@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modeling commands &mdash; OpenSRANE Documentation 0.0.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hazard Subpackage Command/s" href="ModelingCommands/hazard-spk.html" />
+    <link rel="prev" title="Modeling Steps" href="ModelingStepsDiagram.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Users Guideline</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Systemofunits.html">System of units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tags.html">Tags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MiscCommands.html">Miscellaneous Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ModelingStepsDiagram.html">Modeling Steps</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modeling commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/hazard-spk.html">Hazard Subpackage Command/s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/DateAndTime-spk.html">DateAndTime Subpackage Command/s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/WindData-spk.html">WindData Subpackage Command/s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Sites-spk.html">Sites Subpackage Command/s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Substance-spk.html">Substance Subpackage Command/s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Fragilities-spk.html">Fragilities Subpackage Command/s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/OutFlowModel-spk.html">OutFlowModel Subpackage Command/s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Connectors-spk.html">Connectors Subpackage Command/s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/DispersionSpreadModels-spk.html">DispersionSpreadModels Subpackage Command/s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/PhysicalEffect-spk.html">PhysicalEffect Subpackage Command/s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Safety-spk.html">Safety Subpackage Command/s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/PlantUnits-spk.html">PlantUnits Subpackage Command/s</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PostProcessing.html">Post Processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers Guideline</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developer/sourceCode.html">Source Code</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OpenSRANE Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Modeling commands</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/user/ModelingCommands.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="modeling-commands">
+<span id="modelingcmds"></span><h1>Modeling commands<a class="headerlink" href="#modeling-commands" title="Permalink to this heading">¶</a></h1>
+<p>In this section, all the commands that should be used to make an <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> model has been described. The common way of using the following commands has been shown in the <a class="reference internal" href="ModelingStepsDiagram.html#mdlstps"><span class="std std-ref">Modeling Steps</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> mainly created from <strong>Subpackages</strong> that each subpackage is responsible for something different from other subpackages. Each subpackage contain commands of <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> and in this each bundle of <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> commands are separated from the others. So, in the following we see the subpackages name and inside each subpackage the <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> commands are presented.</p>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Users Guideline</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ModelingCommands/hazard-spk.html">Hazard Subpackage Command/s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Hazard-SPK/Earthquake.html">Earthquake Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ModelingCommands/DateAndTime-spk.html">DateAndTime Subpackage Command/s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/DateAndTime-SPK/DateTime.html">DateTime Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ModelingCommands/WindData-spk.html">WindData Subpackage Command/s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/WindData-SPK/WindRose.html">WindRose Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ModelingCommands/Sites-spk.html">Sites Subpackage Command/s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Sites-SPK/Site.html">Site Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ModelingCommands/Substance-spk.html">Substance Subpackage Command/s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Substance-SPK/Material.html">Material Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Substance-SPK/DataBank.html">DataBank Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ModelingCommands/Fragilities-spk.html">Fragilities Subpackage Command/s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Fragilities-SPK/Fragility.html">Fragility Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Fragilities-SPK/Probit.html">Probit Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ModelingCommands/OutFlowModel-spk.html">OutFlowModel Subpackage Command/s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/OutFlowModel-SPK/TankSimultanious.html">TankSimultanious Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/OutFlowModel-SPK/TankHoleSeries.html">TankHoleSeries Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/OutFlowModel-SPK/GasUnitHole.html">GasUnitHole Command <strong>(Still its doc is not completed)</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/OutFlowModel-SPK/Liquid10min.html">Liquid10min Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/OutFlowModel-SPK/NoOutFlow.html">NoOutFlow Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ModelingCommands/Connectors-spk.html">Connectors Subpackage Command/s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Connectors-SPK/DS_LOC.html">DS_LOC Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Connectors-SPK/Out_Physic.html">Out_Physic Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Connectors-SPK/Pb_LOC.html">Pb_LOC Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ModelingCommands/DispersionSpreadModels-spk.html">DispersionSpreadModels Subpackage Command/s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/DispersionSpreadModels-SPK/LiquidSpread.html">LiquidSpread Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/DispersionSpreadModels-SPK/BritterMcQuaid.html">BritterMcQuaid Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/DispersionSpreadModels-SPK/GasGaussian.html">GasGaussian Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/DispersionSpreadModels-SPK/LqdSprdGaussianGasDisp.html">LqdSprdGaussianGasDisp Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ModelingCommands/PhysicalEffect-spk.html">PhysicalEffect Subpackage Command/s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/PhysicalEffect-SPK/fire_point_source.html">fire_point_source Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/PhysicalEffect-SPK/VCE_TNT.html">VCE_TNT Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/PhysicalEffect-SPK/Safe.html">SAFE Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ModelingCommands/Safety-spk.html">Safety Subpackage Command/s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/Safety-SPK/Dike.html">Dike Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ModelingCommands/PlantUnits-spk.html">PlantUnits Subpackage Command/s</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ModelingCommands/PlantUnits-SPK/ONGStorage.html">ONGStorage Command</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Bijan Sayyafzadeh.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2431545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-2431545-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

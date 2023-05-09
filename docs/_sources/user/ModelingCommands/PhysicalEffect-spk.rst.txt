@@ -1,7 +1,7 @@
 .. _PhysicalEffect:
 
-PhysicalEffect Subpackage Command/s
-***********************************
+PhysicalEffect Subpackage
+*************************
 
 In this subpackage the gas dispersion and liquid spread models define by the user. It is possible to for any dispersion type of each material define one dispersion model. The availabel commands of this subpackage are described in the following:
  

@@ -1,7 +1,7 @@
 .. _Connectors:
 
-Connectors Subpackage Command/s
-*******************************
+Connectors Subpackage
+*********************
 
 Connectors are used to connect some models to their following models with a probability distribution. It is assumed that there more than one following event that could happen after current event, so by this type of definition user can define one or more than one following model that increase the flexibility of the program.
 

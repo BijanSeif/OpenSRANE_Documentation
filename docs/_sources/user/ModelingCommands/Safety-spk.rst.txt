@@ -1,7 +1,7 @@
 .. _SafetySPK:
 
-Safety Subpackage Command/s
-***********************************
+Safety Subpackage
+*****************
 
 This subpackage is for defining the barrier and safety systems. Their properties will be used by other objects that these safety object/s assigned to them. The availabel commands of this subpackage are described in the following:
  

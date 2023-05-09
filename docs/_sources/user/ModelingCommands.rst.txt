@@ -27,3 +27,4 @@ In this section, all the commands that should be used to make an |opr| model has
    ModelingCommands/Safety-spk
    ModelingCommands/PlantUnits-spk
    ModelingCommands/Recorders-spk
+   ModelingCommands/Analyze-spk

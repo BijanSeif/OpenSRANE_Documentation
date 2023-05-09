@@ -1,7 +1,7 @@
 .. _WindData:
 
-WindData Subpackage Command/s
-********************************
+WindData Subpackage
+*******************
 
 Using this package wind model data will be defined by user. Currently WindRose module is available for this purpose. The availabel commands of this subpackage are described in the following:
  

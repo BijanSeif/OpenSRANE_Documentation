@@ -1,7 +1,7 @@
 .. _OutFlowModel:
 
-OutFlowModel Subpackage Command/s
-*********************************
+OutFlowModel Subpackage
+***********************
 
 Using this subpackage, Outflow models will be define for the program. For each model, depend the type of the model and material user should select proper material and Outflow model settings. The availabel commands of this subpackage are described in the following:
  

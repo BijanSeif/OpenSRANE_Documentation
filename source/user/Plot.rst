@@ -13,5 +13,7 @@ Plot subpackage present some commands that using them user can **plot some of de
 
    Plot/Fragilities
    Plot/Probits
+   Plot/Hazard
+   Plot/WindRose
 		
 Code Developed by: |bsz|

@@ -5,7 +5,7 @@ Earthquake Command
 
 .. function:: Hazard.Earthquake(Tag,DefType,Magnitude,Probabilities)
    
-   Obviously this command is used for defining earthquake hazard.
+   Obviously this command is used for defining earthquake hazard. 
 
    .. csv-table:: 
       :header: "Argument", "Type", "Description"
@@ -16,6 +16,9 @@ Earthquake Command
 	  Magnitude, list of float, list of the magnitude values.
 	  Probabilities, list of float, list of the probability values corresponding to the magnitude values.
 
+   .. note::
+      
+	  Values less than the first value will be consider as zero.
 
    .. admonition:: Example:
    

@@ -1,7 +1,7 @@
 .. _ProbitsPLT:
 
 ***************
-Probits
+PlotProbits
 ***************
 		   
    To plot defined probits.

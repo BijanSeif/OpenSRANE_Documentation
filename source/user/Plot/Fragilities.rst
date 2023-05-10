@@ -1,7 +1,7 @@
 .. _FragilitiesPLT:
 
 ***************
-Fragilities
+PlotFragilities
 ***************
 
    To plot defined fragilities. 

@@ -57,5 +57,5 @@ html_theme_options = {
     'analytics_id': 'UA-2431545-1',
 	'logo_only': True,
 	'prev_next_buttons_location': None,
-    "body_max_width": None
+    'body_max_width': None
 }

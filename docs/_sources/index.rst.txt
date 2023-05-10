@@ -22,6 +22,7 @@ This documentation is divided to two parts. In the first part (:ref:`Users Guide
    user/MiscCommands
    user/ModelingStepsDiagram
    user/ModelingCommands
+   user/Plot
    user/PostProcessing
 
 

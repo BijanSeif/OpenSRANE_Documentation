@@ -37,4 +37,4 @@ This documentation is divided to two parts. In the first part (:ref:`Users Guide
 
 .. raw:: html
    
-   <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=xfUYwOzPIuGXebr4Z0BoBdjTS42lJZQLFhrQ37AeWP8"></script>
+   <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=250&t=n&d=xfUYwOzPIuGXebr4Z0BoBdjTS42lJZQLFhrQ37AeWP8&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script>

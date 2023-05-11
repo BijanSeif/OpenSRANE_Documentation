@@ -15,5 +15,6 @@ Plot subpackage present some commands that using them user can **plot some of de
    Plot/Probits
    Plot/Hazard
    Plot/WindRose
+   Plot/PlotUnits2D
 		
 Code Developed by: |bsz|

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PostProcess SubPackage &mdash; OpenSRANE Documentation 0.0.2 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Source Code" href="../../developer/sourceCode.html" />
+    <link rel="prev" title="Subpackages callable global parameters" href="SubpackagesGlobParameters.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Users Guideline</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Systemofunits.html">System of units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tags.html">Tags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MiscCommands.html">Miscellaneous Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ModelingStepsDiagram.html">Modeling Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ModelingCommands.html">Modeling commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Plot.html">Plotting tools</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../PostProcessing.html">Post Processing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Access2Objs.html">Access to defined objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SubpackagesGlobParameters.html">Subpackages callable global parameters</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">PostProcess SubPackage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#first-step-load-data">First Step: Load Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#second-step-results-keys">Second Step: Results keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#damagedlevellist-key">DamagedLevelList key</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers Guideline</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../developer/sourceCode.html">Source Code</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">OpenSRANE Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../PostProcessing.html">Post Processing</a></li>
+      <li class="breadcrumb-item active">PostProcess SubPackage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/user/PostProcessing/PostProcess_SPK.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="postprocess-subpackage">
+<span id="postprocessspk"></span><h1>PostProcess SubPackage<a class="headerlink" href="#postprocess-subpackage" title="Permalink to this heading">¶</a></h1>
+<p>Using this subpackage, user can export some specific data or results from the recorders. Currently there are ObjsRecorder and Recorder modules for recording. In the following, some commands are described for exporting some results from recorded data are presented.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using the results in the form of this section for post processing is not mandatory and users can use their own code on the resulted values from analysis of the software. Also, users can develope the current module for post proccessing or add their modules to the source code for futher usages.</p>
+</div>
+<section id="first-step-load-data">
+<h2>First Step: Load Data<a class="headerlink" href="#first-step-load-data" title="Permalink to this heading">¶</a></h2>
+<blockquote>
+<div><p>At very fist step, user should load data and get the results dictionary. For <a class="reference internal" href="../ModelingCommands/Recorders-SPK/Objs_recorder.html#objsrecorder"><span class="std std-ref">Objs_recorder</span></a> and <a class="reference internal" href="../ModelingCommands/Recorders-SPK/Recorder.html#recorder"><span class="std std-ref">Recorder</span></a> there are a specific command to load data and get the resutls. These commands are described in the following:</p>
+<ul>
+<li><p>To load recorded data via <a class="reference internal" href="../ModelingCommands/Recorders-SPK/Objs_recorder.html#objsrecorder"><span class="std std-ref">Objs_recorder</span></a> use the following command. In this command <strong>filename</strong> is the name of recoded file using <a class="reference internal" href="../ModelingCommands/Recorders-SPK/Objs_recorder.html#objsrecorder"><span class="std std-ref">Objs_recorder</span></a> recorder. All the statistical analysis and data will be store in <strong>Results</strong> variable that shown in the following sample.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">opensrane</span> <span class="k">as</span> <span class="nn">opr</span>
+
+<span class="n">Results</span><span class="o">=</span><span class="n">opr</span><span class="o">.</span><span class="n">PostProcess</span><span class="o">.</span><span class="n">ObjsRecorderPP</span><span class="o">.</span><span class="n">Analyze</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>To load recorded data via <a class="reference internal" href="../ModelingCommands/Recorders-SPK/Recorder.html#recorder"><span class="std std-ref">Recorder</span></a> use the following command. When user is using <a class="reference internal" href="../ModelingCommands/Recorders-SPK/Recorder.html#recorder"><span class="std std-ref">Recorder</span></a> to record data and results, there are one separated file for each desired result and so finally there will be more than one file for recorded results. In this command <strong>Recorer_FilenamesList</strong> is the list of the recoded files name using <a class="reference internal" href="../ModelingCommands/Recorders-SPK/Recorder.html#recorder"><span class="std std-ref">Recorder</span></a> recorder. All the statistical analysis and data will be store in <strong>Results</strong> variable that shown in the following sample. In the following sample it is assumed that user recorded the desired results in the mentioned file names.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">opensrane</span> <span class="k">as</span> <span class="nn">opr</span>
+
+<span class="n">Results</span><span class="o">=</span><span class="n">opr</span><span class="o">.</span><span class="n">PostProcess</span><span class="o">.</span><span class="n">RecorderPP</span><span class="o">.</span><span class="n">Analyze</span><span class="p">(</span><span class="n">Recorer_FilenamesList</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;RecorderA.OPRrec&#39;</span><span class="p">,</span><span class="s1">&#39;RecorderB.OPRrec&#39;</span><span class="p">,</span><span class="s1">&#39;RecorderC.OPRrec&#39;</span><span class="p">,</span><span class="s1">&#39;RecorderD.OPRrec&#39;</span><span class="p">,</span><span class="s1">&#39;RecorderE.OPRrec&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="second-step-results-keys">
+<h2>Second Step: Results keys<a class="headerlink" href="#second-step-results-keys" title="Permalink to this heading">¶</a></h2>
+<blockquote>
+<div><p>The <strong>Results</strong> variable that loaded using the commands mention in above part is a dictionary. In the following table the keys of this variable and their corresponding values are described.</p>
+</div></blockquote>
+<section id="damagedlevellist-key">
+<h3>DamagedLevelList key<a class="headerlink" href="#damagedlevellist-key" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Key Name</p></th>
+<th class="head"><p>How to call</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>DamagedLevelList</strong></p></td>
+<td><p>Results[‘DamagedLevelList’]</p></td>
+<td><p>By calling this key, a list of dictionaries will be shown that each dictionary is related to a scenario and shows tag of the elements and level of damage.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Sample for resulted <strong>value</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[{1: None, 2: None, 3: None, 4: None, 5: None, 6: None, 7: None, 8: None},
+ {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 1, 7: 0, 8: 1},
+ {1: None, 2: None, 3: None, 4: None, 5: None, 6: None, 7: None, 8: None},
+ {1: 0, 2: 0, 3: 3, 4: 4, 5: 1, 6: 0, 7: 1, 8: 2},…]
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Bijan Sayyafzadeh.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2431545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-2431545-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -35,4 +35,6 @@ This documentation is divided to two parts. In the first part (:ref:`Users Guide
    developer/sourceCode
 
 
-
+.. raw:: html
+   
+   <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=xfUYwOzPIuGXebr4Z0BoBdjTS42lJZQLFhrQ37AeWP8"></script>

@@ -11,7 +11,7 @@ PlotUnits2D
 	  As said frequently before, plot commands will plot what is currently exist in the memory or what is loaded into the memory.     
 	   
    
-   .. function:: Plot.Plotly.PlotUnits2D(PlotMode=1, OverPressureList=[], OverPressureHeight=2, OverPressurePointNumber=20, RadiationList=[], RadiationHeight=2, RadiationPointNumber=20, GasConcentrationlist=[], GasConcentrationHeght=2, ConcentrationPointNumber=10,)
+   .. function:: Plot.Plotly.PlotUnits2D(PlotMode=1, OverPressureList=[], OverPressureHeight=2, OverPressurePointNumber=20, RadiationList=[], RadiationHeight=2, RadiationPointNumber=20, GasConcentrationlist=[], GasConcentrationHeght=2, ConcentrationPointNumber=10, raw=False)
 
    
    .. csv-table:: 
@@ -28,7 +28,7 @@ PlotUnits2D
 	  GasConcentrationlist, list of float, list of gas concentration values that user wants to be shown on plot and they will be calculated in GasConcentrationHeght height with ConcentrationPointNumber points in boundary.
 	  GasConcentrationHeght, float, The height that calculations be done for Gas Concentration.
 	  ConcentrationPointNumber, int, Number or boundary points. 
-	  
+      raw, boolean, "If this option set to True, then only the plant units and defined objects without any data of happened scenario will be plotted."
 	    
 	  
    .. admonition:: Example:

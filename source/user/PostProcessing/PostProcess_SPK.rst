@@ -10,6 +10,7 @@ Using this subpackage, user can export some specific data or results from the re
 
    Using the results in the form of this section for post processing is not mandatory and users can use their own code on the resulted values from analysis of the software. Also, users can develope the current module for post proccessing or add their modules to the source code for futher usages. 
    
+.. _First Step:
 
 First Step: Load Data
 ---------------------
@@ -352,3 +353,211 @@ Second Step: Results keys
       :widths: 10, 10, 40
    
       "**NodesGroup_Rad_Probit_Dict**", "Results['NodesGroup_Rad_Probit_Dict']", "This key returns a dictionary that its keys are the NodesGroup tag and the corresponding value is a list of each node Radiation probit average values [Probit(Radiation)]."
+
+
+PostProcess Plots (PlotPP)
+--------------------------
+   
+   By the following commands it is possible to plot some data using PostProcess resutls. The **Results** variable in the followign commands is the variable that calculated in the :ref:`First Step`. 
+   
+   
+   
+* **DamageLevel_ExpectedLoss**
+   
+   Using this command the expected loss of containment in each damage level will be plotted.
+
+   .. function:: PostProcess.PlotPP.DamageLevel_ExpectedLoss(PPResults=None,yaxistype='log',PlotMode=1)
+   
+   .. csv-table:: 
+      :header: "Argument", "Type", "Description"
+      :widths: 10, 10, 40
+   
+      PPResults, str, Name of the variable that results of :ref:`First Step` are stored in.
+      yaxistype, str, "Type of the yaxis ['linear', 'log', 'date', 'category','multicategory']"
+      PlotMode, int, "Options between 1,2 and 3 to plot on various editors."
+	  
+   .. admonition:: Example:
+   
+      The following demonstrates the use of the mentioned command. The results are stores in a file with name 'Recorder' using :ref:`Objs_recorder <Objsrecorder>`.
+   
+      **Python Code**
+   
+      .. code-block:: python
+      
+         import opensrane as opr
+		
+         results=opr.PostProcess.ObjsRecorderPP.Analyze('Recorder',100)
+		 
+         opr.PostProcess.PlotPP.DamageLevel_ExpectedLoss(results,'linear')
+    
+      The result of above command is:
+	  
+      .. raw:: html
+          :file: figures/DamageLevel_ExpectedLoss.html
+		  
+
+
+* **Unit_ZeroLevel_DamageProb**
+   
+   Using this command each plant unit damage probability in zero level will be plotted.
+
+   .. function:: PostProcess.PlotPP.Unit_ZeroLevel_DamageProb(PPResults=None,yaxistype='log',PlotMode=1)
+   
+   .. csv-table:: 
+      :header: "Argument", "Type", "Description"
+      :widths: 10, 10, 40
+   
+      PPResults, str, Name of the variable that results of :ref:`First Step` are stored in.
+      yaxistype, str, "Type of the yaxis ['linear', 'log', 'date', 'category','multicategory']"
+      PlotMode, int, "Options between 1,2 and 3 to plot on various editors."
+	  
+   .. admonition:: Example:
+   
+      The following demonstrates the use of the mentioned command. The results are stores in a file with name 'Recorder' using :ref:`Objs_recorder <Objsrecorder>`.
+   
+      **Python Code**
+   
+      .. code-block:: python
+      
+         import opensrane as opr
+		
+         results=opr.PostProcess.ObjsRecorderPP.Analyze('Recorder',100)
+		 
+         opr.PostProcess.PlotPP.Unit_ZeroLevel_DamageProb(results,'linear')
+    
+      The result of above command is:
+	  
+      .. raw:: html
+          :file: figures/Unit_ZeroLevel_DamageProb.html
+		  
+
+* **Fragilities_Probits_Probability**
+   
+   Using this command each fragility and probit happening probability will be plotted.
+
+   .. function:: PostProcess.PlotPP.Fragilities_Probits_Probability(PPResults=None,yaxistype='log',PlotMode=1)
+   
+   .. csv-table:: 
+      :header: "Argument", "Type", "Description"
+      :widths: 10, 10, 40
+   
+      PPResults, str, Name of the variable that results of :ref:`First Step` are stored in.
+      yaxistype, str, "Type of the yaxis ['linear', 'log', 'date', 'category','multicategory']"
+      PlotMode, int, "Options between 1,2 and 3 to plot on various editors."
+	  
+   .. admonition:: Example:
+   
+      The following demonstrates the use of the mentioned command. The results are stores in a file with name 'Recorder' using :ref:`Objs_recorder <Objsrecorder>`.
+   
+      **Python Code**
+   
+      .. code-block:: python
+      
+         import opensrane as opr
+		
+         results=opr.PostProcess.ObjsRecorderPP.Analyze('Recorder',100)
+		 
+         opr.PostProcess.PlotPP.Fragilities_Probits_Probability(results,'log')
+    
+      The result of above command is:
+	  
+      .. raw:: html
+          :file: figures/Fragilities_Probits_Probability.html
+		  
+
+* **Expected_Total_LOC**
+   
+   Using this command expected total loss of containment will be plotted.
+
+   .. function:: PostProcess.PlotPP.Expected_Total_LOC(PPResults=None,yaxistype='log',PlotMode=1)
+   
+   .. csv-table:: 
+      :header: "Argument", "Type", "Description"
+      :widths: 10, 10, 40
+   
+      PPResults, str, Name of the variable that results of :ref:`First Step` are stored in.
+      yaxistype, str, "Type of the yaxis ['linear', 'log', 'date', 'category','multicategory']"
+      PlotMode, int, "Options between 1,2 and 3 to plot on various editors."
+	  
+   .. admonition:: Example:
+   
+      The following demonstrates the use of the mentioned command. The results are stores in a file with name 'Recorder' using :ref:`Objs_recorder <Objsrecorder>`.
+   
+      **Python Code**
+   
+      .. code-block:: python
+      
+         import opensrane as opr
+		
+         results=opr.PostProcess.ObjsRecorderPP.Analyze('Recorder',100)
+		 
+         opr.PostProcess.PlotPP.Expected_Total_LOC(results,'log')
+    
+      The result of above command is:
+	  
+      .. raw:: html
+          :file: figures/Expected_Total_LOC.html
+		  
+
+* **ScenarioProbability**
+   
+   Using this command probability of scenarios will be plotted.
+
+   .. function:: PostProcess.PlotPP.ScenarioProbability(PPResults=None,yaxistype='log',DamageLevel=[],ScenarioList=[],PlotMode=1,)
+   
+   .. csv-table:: 
+      :header: "Argument", "Type", "Description"
+      :widths: 10, 10, 40
+   
+      PPResults, str, Name of the variable that results of :ref:`First Step` are stored in.
+      yaxistype, str, "Type of the yaxis ['linear', 'log', 'date', 'category','multicategory']"
+      PlotMode, int, "Options between 1,2 and 3 to plot on various editors."
+	  DamageLevel, list of int, List of damage level that user want to watch the results
+	  ScenarioList, list of str, List of scenarios that want to be shown in plot. (for Empty it means that plot all scenarios)
+	  
+	  
+   .. admonition:: Example:
+   
+      The following demonstrates the use of the mentioned command. The results are stores in a file with name 'Recorder' using :ref:`Objs_recorder <Objsrecorder>`.
+   
+      **Python Code**
+   
+      .. code-block:: python
+      
+         import opensrane as opr
+		
+         results=opr.PostProcess.ObjsRecorderPP.Analyze('Recorder',100)
+		 
+         opr.PostProcess.PlotPP.ScenarioProbability(results,'log',)
+    
+      The result of above command is:
+	  
+      .. raw:: html
+          :file: figures/ScenarioProbability.html
+      
+      |
+
+      And to plot just for damage level 0 and 1
+	  
+      .. code-block:: python
+      
+         import opensrane as opr
+		
+         results=opr.PostProcess.ObjsRecorderPP.Analyze('Recorder',100)
+		 
+         opr.opr.PostProcess.PlotPP.ScenarioProbability(results,'log',DamageLevel=[0,1],)
+		 
+      .. raw:: html
+          :file: figures/ScenarioProbability01.html
+		  
+
+      |
+
+      And if user wants to plot for some specific scenarios:
+	  
+      .. code-block:: python
+		 
+         opr.PostProcess.PlotPP.ScenarioProbability(results,'linear', ScenarioList=[f'(0):[{i}]' for i in range(1,9)],)
+		 
+      .. raw:: html
+          :file: figures/ScenarioProbabilityScens.html

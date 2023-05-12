@@ -47,7 +47,11 @@
 <li class="toctree-l1"><a class="reference internal" href="Systemofunits.html">System of units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tags.html">Tags</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MiscCommands.html">Miscellaneous Commands</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Modeling Steps</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modeling Steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#linked-modeling-steps">Linked Modeling Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-existing-subpackages">Other existing Subpackages</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="ModelingCommands.html">Modeling commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Plot.html">Plotting tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PostProcessing.html">Post Processing</a></li>
@@ -85,7 +89,7 @@
 <span id="mdlstps"></span><h1>Modeling Steps<a class="headerlink" href="#modeling-steps" title="Permalink to this heading">¶</a></h1>
 <p>The steps of creating a common model in <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> has been shown in the following figure. There is an emphasize on the <strong>common</strong> model because when user understood the way that <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> creates the models, then without following the below steps, user can create his desired model in different way!</p>
 <figure class="align-center" id="id1">
-<img alt="../_images/ModellingSteps.png" src="../_images/ModellingSteps.png" />
+<span id="modelstpfig"></span><img alt="../_images/ModellingSteps.png" src="../_images/ModellingSteps.png" />
 <figcaption>
 <p><span class="caption-text">Modeling Steps</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </figcaption>
@@ -94,7 +98,129 @@
 <p class="admonition-title">Note</p>
 <p>for a complete modelling user should pass the steps shown above to finish the model. For each step user can uses Python coding commands and features (loops commands, dictionaries, lists …) to make modeling more convenient and it depends on the user. But before start of the analysis, the required objects shown in the following path should be defined.</p>
 </div>
+<section id="linked-modeling-steps">
+<h2>Linked Modeling Steps<a class="headerlink" href="#linked-modeling-steps" title="Permalink to this heading">¶</a></h2>
+<p>In the following, the steps that showed in the <a class="reference internal" href="#modelstpfig"><span class="std std-ref">Modeling Steps</span></a> will be explain more and the related document page is linked for more convinient users access.</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt><strong>Start</strong>:</dt><dd><p>To start modeling it is highly recommended that using <a class="reference internal" href="MiscCommands/wipe.html#wipe"><span class="std std-ref">wipe</span></a> command clear all defined objects that may exist in the memory.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Define Recorders</strong>:</dt><dd><p>To save the analysis results it is important that user using one of the existing recorders methods in <a class="reference internal" href="ModelingCommands/Recorders-spk.html#recorders"><span class="std std-ref">Recorders</span></a>, define the recorder/s objects and in this way the way of recording results will be specifiy for the software.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Define Hazard</strong>:</dt><dd><p>Usign <a class="reference internal" href="ModelingCommands/hazard-spk.html#hazspk"><span class="std std-ref">Hazard</span></a> subpackage, user should define hazard curve for the software. Currently earthquake command exist and user could define seismic hazard curve for software.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Define Date And Time</strong>:</dt><dd><p>User should also define the time and date model for software. Usign <a class="reference internal" href="ModelingCommands/DateAndTime-spk.html#datetimespk"><span class="std std-ref">DateAndTime</span></a> subpackage, user could define Date and time model for the software.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Define WindData</strong>:</dt><dd><p>To define site wind date, Usign <a class="reference internal" href="ModelingCommands/WindData-spk.html#winddata"><span class="std std-ref">WindData</span></a> subpackage, user could define Wind model for the software.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Define Site data</strong>:</dt><dd><p>To define site properties, the <a class="reference internal" href="ModelingCommands/Sites-spk.html#sitesspk"><span class="std std-ref">Sites</span></a> subpackage has been provided.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Define Substance/s</strong>:</dt><dd><p>The material that fill plant units should be define using <a class="reference internal" href="ModelingCommands/Substance-spk.html#substance"><span class="std std-ref">Substance</span></a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Define Fragilities</strong>:</dt><dd><p>Usign <a class="reference internal" href="ModelingCommands/Fragilities-SPK/Fragility.html#fragility"><span class="std std-ref">Fragility</span></a> command, user could define all plant units possible fragilities.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Define Probits</strong>:</dt><dd><p>To define vulnerability of plant units and also NodesGroup objects, Usign <a class="reference internal" href="ModelingCommands/Fragilities-SPK/Probit.html#probit"><span class="std std-ref">Probit</span></a> command, user could define the required probits.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Define OutFlow models</strong>:</dt><dd><p>Materials outflow from damaged plant units should be model using existing models or commands in the <a class="reference internal" href="ModelingCommands/OutFlowModel-spk.html#outflowmodel"><span class="std std-ref">OutFlowModel</span></a> subpackage.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Define Dispersion and spread models</strong>:</dt><dd><p>To define the models related to dispersion and spread of outflowed materials, the <a class="reference internal" href="ModelingCommands/DispersionSpreadModels-spk.html#dispersionspreadmodels"><span class="std std-ref">DispersionSpreadModels</span></a> subpackage has been provided.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Define Phisycal effec models</strong>:</dt><dd><p>The <a class="reference internal" href="ModelingCommands/PhysicalEffect-spk.html#physicaleffect"><span class="std std-ref">PhysicalEffect</span></a> subpackge is responsible for defining physical effect models and using this subpackage user can define various physical effect models.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Define Connectors</strong>:</dt><dd><p>The defined models like outflow models, DispersionSpread models and PhysicalEffect models should properly connect to related plant units. But it is not necessary to define them directly. Using <a class="reference internal" href="ModelingCommands/Connectors-spk.html#connectors"><span class="std std-ref">Connectors</span></a> subpackage user can connect mentioned models to each other with desired occurence probability.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Define Safety OBjects</strong>:</dt><dd><p>Safety Objects can be define using commands exist in <a class="reference internal" href="ModelingCommands/Safety-spk.html#safetyspk"><span class="std std-ref">Safet</span></a> subpackage.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Define Plant Units</strong>:</dt><dd><p>The final part of modeling is defining plant units using <a class="reference internal" href="ModelingCommands/PlantUnits-spk.html#plantunits"><span class="std std-ref">PlantUnits</span></a> subpackage. Each command in this subpackage is related to a type of Plant unit.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Analysis</strong>:</dt><dd><p>By defining the plant units, the model is now ready for analysis. In <a class="reference internal" href="ModelingCommands/Analyze-spk.html#analyze"><span class="std std-ref">Analyze</span></a> subpackage there are various methods to run the analysis.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="other-existing-subpackages">
+<h2>Other existing Subpackages<a class="headerlink" href="#other-existing-subpackages" title="Permalink to this heading">¶</a></h2>
+<p>There are some packages that using of them is not necessary, however they maybe become useful for completing the analysis. In the following they are explained and linked to their documentation page.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>NodesGroup (Vulneable Objects)</strong>:</p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul>
+<li><p><strong>Plotting tools</strong>:</p>
+<blockquote>
+<div><p>It is really convenient to check the model and results visually. Using <a class="reference internal" href="Plot.html#plot"><span class="std std-ref">Plot</span></a> subpackage, user have access to some provided commands to plot various defined objects.</p>
+</div></blockquote>
+</li>
+<li><p><strong>Access to Objects</strong>:</p>
+<blockquote>
+<div><p>By finishing the analysis, it is important to have access to object to check their results and condition. To way of access to defined objects or elements is described in <a class="reference internal" href="PostProcessing/Access2Objs.html#acs2obj"><span class="std std-ref">This Page</span></a>.</p>
+</div></blockquote>
+</li>
+<li><p><strong>Objects or Elements data</strong>:</p>
+<blockquote>
+<div><p>By refering or accessing to an element or object, various data can be read from them. The data that can be read from an object is described <a class="reference internal" href="PostProcessing/SubpackagesGlobParameters.html#subglobpara"><span class="std std-ref">This Page</span></a>. For each object there are various data that can be read.</p>
+</div></blockquote>
+</li>
+<li><p><strong>PostProcess Subpackage</strong>:</p>
+<blockquote>
+<div><p>There is also a <a class="reference internal" href="PostProcessing/PostProcess_SPK.html#postprocessspk"><span class="std std-ref">subpackage</span></a> that is provided for post processing. <strong>But there is no mandatory to use this subpackage</strong>. To use this subpackage user should first load data and then call the existing desired results. Also, some auto plots is available. All required knowledge to use it, is described in <a class="reference internal" href="PostProcessing/PostProcess_SPK.html#postprocessspk"><span class="std std-ref">This page</span></a>.</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
 <p>figure/s by: <strong>Bijan Sayyafzadeh</strong></p>
+</section>
 </section>
 
 

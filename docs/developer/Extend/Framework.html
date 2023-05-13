@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Framework Structure &mdash; OpenSRANE Documentation 0.0.2 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Hazard Subpackage Structure" href="hazard-spk.html" />
+    <link rel="prev" title="Extending Application" href="../extend.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Users Guideline</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/Systemofunits.html">System of units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/Tags.html">Tags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/MiscCommands.html">Miscellaneous Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/ModelingStepsDiagram.html">Modeling Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/ModelingCommands.html">Modeling commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/Plot.html">Plotting tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/PostProcessing.html">Post Processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers Guideline</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../sourceCode.html">Source Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../build.html">Building Application</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../extend.html">Extending Application</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Framework Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#globalparameters">_GlobalParameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hazard-spk.html">Hazard Subpackage Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DateAndTime-spk.html">DateAndTime Subpackage Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WindData-spk.html">WindData Subpackage Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sites-spk.html">Sites Subpackage Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Substance-spk.html">Substance Subpackage Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Fragilities-spk.html">Fragilities Subpackage Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OutFlowModel-spk.html">OutFlowModel Subpackage Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Connectors-spk.html">Connectors Subpackage Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DispersionSpreadModels-spk.html">DispersionSpreadModels Subpackage Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PhysicalEffect-spk.html">PhysicalEffect Subpackage Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Safety-spk.html">Safety Subpackage Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlantUnits-spk.html">PlantUnits Subpackage Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Recorders-spk.html">Recorders Subpackage Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Analyze-spk.html">Analyze Subpackage Structure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contributing Code &amp; Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../issues.html">Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">OpenSRANE Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../extend.html">Extending Application</a></li>
+      <li class="breadcrumb-item active">Framework Structure</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/developer/Extend/Framework.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="framework-structure">
+<span id="framework"></span><h1>Framework Structure<a class="headerlink" href="#framework-structure" title="Permalink to this heading">¶</a></h1>
+<p><a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> framework consist of a collection of subpackages. There are two types of SubPackages, common subpackages and special subpackages. Special subpackages are the ones that are used for special purposes like Misc (That is for managing modules and special required commands like wipe), Plot and PostProcess that as are obvious from their name are for post processing activities (That maybe remove in future into another Package). Rest of the subpackages are common packages that have the following structure:</p>
+<figure class="align-center" id="id2">
+<span id="spkstrfig"></span><img alt="../../_images/SPKStructure.png" src="../../_images/SPKStructure.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Fig.1 - A Subpackage content structure</strong></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong>__init__.py</strong> and <strong>ObjManager.py</strong> are constant modules that <strong>should exist in any subpackages and should never change</strong>!</p>
+</div>
+<p>In the following parts of <a class="reference internal" href="#spkstrfig"><span class="std std-ref">Fig.1</span></a> is describing.</p>
+<section id="globalparameters">
+<h2>_GlobalParameters<a class="headerlink" href="#globalparameters" title="Permalink to this heading">¶</a></h2>
+<p>Every subpackage as shown in <a class="reference internal" href="#spkstrfig"><span class="std std-ref">Fig.1</span></a> contains a <strong>_GlobalParameters.py</strong> file that involves variables and methods that are common for all classes inside the subpackage. It plays a key rule to make integrity between subpackage modules and specifies the minimum methods and variables and type of variables that each module should have.</p>
+<p>It contains GlobalParameters class and all of the common variables and methods with no initial values and calculations are defined in this class and they show that subpackage modules should contain and fill these methods and variables.</p>
+<blockquote>
+<div><div class="admonition-example admonition">
+<p class="admonition-title">Example:</p>
+<p>The <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/blob/main/opensrane/OutFlowModel/_GlobalParameters.py">_GlobalParameters.py</a> file content of <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/blob/main/opensrane/OutFlowModel/">OutFlowModel</a> subpackage has been shown as a sample in the following.</p>
+<p><strong>Python Code</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">_GlobalParameters</span><span class="p">():</span>
+
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">wipeAnalysis</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">wipeAnalysisGlobal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">t_release</span><span class="o">=</span><span class="kc">None</span>  <span class="c1">#Time list of outFlow or release</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">MassLiquidReleaseRate</span><span class="o">=</span><span class="kc">None</span>   <span class="c1">#Mass Liquid Release rate in each step</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dMassLiquid_release</span><span class="o">=</span><span class="kc">None</span>     <span class="c1">#Mass Liquid list of OutFlow Or release in each time step (Delta Mass)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">TotalMassLiquid_Release</span><span class="o">=</span><span class="kc">None</span> <span class="c1">#Total Mass Liquid list of OutFlow Or release in each time step</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">MassGasReleaseRate</span><span class="o">=</span><span class="kc">None</span>      <span class="c1">#Mass Gas Release rate in each step</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dMassGas_release</span><span class="o">=</span><span class="kc">None</span>        <span class="c1">#Mass Gas list of OutFlow Or release in each time step (Delta Mass)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">TotalMassGas_Release</span><span class="o">=</span><span class="kc">None</span>    <span class="c1">#Total Mass Gas list of OutFlow Or release in each time step</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">UnitObject</span><span class="o">=</span><span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">wipeAnalysis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wipeAnalysisGlobal</span><span class="p">()</span>
+        <span class="k">pass</span>
+
+
+    <span class="k">def</span> <span class="nf">Calculate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="n">UnitObject</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">UnitObject</span> <span class="c1">#self.UnitObject is defined in _GlobalParameters</span>
+        <span class="k">if</span> <span class="n">UnitObject</span><span class="o">==</span><span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="s1">&#39;Error: self.UnitObject is emptey and before any usage it should be assigned before&#39;</span>
+
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Variables like <strong>MassLiquidReleaseRate, dMassLiquid_release, TotalMassLiquid_Release and …</strong> are the ones that every class of outflow subpackage should calculate and fill them. These variables in each analysis or sampling could varies depend on the verious conditions, so they should be reset at the start of each analysis. To get ensure these variables will be restart and the begining of the analysis, they are put in <strong>wipeAnalysisGlobal(self)</strong> that will be explained in related part. Also, there is a <strong>Calculate(self)</strong> method that all classes in the <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/blob/main/opensrane/OutFlowModel/">OutFlowModel</a> subpackage, should have this method and calculate and return what is explained in its related discription in <a class="reference internal" href="OutFlowModel-spk.html#outflowmodelex"><span class="std std-ref">outflow subpackage structure</span></a> part.</p>
+</div>
+</div></blockquote>
+<p>All classes in each subpackage should inherits _GlobalParameters class and initialize the _GlobalParameters variables and also fill them with the results or entered parameters by the user. Also, methods that should be common for all classes in the subpackage should be define in _GlobalParameters class. However, in any class the method code can changes by developer.</p>
+<p>These parameters should be filled by each module and the results of calculations are stored in them. Each module can have their own internal methods and these methods are used only for internal calculations of the module and they won’t be call with other modules or subpackages. Sometimes there are some methods that maybe useful for subpackage modules so they are located in _GlobalParameters.py and started with “_” sign.</p>
+<p>For some subpackages there are Calculate method in some _GlobalParameters.py is responsible to start module calculations to fill the parameters with results. So, the main code of the module should be written in the Calculate method and this part is called by analysis subpackage and after it, the parameters should be filled by the results.</p>
+<p>Other Common Methods: there are some other methods in _GlobalParameters.py (That are not started with “_”) and also these methods should be considered with each module and the need of them are explained in each subpackage description in the following chapters.</p>
+<p>wipeAnalysis and wipeAnalysisGlobal in _GlobalParameters.py are very important methods that show the common parameters that should filled with their initial value at the start of the analysis.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Bijan Sayyafzadeh.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2431545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-2431545-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

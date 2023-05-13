@@ -9,7 +9,7 @@
 project = 'OpenSRANE Documentation'
 copyright = '2023, Bijan Sayyafzadeh'
 author = 'Bijan Sayyafzadeh'
-release = '0.0.2'
+release = '0.0.3'
 html_logo = 'logo.png'
 
 

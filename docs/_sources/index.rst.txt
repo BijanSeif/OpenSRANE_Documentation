@@ -2,8 +2,10 @@
 
 OpenSRANE
 =========
-Open Software for Risk Assessment of NaTech Events
---------------------------------------------------
+ 
+.. raw:: html
+   
+   <p style="font-size: 20px; margin-bottom: 50px"><b style="font-size: 25px">Open S</b>oftware for <b style="font-size: 25px">R</b>isk <b style="font-size: 25px">A</b>ssessment of <b style="font-size: 25px">N</b>aTech <b style="font-size: 25px">E</b>vents</p>
 
 
 |opr| is an open-source, extensible, flexible and object-oriented software for calculating the quantitative risk of NaTech events in process plants. The |doc| for using the software and getting familiar with the framework of the software and the platform (|githubLink|) that the package has been located and presented are described here.

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wipeAnalysis and wipeAnalysisGlobal &mdash; OpenSRANE Documentation 0.0.3 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Users Guideline</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/Systemofunits.html">System of units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/Tags.html">Tags</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/MiscCommands.html">Miscellaneous Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/ModelingStepsDiagram.html">Modeling Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/ModelingCommands.html">Modeling commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/Plot.html">Plotting tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/PostProcessing.html">Post Processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developers Guideline</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../sourceCode.html">Source Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../build.html">Building Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extend.html">Extending Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">Contributing Code &amp; Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../issues.html">Issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">OpenSRANE Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">wipeAnalysis and wipeAnalysisGlobal</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/developer/Extend/Framework/WipeAna.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="wipeanalysis-and-wipeanalysisglobal">
+<span id="wipeanalysisfmw"></span><h1>wipeAnalysis and wipeAnalysisGlobal<a class="headerlink" href="#wipeanalysis-and-wipeanalysisglobal" title="Permalink to this heading">¶</a></h1>
+<section id="wipeanalysisex">
+<span id="id1"></span><h2>wipeAnalysis and wipeAnalysisGlobal<a class="headerlink" href="#wipeanalysisex" title="Permalink to this heading">¶</a></h2>
+<blockquote>
+<div><p>wipeAnalysis and wipeAnalysisGlobal in _GlobalParameters.py and classes are very important methods that show the local and global parameters that should filled with their initial value at the begining of each analysis.</p>
+<p><a class="reference internal" href="#wipeanalysisex"><span class="std std-ref">wipeAnalysisGlobal</span></a> contains variables that are common between all classes and after each analysis by calling wipeAnalysis command their assigned data will be clear and the initial value should be assigned to them to get ready for next analysis. These variables are those that will be use and call by the other classes in other SubPackages or call by recorders or by users to be stored for postprocess analysis. <a class="reference internal" href="#wipeanalysisex"><span class="std std-ref">wipeAnalysis</span></a> methos or command is resposible to reset and initialize the class local variables and the <a class="reference internal" href="#wipeanalysisex"><span class="std std-ref">wipeAnalysisGlobal</span></a> method should be called inside this method and by this way all global variables also will be reset.</p>
+<p><a class="reference internal" href="#wipeanalysisex"><span class="std std-ref">wipeAnalysis</span></a> in _GlobalParameters.py is for module parameters and it is responsible to initialize the parameters that are used only inside the module at the start of each analysis and remove the last analysis values from them. To making code briefer, the code only calls wipeAnalysis and so in each wipeAnalysis command the wipeAnalysisGlobal also should be called to reset the global parameters. (Watch <a class="reference internal" href="GlobalParam.html#frameworkex1"><span class="std std-ref">Example1</span></a> and <a class="reference internal" href="GlobalParam.html#frameworkex2"><span class="std std-ref">Example2</span></a>)</p>
+<p>So, each time that analysis command repeat, these parameters will be reset and initialize and their previous values from the last analysis will be removed. <strong>constant variables and variables that their values won’t change do not need to be defined in the</strong> <a class="reference internal" href="#wipeanalysisex"><span class="std std-ref">wipeAnalysisGlobal or wipeAnalysis</span></a> <strong>body</strong>.</p>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Bijan Sayyafzadeh.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2431545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-2431545-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

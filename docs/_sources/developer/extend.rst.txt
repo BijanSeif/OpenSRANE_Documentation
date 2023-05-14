@@ -16,6 +16,11 @@ This section has been devided to the following parts.
    :maxdepth: 1
 
    Extend/Framework
+   
+.. toctree::
+   :caption: OpenSRANE SubPackages architecture description
+   :maxdepth: 1
+   
    Extend/hazard-spk
    Extend/DateAndTime-spk
    Extend/WindData-spk

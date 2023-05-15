@@ -16,6 +16,10 @@ Parameters
 Methods
 -------
 
-   * `SampleRandomMagnitude <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/Hazard/Earthquake.py#L64>`_ is a global method that described in the :ref:`_GlobalParameters <HazardEx>` of parent subpackage. In the current module this method filled with an algorithem that calculate and returns the SampledMagnitude parameter according defined hazard data using local `parameters <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/Hazard/Earthquake.py#L42>`_.
+   * `SampleRandomMagnitude <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/Hazard/Earthquake.py#L64>`_ is a global method that described in the :ref:`_GlobalParameters <HazardEx>` of parent subpackage. In the current module this method filled with an algorithem that calculate and returns the SampledMagnitude parameter according defined hazard data using local `parameters <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/Hazard/Earthquake.py#L42>`_. The following hypothesises are considered in this method:
+      
+	  * If there were no rnd or if the value entered as rnd be a number smaller than 0 or greater that 1 then a random number will be consider automatically between 0 and 1.
+	  * If the entered value as rnd be less than the defined probabilities for hazaed curve, then the maximum defined magnitude will be return as the result of the method.
+	  * If the entered value as rnd be greater than the defined probabilities for hazaed curve, then 0 value be return as the result of the method.
 	  
 	  

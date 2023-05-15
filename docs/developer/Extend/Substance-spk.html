@@ -17,8 +17,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fragilities Subpackage Structure" href="Fragilities-spk.html" />
-    <link rel="prev" title="Sites Subpackage Structure" href="Sites-spk.html" /> 
+    <link rel="next" title="Material Module Structure" href="Substance-spk/Material.html" />
+    <link rel="prev" title="Site Module Structure" href="Sites-spk/Site.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -62,7 +62,16 @@
 <li class="toctree-l2"><a class="reference internal" href="DateAndTime-spk.html">DateAndTime Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WindData-spk.html">WindData Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Sites-spk.html">Sites Subpackage Structure</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Substance Subpackage Structure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Substance Subpackage Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-goal-of-this-subpackage">Main Goal Of this Subpackage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#globalparameters">_GlobalParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#existing-modules">Existing modules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Substance-spk/Material.html">Material Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Substance-spk/DataBank.html">MatDataBank Module Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="Fragilities-spk.html">Fragilities Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="OutFlowModel-spk.html">OutFlowModel Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Connectors-spk.html">Connectors Subpackage Structure</a></li>
@@ -106,6 +115,36 @@
              
   <section id="substance-subpackage-structure">
 <span id="substanceex"></span><h1>Substance Subpackage Structure<a class="headerlink" href="#substance-subpackage-structure" title="Permalink to this heading">¶</a></h1>
+<section id="main-goal-of-this-subpackage">
+<h2>Main Goal Of this Subpackage<a class="headerlink" href="#main-goal-of-this-subpackage" title="Permalink to this heading">¶</a></h2>
+<blockquote>
+<div><p>The main goals of this <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Substance">subpackage</a> are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Getting the material properties or data from user to use them in the other subpackages and modules.</p></li>
+<li><p>Present some predefined materials to user.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="globalparameters">
+<h2>_GlobalParameters<a class="headerlink" href="#globalparameters" title="Permalink to this heading">¶</a></h2>
+<blockquote>
+<div><p>This subpackage as said is mainly for getting data from user and just one module is enough for this purpose so the <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Substance/_GlobalParameters.py">_GlobalParameters.py</a> have no usage in this subpackage and it is leaved empty.</p>
+</div></blockquote>
+</section>
+<section id="existing-modules">
+<h2>Existing modules<a class="headerlink" href="#existing-modules" title="Permalink to this heading">¶</a></h2>
+<blockquote>
+<div><p>In the followin the existing modules for this <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Substance">subpackage</a> are described:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Substance-spk/Material.html">Material Module Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Substance-spk/DataBank.html">MatDataBank Module Structure</a></li>
+</ul>
+</div>
+</div></blockquote>
+</section>
 </section>
 
 

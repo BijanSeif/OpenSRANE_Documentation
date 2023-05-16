@@ -8,8 +8,9 @@ Main Goal Of this Subpackage
 ----------------------------
 
    The main goals of this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Fragilities>`_ are:
+
       * Getting the Fragilities and Probits data from the user (Get the probability of fragile, collapse, vulnerability or any type of damage under a magnitude value of external excitation).
-	  * Retruning probability value corresponding to entered damage magnitude.
+      * Retruning probability value corresponding to entered damage magnitude.
 	  
 	  
 _GlobalParameters

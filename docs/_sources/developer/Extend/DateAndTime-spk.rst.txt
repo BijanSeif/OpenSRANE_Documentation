@@ -8,6 +8,7 @@ Main Goal Of this Subpackage
 ----------------------------
 
    The main goals of this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/DateAndTime>`_ are:
+
       * Getting the time or date distribution data.
       * Returning a time of day corresponding to random created value between zero and 1.
 	  

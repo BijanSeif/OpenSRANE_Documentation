@@ -49,9 +49,9 @@ exclude_patterns = []
 # html_theme = 'alabaster'
 html_static_path = ["_static"]
 
-import sphinx_rtd_theme
+# import sphinx_rtd_theme
 html_theme = 'sphinx_rtd_theme'
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+# html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 html_theme_options = {
     'analytics_id': 'UA-2431545-1',

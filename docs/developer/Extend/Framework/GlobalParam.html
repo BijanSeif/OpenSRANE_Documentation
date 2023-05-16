@@ -11,13 +11,14 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Hazard Subpackage Structure" href="../hazard-spk.html" />
+    <link rel="next" title="Subpackage modules" href="SubpackageMod.html" />
     <link rel="prev" title="Framework Structure" href="../Framework.html" /> 
 </head>
 
@@ -62,6 +63,9 @@
 <li class="toctree-l4"><a class="reference internal" href="#wipeanalysis-and-wipeanalysisglobal">wipeAnalysis and wipeAnalysisGlobal</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="SubpackageMod.html">Subpackage modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="HowAddNewMod.html">How add a new Module (New Model)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="HowAddNewSubPK.html">How add a new SubPackage</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../hazard-spk.html">Hazard Subpackage Structure</a></li>
@@ -112,7 +116,7 @@
            <div itemprop="articleBody">
              
   <section id="globalparameters">
-<span id="frameworkglbp"></span><h1>_GlobalParameters<a class="headerlink" href="#globalparameters" title="Permalink to this heading">¶</a></h1>
+<span id="frameworkglbp"></span><h1>_GlobalParameters<a class="headerlink" href="#globalparameters" title="Permalink to this heading"></a></h1>
 <blockquote>
 <div><p>Every subpackage as shown in <a class="reference internal" href="../Framework.html#spkstrfig"><span class="std std-ref">Fig.1</span></a> contains a <strong>_GlobalParameters.py</strong> file that involves variables and methods that are common for all classes inside the subpackage. It plays a key rule to make integrity between subpackage modules and specifies the minimum methods and variables and type of variables that each module should have.</p>
 <p>It contains GlobalParameters class and all of the common variables and methods with no initial values and calculations are defined in this class and they show that subpackage modules should contain and fill these methods and variables.</p>
@@ -215,7 +219,7 @@
 <p>There are some other methods in some _GlobalParameters.py (That are not started with “_”). These methods can be called and used within each module (class) and may help developers to calculate some calculations more convinient. These methods are explained in each subpackage description in <a class="reference internal" href="../../extend.html#extend"><span class="std std-ref">OpenSRANE Framework architecture page</span></a>.</p>
 </div></blockquote>
 <section id="wipeanalysis-and-wipeanalysisglobal">
-<span id="wipeanalysisex"></span><h2>wipeAnalysis and wipeAnalysisGlobal<a class="headerlink" href="#wipeanalysis-and-wipeanalysisglobal" title="Permalink to this heading">¶</a></h2>
+<span id="wipeanalysisex"></span><h2>wipeAnalysis and wipeAnalysisGlobal<a class="headerlink" href="#wipeanalysis-and-wipeanalysisglobal" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p>wipeAnalysis and wipeAnalysisGlobal in _GlobalParameters.py and classes are very important methods that show the local and global parameters that should filled with their initial value at the begining of each analysis.</p>
 <p><a class="reference internal" href="#wipeanalysisex"><span class="std std-ref">wipeAnalysisGlobal</span></a> contains variables that are common between all classes and after each analysis by calling wipeAnalysis command their assigned data will be clear and the initial value should be assigned to them to get ready for next analysis. These variables are those that will be use and call by the other classes in other SubPackages or call by recorders or by users to be stored for postprocess analysis. <a class="reference internal" href="#wipeanalysisex"><span class="std std-ref">wipeAnalysis</span></a> methos or command is resposible to reset and initialize the class local variables and the <a class="reference internal" href="#wipeanalysisex"><span class="std std-ref">wipeAnalysisGlobal</span></a> method should be called inside this method and by this way all global variables also will be reset.</p>

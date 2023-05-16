@@ -11,6 +11,7 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/sphinx_highlight.js"></script>
@@ -115,7 +116,7 @@
            <div itemprop="articleBody">
              
   <section id="objs-recorder-loader-command">
-<span id="objsrecorderloader"></span><h1>Objs_recorder_loader Command<a class="headerlink" href="#objs-recorder-loader-command" title="Permalink to this heading">¶</a></h1>
+<span id="objsrecorderloader"></span><h1>Objs_recorder_loader Command<a class="headerlink" href="#objs-recorder-loader-command" title="Permalink to this heading"></a></h1>
 <blockquote>
 <div><p>This command contains the following subcommands that are used to load the recorded data using <a class="reference internal" href="Objs_recorder.html#objsrecorder"><span class="std std-ref">Objs_recorder</span></a>. In the following each subcommand with their usage are described.</p>
 <p>Bank method is another way to load scenarios. It loads all scenarios into the memory and so calling them are so much fast but if there were no enough memory probably user encounter with system problem!
@@ -126,11 +127,11 @@ So just use it when a powerful system is available.</p>
 </div>
 </div></blockquote>
 <section id="loadscenariobank-subcommand">
-<h2>loadScenarioBank SUBCOMMAND<a class="headerlink" href="#loadscenariobank-subcommand" title="Permalink to this heading">¶</a></h2>
+<h2>loadScenarioBank SUBCOMMAND<a class="headerlink" href="#loadscenariobank-subcommand" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><dl class="py function">
 <dt class="sig sig-object py" id="Recorders.Objs_recorder_loader.loadScenarioBank">
-<span class="sig-prename descclassname"><span class="pre">Recorders.Objs_recorder_loader.</span></span><span class="sig-name descname"><span class="pre">loadScenarioBank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Recorders.Objs_recorder_loader.loadScenarioBank" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Recorders.Objs_recorder_loader.</span></span><span class="sig-name descname"><span class="pre">loadScenarioBank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Recorders.Objs_recorder_loader.loadScenarioBank" title="Permalink to this definition"></a></dt>
 <dd><p>This command loads all recorder scenarios using <a class="reference internal" href="Objs_recorder.html#objsrecorder"><span class="std std-ref">Objs_recorder</span></a> in to the system memory. User can send all recorded scenarios (ScenarioBank) to the memory and call them faster. It is obvious that weak systems with low memory capcity, this method may encounter with system hanging. Also, it returns all scenarios as a dictionary that keys are the number of the simulation.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -156,11 +157,11 @@ So just use it when a powerful system is available.</p>
 </div></blockquote>
 </section>
 <section id="load1scenarioofbank-subcommand">
-<h2>load1ScenarioOfBank SUBCOMMAND<a class="headerlink" href="#load1scenarioofbank-subcommand" title="Permalink to this heading">¶</a></h2>
+<h2>load1ScenarioOfBank SUBCOMMAND<a class="headerlink" href="#load1scenarioofbank-subcommand" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><dl class="py function">
 <dt class="sig sig-object py" id="opr.Recorders.Objs_recorder_loader.load1ScenarioOfBank">
-<span class="sig-prename descclassname"><span class="pre">opr.Recorders.Objs_recorder_loader.</span></span><span class="sig-name descname"><span class="pre">load1ScenarioOfBank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ScenarioTag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opr.Recorders.Objs_recorder_loader.load1ScenarioOfBank" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">opr.Recorders.Objs_recorder_loader.</span></span><span class="sig-name descname"><span class="pre">load1ScenarioOfBank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ScenarioTag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opr.Recorders.Objs_recorder_loader.load1ScenarioOfBank" title="Permalink to this definition"></a></dt>
 <dd><p>By defining the file name to previous command (loadScenarioBank), all the recorded scenarios with all their objects will be load in the memory. <strong>After loading the scnario bank using loadScenarioBank</strong>, Using this command, user can load a scenario into the memory. <strong>By loading a scenario into the memory, it is ready to be investigated and ready to plot and also all anlysis results are accessable</strong>.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -186,11 +187,11 @@ So just use it when a powerful system is available.</p>
 </div></blockquote>
 </section>
 <section id="id1">
-<h2>load1ScenarioOfBank SUBCOMMAND<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<h2>load1ScenarioOfBank SUBCOMMAND<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><dl class="py function">
 <dt class="sig sig-object py" id="opr.Recorders.Objs_recorder_loader.ClearScenarioBank">
-<span class="sig-prename descclassname"><span class="pre">opr.Recorders.Objs_recorder_loader.</span></span><span class="sig-name descname"><span class="pre">ClearScenarioBank</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opr.Recorders.Objs_recorder_loader.ClearScenarioBank" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">opr.Recorders.Objs_recorder_loader.</span></span><span class="sig-name descname"><span class="pre">ClearScenarioBank</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#opr.Recorders.Objs_recorder_loader.ClearScenarioBank" title="Permalink to this definition"></a></dt>
 <dd><p>By the this command memory will be clear from loaded Scenario Bank.</p>
 </dd></dl>
 

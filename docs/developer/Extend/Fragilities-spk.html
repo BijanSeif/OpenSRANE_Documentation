@@ -18,7 +18,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="OutFlowModel Subpackage Structure" href="OutFlowModel-spk.html" />
+    <link rel="next" title="Fragility Module Structure" href="Fragilities-spk/Fragility.html" />
     <link rel="prev" title="MatDataBank Module Structure" href="Substance-spk/DataBank.html" /> 
 </head>
 
@@ -64,7 +64,16 @@
 <li class="toctree-l2"><a class="reference internal" href="WindData-spk.html">WindData Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Sites-spk.html">Sites Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Substance-spk.html">Substance Subpackage Structure</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Fragilities Subpackage Structure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Fragilities Subpackage Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-goal-of-this-subpackage">Main Goal Of this Subpackage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#globalparameters">_GlobalParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#existing-modules">Existing modules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Fragilities-spk/Fragility.html">Fragility Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Fragilities-spk/Probit.html">Probit Module Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="OutFlowModel-spk.html">OutFlowModel Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Connectors-spk.html">Connectors Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DispersionSpreadModels-spk.html">DispersionSpreadModels Subpackage Structure</a></li>
@@ -107,6 +116,41 @@
              
   <section id="fragilities-subpackage-structure">
 <span id="fragilitiesex"></span><h1>Fragilities Subpackage Structure<a class="headerlink" href="#fragilities-subpackage-structure" title="Permalink to this heading"></a></h1>
+<section id="main-goal-of-this-subpackage">
+<h2>Main Goal Of this Subpackage<a class="headerlink" href="#main-goal-of-this-subpackage" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><dl class="simple">
+<dt>The main goals of this <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Fragilities">subpackage</a> are:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>Getting the Fragilities and Probits data from the user (Get the probability of fragile, collapse, vulnerability or any type of damage under a magnitude value of external excitation).</dt><dd><ul>
+<li><p>Retruning probability value corresponding to entered damage magnitude.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="globalparameters">
+<h2>_GlobalParameters<a class="headerlink" href="#globalparameters" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>In the following tables the existing global parameters and methods in <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Fragilities/_GlobalParameters.py">_GlobalParameters.py</a> of this subpackage has been shown: (Currently this subpackage only have a common method for modules and there is no common parameters)</p>
+</div></blockquote>
+</section>
+<section id="existing-modules">
+<h2>Existing modules<a class="headerlink" href="#existing-modules" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>In the followin the existing modules for this <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Fragilities">subpackage</a> are described:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Fragilities-spk/Fragility.html">Fragility Module Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Fragilities-spk/Probit.html">Probit Module Structure</a></li>
+</ul>
+</div>
+</div></blockquote>
+</section>
 </section>
 
 

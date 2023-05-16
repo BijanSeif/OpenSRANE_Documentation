@@ -9,6 +9,7 @@ Main Goal Of this Subpackage
 ----------------------------
 
    The main goals of this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Hazard>`_ are:
+   
       * Getting the natural hazard probabilistic data (Magnitude and probability of occurence each magnitude)
       * Returning magnitude corresponding to random created samples between zero and 1
 	  

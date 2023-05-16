@@ -9,6 +9,7 @@ Main Goal Of this Subpackage
 ----------------------------
 
    The main goals of this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/WindData>`_ are:
+   
       * Getting the site wind distribution data (such as wind speeds, wind directions, calm condition, wind classes, height coefficient)
       * Returning a wind condition according to defined data as a sample of wind.
 	  
@@ -40,7 +41,7 @@ _GlobalParameters
 Existing modules
 ----------------
    
-   In the followin the existing modules for this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Hazard>`_ are described:
+   In the followin the existing modules for this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/WindData>`_ are described:
    
    .. toctree::
       :maxdepth: 1

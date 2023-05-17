@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>warningClear Command &mdash; OpenSRANE Documentation 0.0.3 documentation</title>
+  <title>Miscellaneous(Misc) Commands &mdash; OpenSRANE Documentation 0.0.3 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Modeling Steps" href="../ModelingStepsDiagram.html" />
-    <link rel="prev" title="warning Command" href="warning.html" /> 
+    <link rel="next" title="wipe Command" href="MiscCommands/wipe.html" />
+    <link rel="prev" title="Modeling commands" href="../ModelingCommands.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,19 +46,32 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Systemofunits.html">System of units</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tags.html">Tags</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../MiscCommands.html">Miscellaneous Commands</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="wipe.html">wipe Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wipeAnalysis.html">wipeAnalysis Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="warning.html">warning Command</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">warningClear Command</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#warningClear"><code class="docutils literal notranslate"><span class="pre">warningClear()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../ModelingStepsDiagram.html">Modeling Steps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ModelingCommands.html">Modeling commands</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ModelingCommands.html">Modeling commands</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Miscellaneous(Misc) Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MiscCommands/wipe.html">wipe Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MiscCommands/wipeAnalysis.html">wipeAnalysis Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MiscCommands/warning.html">warning Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MiscCommands/warningClear.html">warningClear Command</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tags.html">Tags (Concept)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hazard-spk.html">Hazard Subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DateAndTime-spk.html">DateAndTime Subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WindData-spk.html">WindData Subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sites-spk.html">Sites Subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Substance-spk.html">Substance Subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Fragilities-spk.html">Fragilities Subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OutFlowModel-spk.html">OutFlowModel Subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Connectors-spk.html">Connectors Subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DispersionSpreadModels-spk.html">DispersionSpreadModels Subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PhysicalEffect-spk.html">PhysicalEffect Subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Safety-spk.html">Safety Subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PlantUnits-spk.html">PlantUnits Subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Recorders-spk.html">Recorders Subpackage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Analyze-spk.html">Analyze Subpackage</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../Plot.html">Plotting tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PostProcessing.html">Post Processing</a></li>
 </ul>
@@ -86,10 +99,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../MiscCommands.html">Miscellaneous Commands</a></li>
-      <li class="breadcrumb-item active">warningClear Command</li>
+          <li class="breadcrumb-item"><a href="../ModelingCommands.html">Modeling commands</a></li>
+      <li class="breadcrumb-item active">Miscellaneous(Misc) Commands</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/user/MiscCommands/warningClear.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user/ModelingCommands/MiscCommands.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -97,25 +110,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="warningclear-command">
-<span id="warningclear"></span><h1>warningClear Command<a class="headerlink" href="#warningclear-command" title="Permalink to this heading"></a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="warningClear">
-<span class="sig-name descname"><span class="pre">warningClear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#warningClear" title="Permalink to this definition"></a></dt>
-<dd><p>This command clears all recorded warnings from <strong>Warnings.wrn</strong> file.</p>
-<div class="admonition-example admonition">
-<p class="admonition-title">Example:</p>
-<p>The following demonstrates the use of the warningClear command.</p>
-<p><strong>Python Code</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">opensrane</span> <span class="k">as</span> <span class="nn">opr</span>
-
-<span class="n">opr</span><span class="o">.</span><span class="n">Misc</span><span class="o">.</span><span class="n">warningClear</span><span class="p">()</span>
-</pre></div>
+  <section id="miscellaneous-misc-commands">
+<span id="misccmd"></span><h1>Miscellaneous(Misc) Commands<a class="headerlink" href="#miscellaneous-misc-commands" title="Permalink to this heading"></a></h1>
+<p>There are some commands that users need them to control the <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> modeling procedure. in the following these commands are described.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="MiscCommands/wipe.html">wipe Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MiscCommands/wipeAnalysis.html">wipeAnalysis Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MiscCommands/warning.html">warning Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MiscCommands/warningClear.html">warningClear Command</a></li>
+</ul>
 </div>
-</div>
-</dd></dl>
-
-<p>Code Developed by: <strong>Bijan Sayyafzadeh</strong></p>
 </section>
 
 

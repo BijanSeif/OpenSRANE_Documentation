@@ -10,10 +10,18 @@ In this section, all the commands that should be used to make an |opr| model has
    
    |opr| mainly created from **Subpackages** that each subpackage is responsible for something different from other subpackages. Each subpackage contain commands of |opr| and in this each bundle of |opr| commands are separated from the others. So, in the following we see the subpackages name and inside each subpackage the |opr| commands are presented.
 
+
+.. toctree::
+   :caption: Indirect commands and concepts
+   :maxdepth: 2
+   
+   ModelingCommands/MiscCommands
+   ModelingCommands/Tags
+   
 .. toctree::
    :caption: Subpackages and their command/s
    :maxdepth: 2
-
+   
    ModelingCommands/hazard-spk
    ModelingCommands/DateAndTime-spk
    ModelingCommands/WindData-spk

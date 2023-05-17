@@ -20,12 +20,11 @@ This documentation is divided to two parts. In the first part (:ref:`Users Guide
 
    user/installation
    user/Systemofunits
-   user/Tags
-   user/MiscCommands
    user/ModelingStepsDiagram
    user/ModelingCommands
    user/Plot
    user/PostProcessing
+   user/Examples
 
 
 .. _Developers Guideline:

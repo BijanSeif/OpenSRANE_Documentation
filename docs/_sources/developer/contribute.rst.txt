@@ -10,7 +10,7 @@ To submit your code contribution (e.g. Material Model, Element) please submit pu
 
    .. warning::
    
-      * Attention that **setup.py** and **setup-Local.py** are located in **.gitignore** file, means that do not push any changes of these files to the main repository.
+      * Attention that **setup.py** and **setup-Local.py** changes should not be push to the main repository.
    
 Documentation
 ==============

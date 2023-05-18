@@ -50,6 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../user/ModelingCommands.html">Modeling commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../user/Plot.html">Plotting tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../user/PostProcessing.html">Post Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/Examples.html">Examples</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Developers Guideline</span></p>
 <ul class="current">
@@ -121,7 +122,7 @@
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><p>All local parameters of this module are data parameters and filled with arguments and no need to be reset at the beggining of each analysis, so they are not defined in the wipeAnalysis.</p></li>
+<li><p>All local parameters of this module are data parameters and filled with arguments and no need to be reset at the beginning of each analysis, so they are not defined in the wipeAnalysis.</p></li>
 <li><p><strong>DayDirectProbability</strong> and <strong>DayTheta</strong> and <strong>DayCalmn</strong> and also <strong>NightDirectProbability</strong> and <strong>NightTheta</strong> and <strong>NightCalmn</strong> are some internal parameters that describes the probability of wind blast in each direction and also return the directions angle and the probalility of the calm condition. These data are exported from user defined data described in <a class="reference internal" href="../../../user/ModelingCommands/WindData-SPK/WindRose.html#windrose"><span class="std std-ref">Page</span></a>. Using <strong>_CalcDirectionProbabilities</strong> method these internal parameters will be calculated.</p></li>
 </ul>
 </div></blockquote>
@@ -130,11 +131,11 @@
 <h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><ul>
-<li><p><strong>GetRandomWindِSample</strong> is a global method that described in the <a class="reference internal" href="../WindData-spk.html#winddataex"><span class="std std-ref">_GlobalParameters</span></a> of parent subpackage. In the current module this method filled with an algorithm that calculates and returns the Sampled wind data parameter according defined data described in <a class="reference internal" href="../../../user/ModelingCommands/WindData-SPK/WindRose.html#windrose"><span class="std std-ref">Page</span></a>. The following hypothesises are considered in this method:</p>
+<li><p><strong>GetRandomWindِSample</strong> is a global method that described in the <a class="reference internal" href="../WindData-spk.html#winddataex"><span class="std std-ref">_GlobalParameters</span></a> of parent subpackage. In the current module this method filled with an algorithm that calculates and returns the Sampled wind data parameter according defined data described in <a class="reference internal" href="../../../user/ModelingCommands/WindData-SPK/WindRose.html#windrose"><span class="std std-ref">Page</span></a>. The following hypothesists are considered in this method:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>If <a class="reference internal" href="../../../user/ModelingCommands/DateAndTime-SPK/DateTime.html#datetime"><span class="std std-ref">DateTime</span></a> object didn’t define, it returns an error and do not calculate sampling data.</p></li>
-<li><p>Using sampled Day condition it uses data ralted to day or night.</p></li>
+<li><p>Using sampled Day condition it uses data related to day or night.</p></li>
 <li><p>By sampling a random value between 0 and 1, calculates the other wind parameters and fill them as the response of the method.</p></li>
 </ul>
 </div></blockquote>

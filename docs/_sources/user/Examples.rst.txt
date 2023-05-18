@@ -9,8 +9,9 @@ In this section, several example script of |opr| model is shown.
 
 
 .. toctree::
-   :caption: Simple Exaples
+   :caption: Basic Examples
    :maxdepth: 1
    
-   Examples/SimpExam1
+   Examples/BasicExam1
+   Examples/BasicExam2
    

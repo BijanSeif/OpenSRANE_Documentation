@@ -105,7 +105,7 @@ OutFlowModel
 
    .. note::
       
-	  This class can not be called directly and it should be called from the object(like plant unit) that it was assigned to. Look at the follwing example.
+	  This class can not be called directly and it should be called from the object(like plant unit) that it was assigned to. Look at the following example.
 
    .. csv-table:: 
       :header: "Parameter", "Description"
@@ -135,7 +135,7 @@ DispersionSpreadModels
 
    .. note::
       
-	  This class can not be called directly and it should be called from the object(like plant unit) that it was assigned to. Look at the follwing example.
+	  This class can not be called directly and it should be called from the object(like plant unit) that it was assigned to. Look at the following example.
 
    .. csv-table:: 
       :header: "Parameter", "Description"
@@ -170,7 +170,7 @@ PhysicalEffect
 
    .. note::
       
-	  This class can not be called directly and it should be called from the object(like plant unit) that it was assigned to. Look at the follwing example.
+	  This class can not be called directly and it should be called from the object(like plant unit) that it was assigned to. Look at the following example.
 
    .. csv-table:: 
       :header: "Parameter", "Description"

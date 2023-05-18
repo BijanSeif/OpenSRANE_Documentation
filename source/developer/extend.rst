@@ -5,9 +5,9 @@ Extending Application
 *********************
 
 
-In this section, details of the |opr| framework architecture has been described and also details about each subpackage also has been reviewd. It is highly recommended that Developers before any develop, read the target subpackage structure from this section to get familiar with various part of the subpackage and then start to develop.
+In this section, details of the |opr| framework architecture has been described and also details about each subpackage also has been reviewed. It is highly recommended that Developers before any develop, read the target subpackage structure from this section to get familiar with various part of the subpackage and then start to develop.
 
-This section has been devided to the following parts.
+This section has been divided to the following parts.
 
 .. Archi parts:
 

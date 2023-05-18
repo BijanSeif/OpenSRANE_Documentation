@@ -26,12 +26,12 @@ The steps of creating a common model in |opr| has been shown in the following fi
 Linked Modeling Steps
 ---------------------
 
-In the following, the steps that showed in the :ref:`ModelStpFig` will be explain more and the related document page is linked for more convinient users access.
+In the following, the steps that showed in the :ref:`ModelStpFig` will be explain more and the related document page is linked for more convenient users access.
 
    * **Start**: 
       To start modeling it is highly recommended that using :ref:`wipe <wipe>` command clear all defined objects that may exist in the memory.
    * **Define Recorders**: 
-      To save the analysis results it is important that user using one of the existing recorders methods in :ref:`Recorders <Recorders>`, define the recorder/s objects and in this way the way of recording results will be specifiy for the software.
+      To save the analysis results it is important that user using one of the existing recorders methods in :ref:`Recorders <Recorders>`, define the recorder/s objects and in this way the way of recording results will be specif y for the software.
    * **Define Hazard**: 
       Usign :ref:`Hazard <hazSPK>` subpackage, user should define hazard curve for the software. Currently earthquake command exist and user could define seismic hazard curve for software.
    * **Define Date And Time**: 
@@ -43,19 +43,19 @@ In the following, the steps that showed in the :ref:`ModelStpFig` will be explai
    * **Define Substance/s**: 
       The material that fill plant units should be define using :ref:`Substance <Substance>`.
    * **Define Fragilities**: 
-      Usign :ref:`Fragility <Fragility>` command, user could define all plant units possible fragilities.
+      Using :ref:`Fragility <Fragility>` command, user could define all plant units possible fragilities.
    * **Define Probits**: 
-      To define vulnerability of plant units and also NodesGroup objects, Usign :ref:`Probit <Probit>` command, user could define the required probits.
+      To define vulnerability of plant units and also NodesGroup objects, Using :ref:`Probit <Probit>` command, user could define the required probits.
    * **Define OutFlow models**:
       Materials outflow from damaged plant units should be model using existing models or commands in the :ref:`OutFlowModel <OutFlowModel>` subpackage.
    * **Define Dispersion and spread models**: 
       To define the models related to dispersion and spread of outflowed materials, the :ref:`DispersionSpreadModels <DispersionSpreadModels>` subpackage has been provided. 
-   * **Define Phisycal effec models**: 
+   * **Define Physical effect models**: 
       The :ref:`PhysicalEffect <PhysicalEffect>` subpackge is responsible for defining physical effect models and using this subpackage user can define various physical effect models.
    * **Define Connectors**: 
-      The defined models like outflow models, DispersionSpread models and PhysicalEffect models should properly connect to related plant units. But it is not necessary to define them directly. Using :ref:`Connectors <Connectors>` subpackage user can connect mentioned models to each other with desired occurence probability.
+      The defined models like outflow models, DispersionSpread models and PhysicalEffect models should properly connect to related plant units. But it is not necessary to define them directly. Using :ref:`Connectors <Connectors>` subpackage user can connect mentioned models to each other with desired occurrence probability.
    * **Define Safety OBjects**: 
-      Safety Objects can be define using commands exist in :ref:`Safet <SafetySPK>` subpackage.
+      Safety Objects can be define using commands exist in :ref:`Safety <SafetySPK>` subpackage.
    * **Define Plant Units**:
       The final part of modeling is defining plant units using :ref:`PlantUnits <PlantUnits>` subpackage. Each command in this subpackage is related to a type of Plant unit.
    * **Analysis**: 
@@ -66,7 +66,7 @@ Other existing Subpackages
 
 There are some packages that using of them is not necessary, however they maybe become useful for completing the analysis. In the following they are explained and linked to their documentation page.
 
-   * **NodesGroup (Vulneable Objects)**:
+   * **NodesGroup (Vulnerable Objects)**:
    
    |
    
@@ -81,7 +81,7 @@ There are some packages that using of them is not necessary, however they maybe 
 	  
    *  **Objects or Elements data**: 
    
-         By refering or accessing to an element or object, various data can be read from them. The data that can be read from an object is described :ref:`This Page <SubGlobPara>`. For each object there are various data that can be read.
+         By referring or accessing to an element or object, various data can be read from them. The data that can be read from an object is described :ref:`This Page <SubGlobPara>`. For each object there are various data that can be read.
 	  
    *  **PostProcess Subpackage**:
    

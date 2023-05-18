@@ -15,7 +15,7 @@ LiquidSpread Command
       :widths: 10, 10, 40
 	  
       Tag, int, Unique integer value that will be used for referring to the defined elements or objects.
-	  MatTags, list of int, List of defined materials that user wants to consider this module for them as their behaviour.
+	  MatTags, list of int, List of defined materials that user wants to consider this module for them as their behavior.
 	  OutFlowModelTags, list of int, List of outflow models that this model can happen after happening them.
 	  MinDisThickness, list of float, "Minimum thickness of the liquid until it has not reached to the dike wall (if dike has been defined before). If user do not define any value for this parameter, it will be considered equal to 0.01 m."
 	  Surface_Roughnesslist, list of float, List of existing surfaces roughness’s.

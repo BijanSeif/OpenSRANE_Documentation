@@ -15,8 +15,8 @@ Parameters
 Methods
 -------
 
-   * The methods in this module are as the name of some existing materials. Each method will be created only by entering a unique tag for it and the mothod creates a :ref:`Material <MaterialEx>` object and fill the properties of the material with defined values. 
-   * Developers simply can add any new material similar existing smples in `This module <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/Substance/DataBank.py>`_.
+   * The methods in this module are as the name of some existing materials. Each method will be created only by entering a unique tag for it and the method creates a :ref:`Material <MaterialEx>` object and fill the properties of the material with defined values. 
+   * Developers simply can add any new material similar existing samples in `This module <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/Substance/DataBank.py>`_.
    
 	  
 	  

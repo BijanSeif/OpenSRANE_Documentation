@@ -10,7 +10,7 @@ Main Goal Of this Subpackage
 
    The main goals of this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Hazard>`_ are:
    
-      * Getting the natural hazard probabilistic data (Magnitude and probability of occurence each magnitude)
+      * Getting the natural hazard probabilistic data (Magnitude and probability of occurrence each magnitude)
       * Returning magnitude corresponding to random created samples between zero and 1
 	  
 	  
@@ -31,7 +31,7 @@ _GlobalParameters
          :widths: 10, 10, 40
 	     
 		 SampleRandomMagnitude, rnd [1]_, It shows that each class(in the module) should have this method for returning the magnitude corresponding the entered random variable.
-	     wipeAnalysisGlobal, "---", Shows the global parameters that should be initialize and the begining of each analysis as decribed :ref:`here <FrameworkGLBP>`.
+	     wipeAnalysisGlobal, "---", Shows the global parameters that should be initialize and the beginning of each analysis as described :ref:`here <FrameworkGLBP>`.
 		 
 		 
    .. [1] rnd: Is an argument for getting random variable.
@@ -39,7 +39,7 @@ _GlobalParameters
 Existing modules
 ----------------
    
-   In the followin the existing modules for this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Hazard>`_ are described:
+   In the following the existing modules for this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Hazard>`_ are described:
    
    .. toctree::
       :maxdepth: 1

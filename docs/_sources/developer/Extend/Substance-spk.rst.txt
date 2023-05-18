@@ -24,7 +24,7 @@ _GlobalParameters
 Existing modules
 ----------------
    
-   In the followin the existing modules for this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Substance>`_ are described:
+   In the following the existing modules for this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Substance>`_ are described:
    
    .. toctree::
       :maxdepth: 1

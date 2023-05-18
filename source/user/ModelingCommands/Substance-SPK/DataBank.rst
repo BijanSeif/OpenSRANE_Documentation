@@ -16,7 +16,7 @@ DataBank Command
 
    .. note::
    
-      * DataBank command has saved materials in its self. To call one of the saved materials, by putting a "." sign after DataBank command, list of the predefined materials will be appear (Some editors may not show). Then user should enter the tag number of the selected material in pranthesis just after the selected material.
+      * DataBank command has saved materials in its self. To call one of the saved materials, by putting a "." sign after DataBank command, list of the predefined materials will be appear (Some editors may not show). Then user should enter the tag number of the selected material in parenthesis just after the selected material.
 	  
       * After selecting the material, it is also possible to define or modify some properties of selected material. This case is also shown in the following example part. List of existing materials in the DataBank are mentioned in the following list.
    

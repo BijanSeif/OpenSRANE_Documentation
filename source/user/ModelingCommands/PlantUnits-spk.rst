@@ -3,7 +3,7 @@
 PlantUnits Subpackage
 *********************
 
-Very Important subpackage that is responsible to define the plant unit objects and assign their properties and defined related objects to them. The availabel commands of this subpackage are described in the following:
+Very Important subpackage that is responsible to define the plant unit objects and assign their properties and defined related objects to them. The available commands of this subpackage are described in the following:
  
 
 .. toctree::

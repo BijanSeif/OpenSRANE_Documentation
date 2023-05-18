@@ -50,6 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../user/ModelingCommands.html">Modeling commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../user/Plot.html">Plotting tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../user/PostProcessing.html">Post Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/Examples.html">Examples</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Developers Guideline</span></p>
 <ul class="current">
@@ -121,8 +122,8 @@
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><p>All local <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/DateAndTime/DateTime.py#L45">parameters</a> of this module are data parameters and filled with arguments and no need to be reset at the beggining of each analysis, so they are not defined in the wipeAnalysis.</p></li>
-<li><p>The SampledisDay parameter is a global parameter that stores the sampled time of day as a boolean that True means it is day. It is located in <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/DateAndTime/DateTime.py#L59">wipeAnalysis</a>  and by beginig of each analysis it will be reset and initialize.</p></li>
+<li><p>All local <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/DateAndTime/DateTime.py#L45">parameters</a> of this module are data parameters and filled with arguments and no need to be reset at the beginning of each analysis, so they are not defined in the wipeAnalysis.</p></li>
+<li><p>The SampledisDay parameter is a global parameter that stores the sampled time of day as a boolean that True means it is day. It is located in <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/DateAndTime/DateTime.py#L59">wipeAnalysis</a>  and by beginning of each analysis it will be reset and initialize.</p></li>
 </ul>
 </div></blockquote>
 </section>
@@ -130,7 +131,7 @@
 <h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><p><a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/DateAndTime/DateTime.py#L64">SampleisDay</a> is a  method that using defined data, determnines if it is day or not and stores result in SampledisDay parameter. It creates a random value between zero and one and then regarding the defined day to night ratio, determines if it is day or not.</p></li>
+<li><p><a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/DateAndTime/DateTime.py#L64">SampleisDay</a> is a  method that using defined data, determines if it is day or not and stores result in SampledisDay parameter. It creates a random value between zero and one and then regarding the defined day to night ratio, determines if it is day or not.</p></li>
 </ul>
 </div></blockquote>
 </section>

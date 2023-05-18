@@ -18,7 +18,7 @@ GasGaussian Command
 	  MatTags, list of int, List of defined materials that user wants to consider this module for them as their behavior.
 	  OutFlowModelTags, list of int, List of outflow models that can can cause this type of dispersion.
 	  OutFlowHeight, float, Hight that gas is outflowing.
-	  GasConstant, float, List of existing surfaces roughness’s.
+	  GasConstant, float, List of existing surfaces roughness`s.
 	  GasDispersionXSegments, int, number of segments that are considered to calculate the dispersion and also dispersed mass of gas.
       GasDisperstionErrorPercent, float, Error percentage for numerical calculations.
 

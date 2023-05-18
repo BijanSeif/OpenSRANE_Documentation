@@ -4,7 +4,7 @@ Fragilities Subpackage
 **********************
 
 Fragilities and Probits models are defined using this part. Because same nature of these models, they are considered in a subpackage. 
-The availabel commands of this subpackage are described in the following:
+The available commands of this subpackage are described in the following:
  
 
 .. toctree::

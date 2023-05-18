@@ -88,6 +88,39 @@
              
   <section id="building-application">
 <span id="build"></span><h1>Building Application<a class="headerlink" href="#building-application" title="Permalink to this heading"></a></h1>
+<blockquote>
+<div><p>After providing the source code on your local machine (<a class="reference internal" href="sourceCode.html#sourcecode"><span class="std std-ref">source</span></a>), using following commands the build process is somewhat simple!</p>
+<ul>
+<li><p>First check if an existing version of <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> exist in the installed packages, remove it (using command prompt for windows).</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Remove the existing <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> package from local machine</span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip uninstall OpenSRANE</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>To install the forked <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> on you local machine, go to the <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> folder and delete <strong>setup.py</strong> and rename the <strong>setup-Local.py</strong> to <strong>setup.py</strong>.</p></li>
+<li><p>Go to the <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> folder that <strong>setup.py</strong> exist and using command prompt for windows run the following command.</p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Installing <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> package from local machine</span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">pip install -e .</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p>Now <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> has been installed on your local machine and any changes in the source code will be directly implement on <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a>.</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Attention that <strong>setup.py</strong> and <strong>setup-Local.py</strong> are located in <strong>.gitignore</strong> file, means that do not push any changes of these files to the main repository.</p></li>
+</ul>
+</div>
 </section>
 
 

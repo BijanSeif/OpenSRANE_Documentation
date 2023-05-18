@@ -7,7 +7,7 @@ Installation
 Install Python
 --------------
 
-   Install  Python from python.org (version: 3.9x)
+   Install  Python from `python.org <https://www.python.org/>`_ (version: 3.9x)
 
 Install OpenSRANE
 -----------------
@@ -27,7 +27,11 @@ Install OpenSRANE
    .. note::
       
       For other systems (Mac, Linux …) using corresponding commands for installing Python packages users can install the package.
-   
+
+Editor
+----------------
+
+   Users can use any editor for writing Python codes. However, it is highly recommonded to use `Visual Studio Code <https://code.visualstudio.com/Download>`_ as the main editor of your scripts.
 
 Import OpenSRANE
 ----------------

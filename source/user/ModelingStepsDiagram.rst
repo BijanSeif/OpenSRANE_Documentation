@@ -17,6 +17,11 @@ The steps of creating a common model in |opr| has been shown in the following fi
 .. note::
    for a complete modelling user should pass the steps shown above to finish the model. For each step user can uses Python coding commands and features (loops commands, dictionaries, lists …) to make modeling more convenient and it depends on the user. But before start of the analysis, the required objects shown in the following path should be defined.
 
+.. warning::
+
+   To **know and use** the commands in a programming language in order to develop an application (**coding**) is one thing. To **program** in a language is something different. **Programming** involves creativity and thinking at a higher level, thinking in terms of problem solving, what are the abstractions and algorithms that can be employed to solve the problem. Programmers finally use code to express their thoughts of how to solve the problem. All programmers are coders. Most coders are **NOT** programmers. To utilize the OpenSees interpreters effectively **YOU WANT TO BECOME A PROGRAMMER**.
+   
+   This warning has been hired from `OpenSees Documentation <https://opensees.github.io/OpenSeesDocumentation/user/interpreters.html>`_ page. |opr| users also should pay attention to this warning before using |opr|.
 
 Linked Modeling Steps
 ---------------------

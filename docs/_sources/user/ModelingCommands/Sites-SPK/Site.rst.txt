@@ -12,7 +12,7 @@ Site Command
       :widths: 10, 10, 40
    
       Tag, int, Unique integer value that will be used for referring to the defined elements or objects.
-	  Temprature, float, Specifies site atmosphere temperature
+	  Temperature, float, Specifies site atmosphere temperature
 	  Pressure, float, Specifies site atmosphere pressure.
 	  g, float, Earth gravity acceleration. 
 	  OngroundTemprature, float, Specifies the site onground temperature.

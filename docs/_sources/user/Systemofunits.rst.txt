@@ -4,7 +4,7 @@
 System of units
 ***************
 
-|opr| units is according **SI** and users should enter any value in any part of the code according SI unit’s system. Some of the units are mentioned in the following table:
+|opr| units is according **SI** and users should enter any value in any part of the code according SI unit`s system. Some of the units are mentioned in the following table:
 
 .. csv-table:: 
    :header: "Quantity name", "Unit name", "Unit symbol"

@@ -8,14 +8,14 @@ Using this subpackage, user can export some specific data or results from the re
 
 .. note::
 
-   Using the results in the form of this section for post processing is not mandatory and users can use their own code on the resulted values from analysis of the software. Also, users can develope the current module for post proccessing or add their modules to the source code for futher usages. 
+   Using the results in the form of this section for post processing is not mandatory and users can use their own code on the resulted values from analysis of the software. Also, users can develope the current module for post processing or add their modules to the source code for further usages. 
    
 .. _First Step:
 
 First Step: Load Data
 ---------------------
    
-   At very fist step, user should load data and get the results dictionary. For :ref:`Objs_recorder <Objsrecorder>` and :ref:`Recorder <Recorder>` there are a specific command to load data and get the resutls. These commands are described in the following:
+   At very fist step, user should load data and get the results dictionary. For :ref:`Objs_recorder <Objsrecorder>` and :ref:`Recorder <Recorder>` there are a specific command to load data and get the results. These commands are described in the following:
    
    * To load recorded data via :ref:`Objs_recorder <Objsrecorder>` use the following command. In this command **filename** is the name of recoded file using :ref:`Objs_recorder <Objsrecorder>` recorder. All the statistical analysis and data will be store in **Results** variable that shown in the following sample.
    
@@ -358,7 +358,7 @@ Second Step: Results keys
 PostProcess Plots (PlotPP)
 --------------------------
    
-   By the following commands it is possible to plot some data using PostProcess resutls. The **Results** variable in the followign commands is the variable that calculated in the :ref:`First Step`. 
+   By the following commands it is possible to plot some data using PostProcess results. The **Results** variable in the following commands is the variable that calculated in the :ref:`First Step`. 
    
    
    

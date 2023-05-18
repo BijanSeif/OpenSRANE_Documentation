@@ -12,7 +12,7 @@ PlotHazard
       :header: "Argument", "Type", "Description"
       :widths: 10, 10, 40
 	  
-	  PlotMode, int, "Options with values equal to 1,2 or 3 to change the plot mode. For variou Editors with one on these option plot will be activate!"
+	  PlotMode, int, "Options with values equal to 1,2 or 3 to change the plot mode. For various Editors with one on these option plot will be activate!"
 	  
    .. admonition:: Example:
    

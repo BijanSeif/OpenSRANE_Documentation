@@ -1,12 +1,12 @@
-.. _SimpExamp1:
+.. _BasicExam2:
 
 *************************************
-Simple Example 1. (2 Symmetric Tanks) 
+Basic Example 2. (2 Close Tanks) 
 *************************************
 
-In this example, 2 Symmetric Tanks are considered. Because of the symmetry of the model, it is expected that resulted scenarios become compatible with each other and results also become symmetric.
+This example is Same Basic example 1, but tanks are close to each other and domino effects are also included and again because of symmetric of the model we expect that results also be symmetric.
 
-In this example data are recorded by recorder Object not with Objs_recorder. Also the code completey can be downloaded from :download:`here <files/Simple Example1.ipynb>` in the Jupyter Notebook format.
+Data are recorded by Objs_recorder. Also the code completely can be downloaded from :download:`here <files/Basic Example2.ipynb>` in the Jupyter Notebook format.
 
 
 Import required packages
@@ -29,8 +29,7 @@ Initialize the model and define reorder
       opr.wipe()
       
       #Define the recorder
-      opr.Recorders.recorder(tag=1, filename='Recorder_ex1', fileAppend=False, recordfield='DamageLevel',)
-      
+      opr.Recorders.Objs_recorder(tag=1,filename='Recorder_ex2',SaveStep=5000, fileAppend=False)
       
       #Clear Warning File content
       opr.Misc.warningClear()
@@ -120,7 +119,7 @@ Define Outflow, Dispersion and physical effect models
       opr.OutFlowModel.TankHole(tag, Hole_Diameter=0.05, Hole_Height_FromBot=0, delta_t=500, Cd=1)
       opr.OutFlowModel.SimultaniousLiquid(2)
       
-      #Define Dispesion Spread Models and their connections to the materials and outflows
+      #Define Dispersion Spread Models and their connections to the materials and outflows
       opr.DispersionSpreadModels.LiquidSpread(tag=1, MatTags=[1], OutFlowModelTags=[1,2],MinDisThickness=0.005,)
       
       #Define Physical Effect models
@@ -172,7 +171,7 @@ Define Safety dike and plant units
                                 radiation_probit_tag=Radiation,)
       
       opr.PlantUnits.ONGStorage(tag=2, SiteTag=1, DikeTag=1, SubstanceTag=1, FragilityTagNumbers=[1,2], 
-                                Horizontal_localPosition=40, Vertical_localPosition=0,
+                                Horizontal_localPosition=25, Vertical_localPosition=0,
                                 Surface_Roughness=0.0001, Pressure=1.1*10**5, Temperature=25+273,
                                 SubstanceVolumeRatio=0.8, Diameter=10, Height=10, GroundTemperature=25+273,
                                 radiation_probit_tag=Radiation,)
@@ -180,12 +179,12 @@ Define Safety dike and plant units
 Define Analysis
 *******************************************************************
 
-   By finishing the modeling, Using analysis command the number or analysis and type of analysis specified for model. In this model it is considered to do analysis for 10000 times. MultiAnalysis type considered for analysis and this type implement multiple analysis using only one cpu.
+   By finishing the modeling, Using analysis command the number or analysis and type of analysis specified for model. In this model it is considered to do analysis for 40000 times. MultiAnalysis type considered for analysis and this type implement multiple analysis using only one cpu.
    
    .. code-block:: python
       
       #Analysis
-      opr.Analyze.ScenarioAnalyze.MultiAnalysis(AnalysisNumber=10_000)
+      opr.Analyze.ScenarioAnalyze.MultiAnalysis(AnalysisNumber=40_000)
 	  
 	  
 Post Processing
@@ -196,14 +195,13 @@ Post Processing
    .. code-block:: python
       
       #Post Process
-      Results=opr.PostProcess.RecorderPP.Analyze(['Recorder_ex1.OPRrec'])
+      Results=opr.PostProcess.ObjsRecorderPP.Analyze('Recorder_ex2')
       
       DM0Scen=Results['Damagelevel_Scenario_Dict'][0]
       ScenProb=Results['ScenariosProbability']
       print('\n\n','Recorder Scenarios in Damage level 0 =',DM0Scen,'\n')
       
       for Scenario in DM0Scen:
-	  
           print(f'Probability of Scenario {Scenario} is equal: {ScenProb[Scenario]}')
 		  
 		  

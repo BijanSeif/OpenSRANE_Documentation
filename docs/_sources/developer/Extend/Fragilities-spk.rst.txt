@@ -10,7 +10,7 @@ Main Goal Of this Subpackage
    The main goals of this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Fragilities>`_ are:
 
       * Getting the Fragilities and Probits data from the user (Get the probability of fragile, collapse, vulnerability or any type of damage under a magnitude value of external excitation).
-      * Retruning probability value corresponding to entered damage magnitude.
+      * Returning probability value corresponding to entered damage magnitude.
 	  
 	  
 _GlobalParameters
@@ -30,7 +30,7 @@ _GlobalParameters
          :widths: 10, 10, 40
 	     
 		 GetProbability, RandomVariable [1]_, It returns the probability value of fragility or probit corresponding to entered RandomVariable.
-	     wipeAnalysisGlobal, "---", Shows the global parameters that should be initialize and the begining of each analysis as decribed :ref:`here <FrameworkGLBP>`.
+	     wipeAnalysisGlobal, "---", Shows the global parameters that should be initialize and the beginning of each analysis as described :ref:`here <FrameworkGLBP>`.
 		 
 		 
    .. [1] RandomVariable: Is the magnitude of damage source.
@@ -38,7 +38,7 @@ _GlobalParameters
 Existing modules
 ----------------
    
-   In the followin the existing modules for this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Fragilities>`_ are described:
+   In the following the existing modules for this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Fragilities>`_ are described:
    
    .. toctree::
       :maxdepth: 1

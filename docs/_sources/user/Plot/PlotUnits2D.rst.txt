@@ -18,7 +18,7 @@ PlotUnits2D
       :header: "Argument", "Type", "Description"
       :widths: 10, 10, 40
 	  
-	  PlotMode, int, "Options with values equal to 1,2 or 3 to change the plot mode. For variou Editors with one on these option plot will be activate!"
+	  PlotMode, int, "Options with values equal to 1,2 or 3 to change the plot mode. For various Editors with one on these option plot will be activate!"
 	  OverPressureList, list of float, list of overpressure values that user wants to be shown on plot and they will be calculated in OverPressureHeight height with OverPressurePointNumber points in boundary.
 	  OverPressureHeight, float, The height that calculations be done for OverPressure. 
 	  OverPressurePointNumber, int, Number or boundary points. 
@@ -49,7 +49,7 @@ PlotUnits2D
 
       | 
 	  
-      Results for sceond model: (**Zoom and click on legends to make them active and watch more details**)
+      Results for second model: (**Zoom and click on legends to make them active and watch more details**)
 	  
       .. raw:: html
           :file: figures/PlotUnits2D2.html		

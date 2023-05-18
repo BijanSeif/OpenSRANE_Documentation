@@ -13,7 +13,7 @@ PlotIndividualRisk
       :header: "Argument", "Type", "Description"
       :widths: 10, 10, 40
 	  
-	  PlotMode, int, "Options with values equal to 1,2 or 3 to change the plot mode. For variou Editors with one on these option plot will be activate!"
+	  PlotMode, int, "Options with values equal to 1,2 or 3 to change the plot mode. For various Editors with one on these option plot will be activate!"
 	  NodesGroupTag, int, The tag of NodesGroup that user want to be shown on plot. 
 	  NodesProbabilityList, list of float, "the probability values that has been resulted from analysis and the specify the death probability of each node (Obviously its length should be equal to the number of the NodesGroupTag nodes. "
 	  ContorList, list of float, "The list of the minimum and maximum contour value that we want to be plot. If user do not fill it, the code automatically consider the range according the minimum and maximum values of NodesProbabilityList."

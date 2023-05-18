@@ -8,7 +8,7 @@ Connectors are used to connect some models to their following models with a prob
 .. note::
    **Important Point**: Users should attention that defined tags for all objects or models of this subpackage should be unique. For example, if user defined DS_LOC connectors with tags 1 and 2 then to define Out_Physic connectors, the tags should be continued from 3.
 
-The availabel commands of this subpackage are described in the following:
+The available commands of this subpackage are described in the following:
  
 
 .. toctree::

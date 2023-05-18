@@ -27,7 +27,7 @@ _GlobalParameters
 		 `WindDirection <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/WindData/_GlobalParameters.py#L47>`_, It shows that each class(in the module) should store the sampled WindDirection in each analysis in this parameter.
 		 `WindSpeed <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/WindData/_GlobalParameters.py#L48>`_, It shows that each class(in the module) should store the sampled WindSpeed in each analysis in this parameter.
 		 `AlphaCOEF <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/WindData/_GlobalParameters.py#L49>`_, It shows that each class(in the module) should store the sampled AlphaCOEF in each analysis in this parameter.
-		 `isCalmn <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/WindData/_GlobalParameters.py#L50>`_, It shows that each class(in the module) should store the sampled Calmn condition in each analysis in this parameter.
+		 `isCalmn <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/WindData/_GlobalParameters.py#L50>`_, It shows that each class(in the module) should store the sampled Calm condition in each analysis in this parameter.
 		 
 		 
       .. csv-table:: 
@@ -35,13 +35,13 @@ _GlobalParameters
          :widths: 10, 10, 40
 	     
 		 `GetRandomWindِSample <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/WindData/_GlobalParameters.py#LL57C9-L57C29>`_, "---", It shows that each class(in the module) should have this method for returning the sampled wind data in the parameters that are defined in previous table.
-	     `wipeAnalysisGlobal <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/WindData/_GlobalParameters.py#LL44C9-L44C27>`_, "---", Shows the global parameters that should be initialize and the begining of each analysis as decribed :ref:`here <FrameworkGLBP>`.
+	     `wipeAnalysisGlobal <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/WindData/_GlobalParameters.py#LL44C9-L44C27>`_, "---", Shows the global parameters that should be initialize and the beginning of each analysis as described :ref:`here <FrameworkGLBP>`.
 		 
 		 
 Existing modules
 ----------------
    
-   In the followin the existing modules for this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/WindData>`_ are described:
+   In the following the existing modules for this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/WindData>`_ are described:
    
    .. toctree::
       :maxdepth: 1

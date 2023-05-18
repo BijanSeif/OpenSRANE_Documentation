@@ -12,7 +12,7 @@ Install Python
 Install OpenSRANE
 -----------------
 
-   OpenSRANE developed as a package on Python programmin environment. it has published on PyPI and users can install this package using following command for windows:
+   OpenSRANE developed as a package on Python programming environment. it has published on PyPI and users can install this package using following command for windows:
    
    .. code-block:: python
       
@@ -31,7 +31,7 @@ Install OpenSRANE
 Editor
 ----------------
 
-   Users can use any editor for writing Python codes. However, it is highly recommonded to use `Visual Studio Code <https://code.visualstudio.com/Download>`_ as the main editor of your scripts.
+   Users can use any editor for writing Python codes. However, it is highly recommended to use `Visual Studio Code <https://code.visualstudio.com/Download>`_ as the main editor of your scripts.
 
 Import OpenSRANE
 ----------------

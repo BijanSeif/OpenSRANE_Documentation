@@ -19,7 +19,7 @@ loadScenarioBank SUBCOMMAND
 
    .. function:: Recorders.Objs_recorder_loader.loadScenarioBank(filename)
    
-      This command loads all recorder scenarios using :ref:`Objs_recorder <Objsrecorder>` in to the system memory. User can send all recorded scenarios (ScenarioBank) to the memory and call them faster. It is obvious that weak systems with low memory capcity, this method may encounter with system hanging. Also, it returns all scenarios as a dictionary that keys are the number of the simulation.
+      This command loads all recorder scenarios using :ref:`Objs_recorder <Objsrecorder>` in to the system memory. User can send all recorded scenarios (ScenarioBank) to the memory and call them faster. It is obvious that weak systems with low memory capacity, this method may encounter with system hanging. Also, it returns all scenarios as a dictionary that keys are the number of the simulation.
    
       .. csv-table:: 
          :header: "Argument", "Type", "Description"
@@ -33,7 +33,7 @@ load1ScenarioOfBank SUBCOMMAND
 
    .. function:: opr.Recorders.Objs_recorder_loader.load1ScenarioOfBank(ScenarioTag)
    
-      By defining the file name to previous command (loadScenarioBank), all the recorded scenarios with all their objects will be load in the memory. **After loading the scnario bank using loadScenarioBank**, Using this command, user can load a scenario into the memory. **By loading a scenario into the memory, it is ready to be investigated and ready to plot and also all anlysis results are accessable**.
+      By defining the file name to previous command (loadScenarioBank), all the recorded scenarios with all their objects will be load in the memory. **After loading the scenario bank using loadScenarioBank**, Using this command, user can load a scenario into the memory. **By loading a scenario into the memory, it is ready to be investigated and ready to plot and also all analysis results are accessible**.
    
       .. csv-table:: 
          :header: "Argument", "Type", "Description"

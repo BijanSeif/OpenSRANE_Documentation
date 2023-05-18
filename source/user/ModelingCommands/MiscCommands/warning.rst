@@ -28,10 +28,10 @@ warning Command
 
 .. note::
 
-   There are some **internal warning** that shows model problem or lack of data. So, by start of the analysis, even user didn't define any warning inside the model, if code encounter with problems the warning alarm will be apear.
+   There are some **internal warning** that shows model problem or lack of data. So, by start of the analysis, even user didn't define any warning inside the model, if code encounter with problems the warning alarm will be appear.
    
 .. warning::
 
-	It is highly recommonded that user solve the problems mentioned in the warning file and provide a model without **internal warnings**.
+	It is highly recommended that user solve the problems mentioned in the warning file and provide a model without **internal warnings**.
 
 Code Developed by: |bsz|

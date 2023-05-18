@@ -15,7 +15,7 @@ PlotProbits
       StdNumber, int, The number of the standard deviation that will be consider for each fragility to plot in this range
 	  NPoints, int, The number of the points that will be consider for each fragility 
 	  ProbitTag, int, the tag of a special defined probit to plot and in nothing enter all probits will be plotted.
-	  PlotMode, int, "Options with values equal to 1,2 or 3 to change the plot mode. For variou Editors with one on these option plot will be activate!"
+	  PlotMode, int, "Options with values equal to 1,2 or 3 to change the plot mode. For various Editors with one on these option plot will be activate!"
 	  
    .. admonition:: Example:
    

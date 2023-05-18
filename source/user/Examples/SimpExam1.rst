@@ -25,7 +25,7 @@ Initialize the model and define reorder
    
    .. code-block:: python
       
-	  #Wipe the model to clear any created object if it is created before
+      #Wipe the model to clear any created object if it is created before
       opr.wipe()
       
       #Define the recorder
@@ -41,7 +41,7 @@ Define Hazard Curve and DateTime object and wind Data and Site data
 
    .. code-block:: python
       
-	  #define Hazard Curve
+      #define Hazard Curve
       PGA=[1.4, 1.29984,1.27091,1.24865,1.22194,1.20191,1.17297,1.13959,1.11065,1.08172, 
            1.05501,1.03275,0.994913,0.961526,0.92814,0.899205,0.872496,0.843561,0.816852, 
            0.790143,0.761208,0.732273,0.696661,0.667727,0.636566,0.609857,0.589825,0.569793, 
@@ -95,7 +95,7 @@ Define Materials and Fragilities and Probits
 
    .. code-block:: python
       
-	  #Define Substances
+      #Define Substances
       opr.Substance.DataBank.Butene(1) #Use DataBank to Load Material
       opr.Substance.ObjManager[1].Specific_Heat_of_Combustion=45.334*10**6
       
@@ -115,7 +115,7 @@ Define Outflow, Dispersion and physical effect models
    
    .. code-block:: python
       
-	  #Define Outflow Models
+      #Define Outflow Models
       tag=1
       opr.OutFlowModel.TankHole(tag, Hole_Diameter=0.05, Hole_Height_FromBot=0, delta_t=500, Cd=1)
       opr.OutFlowModel.SimultaniousLiquid(2)
@@ -143,7 +143,7 @@ Define connectors to connect models to each other
    
    .. code-block:: python
       
-	  #Define the DS_LOC for each Fragility
+      #Define the DS_LOC for each Fragility
       opr.Connectors.DS_LOC(1,FragilityTag=1,OutFlowModelTagList=[2],LOCProbabilityList=[1])
       opr.Connectors.DS_LOC(2,FragilityTag=2,OutFlowModelTagList=[1],LOCProbabilityList=[1])
 	  
@@ -161,7 +161,7 @@ Define Safety dike and plant units
 
    .. code-block:: python
       
-	  #Define Dike Object
+      #Define Dike Object
       opr.Safety.Dike(1,2,30**2)
       
       #Define Plant Units
@@ -184,7 +184,7 @@ Define Analysis
    
    .. code-block:: python
       
-	  #Unit Analysis
+      #Analysis
       opr.Analyze.ScenarioAnalyze.MultiAnalysis(AnalysisNumber=10_000)
 	  
 	  
@@ -195,7 +195,7 @@ Post Processing
    
    .. code-block:: python
       
-	  #Post Process
+      #Post Process
       Results=opr.PostProcess.RecorderPP.Analyze(['Recorder_ex1.OPRrec'])
       
       DM0Scen=Results['Damagelevel_Scenario_Dict'][0]
@@ -203,8 +203,9 @@ Post Processing
       print('\n\n','Recorder Scenarios in Damage level 0 =',DM0Scen,'\n')
       
       for Scenario in DM0Scen:
+	  
           print(f'Probability of Scenario {Scenario} is equal: {ScenProb[Scenario]}')
 		  
 		  
 		  
-Exmple by: |bsz|
+Example by: |bsz|

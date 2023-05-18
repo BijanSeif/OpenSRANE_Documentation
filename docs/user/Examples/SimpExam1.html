@@ -117,7 +117,7 @@
 <section id="initialize-the-model-and-define-reorder">
 <h2>Initialize the model and define reorder<a class="headerlink" href="#initialize-the-model-and-define-reorder" title="Permalink to this heading"></a></h2>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1">#Wipe the model to clear any created object if it is created before</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Wipe the model to clear any created object if it is created before</span>
 <span class="n">opr</span><span class="o">.</span><span class="n">wipe</span><span class="p">()</span>
 
 <span class="c1">#Define the recorder</span>
@@ -133,7 +133,7 @@
 <section id="define-hazard-curve-and-datetime-object-and-wind-data-and-site-data">
 <h2>Define Hazard Curve and DateTime object and wind Data and Site data<a class="headerlink" href="#define-hazard-curve-and-datetime-object-and-wind-data-and-site-data" title="Permalink to this heading"></a></h2>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1">#define Hazard Curve</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#define Hazard Curve</span>
 <span class="n">PGA</span><span class="o">=</span><span class="p">[</span><span class="mf">1.4</span><span class="p">,</span> <span class="mf">1.29984</span><span class="p">,</span><span class="mf">1.27091</span><span class="p">,</span><span class="mf">1.24865</span><span class="p">,</span><span class="mf">1.22194</span><span class="p">,</span><span class="mf">1.20191</span><span class="p">,</span><span class="mf">1.17297</span><span class="p">,</span><span class="mf">1.13959</span><span class="p">,</span><span class="mf">1.11065</span><span class="p">,</span><span class="mf">1.08172</span><span class="p">,</span>
      <span class="mf">1.05501</span><span class="p">,</span><span class="mf">1.03275</span><span class="p">,</span><span class="mf">0.994913</span><span class="p">,</span><span class="mf">0.961526</span><span class="p">,</span><span class="mf">0.92814</span><span class="p">,</span><span class="mf">0.899205</span><span class="p">,</span><span class="mf">0.872496</span><span class="p">,</span><span class="mf">0.843561</span><span class="p">,</span><span class="mf">0.816852</span><span class="p">,</span>
      <span class="mf">0.790143</span><span class="p">,</span><span class="mf">0.761208</span><span class="p">,</span><span class="mf">0.732273</span><span class="p">,</span><span class="mf">0.696661</span><span class="p">,</span><span class="mf">0.667727</span><span class="p">,</span><span class="mf">0.636566</span><span class="p">,</span><span class="mf">0.609857</span><span class="p">,</span><span class="mf">0.589825</span><span class="p">,</span><span class="mf">0.569793</span><span class="p">,</span>
@@ -186,7 +186,7 @@
 <h2>Define Materials and Fragilities and Probits<a class="headerlink" href="#define-materials-and-fragilities-and-probits" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p>Butene considered as tank content. A new value considered for the specific heat of combustion of this material, so the considered value of defined object modified after the definition. Only, pool fire event considered for this model, so only a probit for considering the vulnerability under radiation of tanks defined.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1">#Define Substances</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Define Substances</span>
 <span class="n">opr</span><span class="o">.</span><span class="n">Substance</span><span class="o">.</span><span class="n">DataBank</span><span class="o">.</span><span class="n">Butene</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#Use DataBank to Load Material</span>
 <span class="n">opr</span><span class="o">.</span><span class="n">Substance</span><span class="o">.</span><span class="n">ObjManager</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">Specific_Heat_of_Combustion</span><span class="o">=</span><span class="mf">45.334</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span>
 
@@ -205,7 +205,7 @@
 <h2>Define Outflow, Dispersion and physical effect models<a class="headerlink" href="#define-outflow-dispersion-and-physical-effect-models" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p>Two different outflow model considered. Also, for all considered outflow models just one dispersion model defined. And fire point source model defined for physical events.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1">#Define Outflow Models</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Define Outflow Models</span>
 <span class="n">tag</span><span class="o">=</span><span class="mi">1</span>
 <span class="n">opr</span><span class="o">.</span><span class="n">OutFlowModel</span><span class="o">.</span><span class="n">TankHole</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">Hole_Diameter</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">Hole_Height_FromBot</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delta_t</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">Cd</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">opr</span><span class="o">.</span><span class="n">OutFlowModel</span><span class="o">.</span><span class="n">SimultaniousLiquid</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -234,7 +234,7 @@
 <blockquote>
 <div><p>Finally for any units that damaged under because probit tag equal to 3 (Radiation was equal to 3) outflow model with tags 1 or 2 will be consider for them with equal probability. The probability of of seleccting outflowmodel 1 or 2 is equal because the defined weight for them is similar (LOCProbabilityList=[1,1]).</p>
 </div></blockquote>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1">#Define the DS_LOC for each Fragility</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Define the DS_LOC for each Fragility</span>
 <span class="n">opr</span><span class="o">.</span><span class="n">Connectors</span><span class="o">.</span><span class="n">DS_LOC</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">FragilityTag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">OutFlowModelTagList</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">LOCProbabilityList</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">opr</span><span class="o">.</span><span class="n">Connectors</span><span class="o">.</span><span class="n">DS_LOC</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">FragilityTag</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">OutFlowModelTagList</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">LOCProbabilityList</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 
@@ -252,7 +252,7 @@
 <h2>Define Safety dike and plant units<a class="headerlink" href="#define-safety-dike-and-plant-units" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p>Plant units defined and its properties according defined models tag specified for them. The Fragility tag and vulnerability probit and their location and material and internal pressure and temprature and …</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1">#Define Dike Object</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Define Dike Object</span>
 <span class="n">opr</span><span class="o">.</span><span class="n">Safety</span><span class="o">.</span><span class="n">Dike</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">30</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="c1">#Define Plant Units</span>
@@ -275,7 +275,7 @@
 <h2>Define Analysis<a class="headerlink" href="#define-analysis" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p>By finishing the modeling, Using analysis command the number or analysis and type of analysis specified for model. In this model it is considered to do analysis for 10000 times. MultiAnalysis type considered for analysis and this type implement multiple analysis using only one cpu.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1">#Unit Analysis</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Analysis</span>
 <span class="n">opr</span><span class="o">.</span><span class="n">Analyze</span><span class="o">.</span><span class="n">ScenarioAnalyze</span><span class="o">.</span><span class="n">MultiAnalysis</span><span class="p">(</span><span class="n">AnalysisNumber</span><span class="o">=</span><span class="mi">10_000</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -285,7 +285,7 @@
 <h2>Post Processing<a class="headerlink" href="#post-processing" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p>By finishing the analysis, using the PostProcess subpackage the probability of damage scenarios for each plant unit and for both are calculated. As it is seen in the above results, as we expected, the resulted scenarios are also symmetric. Obviously by increasing the number of the analysis, the probability of scenario (0)-[1] become closer to (0)-[2].</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1">#Post Process</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Post Process</span>
 <span class="n">Results</span><span class="o">=</span><span class="n">opr</span><span class="o">.</span><span class="n">PostProcess</span><span class="o">.</span><span class="n">RecorderPP</span><span class="o">.</span><span class="n">Analyze</span><span class="p">([</span><span class="s1">&#39;Recorder_ex1.OPRrec&#39;</span><span class="p">])</span>
 
 <span class="n">DM0Scen</span><span class="o">=</span><span class="n">Results</span><span class="p">[</span><span class="s1">&#39;Damagelevel_Scenario_Dict&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
@@ -293,11 +293,12 @@
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;Recorder Scenarios in Damage level 0 =&#39;</span><span class="p">,</span><span class="n">DM0Scen</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">Scenario</span> <span class="ow">in</span> <span class="n">DM0Scen</span><span class="p">:</span>
+
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Probability of Scenario </span><span class="si">{</span><span class="n">Scenario</span><span class="si">}</span><span class="s1"> is equal: </span><span class="si">{</span><span class="n">ScenProb</span><span class="p">[</span><span class="n">Scenario</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
-<p>Exmple by: <strong>Bijan Sayyafzadeh</strong></p>
+<p>Example by: <strong>Bijan Sayyafzadeh</strong></p>
 </section>
 </section>
 

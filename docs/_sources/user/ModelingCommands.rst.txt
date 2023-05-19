@@ -17,6 +17,7 @@ In this section, all the commands that should be used to make an |opr| model has
    
    ModelingCommands/MiscCommands
    ModelingCommands/Tags
+   ModelingCommands/Objects
    
 .. toctree::
    :caption: Subpackages and their command/s
@@ -37,3 +38,4 @@ In this section, all the commands that should be used to make an |opr| model has
    ModelingCommands/Recorders-spk
    ModelingCommands/Analyze-spk
    ModelingCommands/NodesGroups-spk
+   

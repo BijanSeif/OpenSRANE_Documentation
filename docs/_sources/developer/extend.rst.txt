@@ -42,3 +42,6 @@ This section has been divided to the following parts.
 .. toctree::
    :caption: How to extend
    :maxdepth: 1
+   
+   Extend/AddModule
+   Extend/AddSPK

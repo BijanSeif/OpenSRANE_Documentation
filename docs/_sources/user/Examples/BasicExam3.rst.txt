@@ -29,7 +29,7 @@ Initialize the model and define reorder
       opr.wipe()
       
       #Define the recorder
-      opr.Recorders.Objs_recorder(tag=1,filename='Recorder_ex2',SaveStep=5000, fileAppend=False)
+      opr.Recorders.Objs_recorder(tag=1,filename='Recorder_ex3',SaveStep=5000, fileAppend=False)
       
       #Clear Warning File content
       opr.Misc.warningClear()

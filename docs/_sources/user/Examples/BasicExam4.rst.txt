@@ -1,12 +1,12 @@
-.. _BasicExam3:
+.. _BasicExam4:
 
-*************************************
-Basic Example 3. (4 symetric Tanks) 
-*************************************
+*********************************************
+Basic Example 4. (Individual Risk for 1 Tank) 
+*********************************************
 
-This example is Same Basic example 1, but tanks are close to each other and domino effects are also included and again because of symmetric of the model we expect that results also be symmetric.
+In this example one tank has been modeled and the individual risk of the tank calculated.
 
-Data are recorded by Objs_recorder. Also the code completely can be downloaded from :download:`here <files/Basic Example3.ipynb>` in the Jupyter Notebook format.
+Data are recorded by Objs_recorder. Also the code completely can be downloaded from :download:`here <files/Basic Example4.ipynb>` in the Jupyter Notebook format.
 
 
 Import required packages
@@ -29,7 +29,7 @@ Initialize the model and define reorder
       opr.wipe()
       
       #Define the recorder
-      opr.Recorders.Objs_recorder(tag=1,filename='Recorder_ex3',SaveStep=5000, fileAppend=False)
+      opr.Recorders.Objs_recorder(tag=1,filename='Recorder_ex4',SaveStep=5000, fileAppend=False)
       
       #Clear Warning File content
       opr.Misc.warningClear()
@@ -82,7 +82,7 @@ Define Hazard Curve and DateTime object and wind Data and Site data
                                 ]                                      
       windobj.NightWindFreqMatrix=windobj.DayWindFreqMatrix
 	  
-	  #Define Site Condition and Geometry
+      #Define Site Condition and Geometry
       SiteTAg=1
       opr.Sites.Site(SiteTAg, Temperature=25+273, Pressure=1*10**5, XSiteBoundary=[0,100,100,0], YSiteBoundary=[0,0,100,100], g=9.81)
 	  
@@ -90,7 +90,7 @@ Define Hazard Curve and DateTime object and wind Data and Site data
 Define Materials and Fragilities and Probits
 *******************************************************************
    
-   Butene considered as tank content. A new value considered for the specific heat of combustion of this material, so the considered value of defined object modified after the definition. Only, pool fire event considered for this model, so only a probit for considering the vulnerability under radiation of tanks defined.
+   Butene considered as tank content. A new value considered for the specific heat of combustion of this material, so the considered value of defined object modified after the definition.
 
    .. code-block:: python
       
@@ -99,14 +99,17 @@ Define Materials and Fragilities and Probits
       opr.Substance.ObjManager[1].Specific_Heat_of_Combustion=45.334*10**6
       
       #Define Fragilities
-      opr.Fragilities.Fragility(tag=1,Distribution_Type='lognormal',modename='EBF',mean=0.8,StdDev=0.8)
-      opr.Fragilities.Fragility(tag=2,Distribution_Type='lognormal',modename='GDF',mean=1.18,StdDev=0.61)
+      opr.Fragilities.Fragility(tag=1,Distribution_Type='lognormal',modename='EBF',mean=-0.652,StdDev=0.286)
+      opr.Fragilities.Fragility(tag=2,Distribution_Type='lognormal',modename='GDF',mean=-0.659,StdDev=0.452)
       
       #Define Probits
       Radiation=3
-      opr.Fragilities.Probit(tag=Radiation, Distribution_Type='normal', K1=1.0, K2=-6.5,Scale_Factor=1500)
-	  
-	  
+      opr.Fragilities.Probit(tag=Radiation, Distribution_Type='normal', K1=1/5000, K2=5-25000/5000)
+      PeopleOverP=4
+      opr.Fragilities.Probit(tag=PeopleOverP, Distribution_Type='normal', K1=1/3000, K2=5-20000/3000,MinRndVar=5000)
+      PeopleRadiation=5
+      opr.Fragilities.Probit(tag=PeopleRadiation, Distribution_Type='normal', K1=1/4000, K2=5-14500/4000,MinRndVar=2500)
+
 Define Outflow, Dispersion and physical effect models
 *******************************************************************
 
@@ -146,22 +149,22 @@ Define connectors to connect models to each other
       opr.Connectors.DS_LOC(1,FragilityTag=1,OutFlowModelTagList=[2],LOCProbabilityList=[1])
       opr.Connectors.DS_LOC(2,FragilityTag=2,OutFlowModelTagList=[1],LOCProbabilityList=[1])
 	  
-	  #Define OutFlow-Phisycal Effect connection
+      #Define OutFlow-Phisycal Effect connection
       opr.Connectors.Out_Physic(tag=3,OutFlowTag=1, MaterialsTagList=[1],PhysicalEffectTagList=[1],PhysProbabilityList=[1])
       opr.Connectors.Out_Physic(tag=4,OutFlowTag=2, MaterialsTagList=[1],PhysicalEffectTagList=[1],PhysProbabilityList=[1])
       
       #Define Probit - LOC loss of containment Connectors
       opr.Connectors.Pb_LOC(tag=5, ProbitTag=Radiation, OutFlowModelTagList=[1,2], LOCProbabilityList=[1,1])
 
-Define Safety dike and plant units
+Define Safety dike, plant units and NodesGroups object
 *******************************************************************
 
-   Plant units defined and its properties according defined models tag specified for them. The Fragility tag and vulnerability probit and their location and material and internal pressure and temprature and ...
+   Plant units defined and its properties according defined models tag specified for them. The Fragility tag and vulnerability probit and their location and material and internal pressure and temprature and ... . Also, to calculate individual risk, a NodesGroups object defined that covers all around tank and risk values are calculated in its defined nodes.
 
    .. code-block:: python
       
       #Define Dike Object
-      opr.Safety.Dike(1,2,30**2)
+      opr.Safety.Dike(1,1,30**2)
       
       #Define Plant Units
       opr.PlantUnits.ONGStorage(tag=1, SiteTag=1, DikeTag=1, SubstanceTag=1, FragilityTagNumbers=[1,2], 
@@ -169,25 +172,12 @@ Define Safety dike and plant units
                                 Surface_Roughness=0.0001, Pressure=1.1*10**5, Temperature=25+273,
                                 SubstanceVolumeRatio=0.8, Diameter=10, Height=10, GroundTemperature=25+273,
                                 radiation_probit_tag=Radiation,)
-
-      opr.PlantUnits.ONGStorage(tag=2, SiteTag=1, DikeTag=1, SubstanceTag=1, FragilityTagNumbers=[1,2], 
-                                Horizontal_localPosition=35, Vertical_localPosition=0,
-                                Surface_Roughness=0.0001, Pressure=1.1*10**5, Temperature=25+273,
-                                SubstanceVolumeRatio=0.8, Diameter=10, Height=10, GroundTemperature=25+273,
-                                radiation_probit_tag=Radiation,)
       
-      opr.PlantUnits.ONGStorage(tag=3, SiteTag=1, DikeTag=1, SubstanceTag=1, FragilityTagNumbers=[1,2], 
-                                Horizontal_localPosition=35, Vertical_localPosition=35,
-                                Surface_Roughness=0.0001, Pressure=1.1*10**5, Temperature=25+273,
-                                SubstanceVolumeRatio=0.8, Diameter=10, Height=10, GroundTemperature=25+273,
-                                radiation_probit_tag=Radiation,)
+      #Define People Distribution for individual risk
+      opr.NodesGroups.RectangNodes(1, xRefPoint=-200, yRefPoint=-200, xDim=400, yDim=400,
+                                   xMesh=10, yMesh=10, PointsHeight=1, Intensity=20, pressure_probit_tag=PeopleOverP,
+                                   radiation_probit_tag=PeopleRadiation, Toxic_probit_tag=None, Type='Social',)
       
-      opr.PlantUnits.ONGStorage(tag=4, SiteTag=1, DikeTag=1, SubstanceTag=1, FragilityTagNumbers=[1,2], 
-                                Horizontal_localPosition=0, Vertical_localPosition=35,
-                                Surface_Roughness=0.0001, Pressure=1.1*10**5, Temperature=25+273,
-                                SubstanceVolumeRatio=0.8, Diameter=10, Height=10, GroundTemperature=25+273,
-                                radiation_probit_tag=Radiation,)
-
 Define Analysis
 *******************************************************************
 
@@ -199,45 +189,40 @@ Define Analysis
       opr.Analyze.ScenarioAnalyze.MultiAnalysis(AnalysisNumber=40_000)
 	  
 	  
-Post Processing
+Post Processing and plotting individual risk
 *******************************************************************
 
-   By finishing the analysis, using the PostProcess subpackage the probability of damage scenarios for each plant unit and for both are calculated. As it is seen in the above results, as we expected, the resulted scenarios are also symmetric. Obviously by increasing the number of the analysis, the probability of scenario (0)-[1] become closer to (0)-[2].
+   By finishing the analysis, using the PostProcess subpackage the individual risk values at each defined nodes will be calculated. 
    
    .. code-block:: python
       
       #Post Process
-      Results=opr.PostProcess.ObjsRecorderPP.Analyze('Recorder_ex3')
-      
-      DM0Scen=list(Results['Damagelevel_Scenario_Dict'][0])
-      ScenProb=Results['ScenariosProbability']
-      print('Recorder Scenarios in Damage level 0 =',DM0Scen,'\n')
-      
-      Len=list(set([len(i) for i in DM0Scen]))
-      Len.sort()
-      
-      for ln in Len:
-          print()
-          for Scenario in DM0Scen:
-              if len(Scenario)==ln: print(f'Probability of Scenario {Scenario} is equal: {ScenProb[Scenario]}')
-      		  
-Plot some scenarios
-*******************************************************************
-
-   Using available commands in plot subpackage we can plot the created scenarios as shown in the following:
-
-   .. code-block:: python
-      
 	  
-      #load Recorded Scenarios
-      opr.Recorders.Objs_recorder_loader.loadScenarioBank('Recorder_ex3')
+      #Get results using PostProcess subpackage
+      results=opr.PostProcess.ObjsRecorderPP.Analyze('Recorder_ex4',100)
+
+      #Calculate the Average radiation and over pressure in nodegroup
+      NGRadDict=results['NodesGroup_Rad_Probit_Dict']
+      NGOVPDict=results['NodesGroup_OVP_Probit_Dict']
+	  
+      #Export and plot max(Radiation,OverPressure) average (Fast Approch with high speed convergency)--------------------------------------------
+      NodeGroupTag=1
+      MaxProb=[max(i,j) for i,j in zip(NGRadDict[NodeGroupTag],NGOVPDict[NodeGroupTag])]
       
+      #Plot Individual risk
+      opr.Plot.Plotly.PlotIndividualRisk(PlotMode=1,
+          NodesGroupTag=NodeGroupTag,
+          NodesProbabilityList=MaxProb,
+          ContorList=[1e-8,1e-5],)
+		  
+      #Also, Plot Individual risk  (With lower speed convergency results)
+      opr.Plot.Plotly.PlotIndividualRisk(PlotMode=1,
+          NodesGroupTag=1,
+          NodesProbabilityList=results['NodesGroupDamageProbability'][1],
+          ContorList=[1e-8,1e-5],)
+            	  
+	  
+	  
       
-      #load a scenario to print
-      ScenNum=50
-      opr.Recorders.Objs_recorder_loader.load1ScenarioOfBank(ScenNum)
-      
-      #Plot the model
-      opr.Plot.Plotly.PlotUnits2D(PlotMode=1,GasConcentrationlist=[  0.1  ], GasConcentrationHeght=1, ConcentrationPointNumber=50,OverPressureList=[3000],RadiationList=[ 1000])#RadiationList=[37500,25000,12500, 4000, 1600],RadiationHeight=2, RadiationPointNumber=5
       		  
 Example by: |bsz|

@@ -17,4 +17,5 @@ In this section, several example script of |opr| model is shown.
    Examples/BasicExam3
    Examples/BasicExam4
    Examples/BasicExam5
+   Examples/BasicExam6
    

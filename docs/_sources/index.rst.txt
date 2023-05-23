@@ -25,6 +25,7 @@ The |doc| for using the software and getting familiar with the framework of the 
    user/Plot
    user/PostProcessing
    user/Examples
+   user/Verifications
 
 
 .. _Developers Guideline:
@@ -39,12 +40,6 @@ The |doc| for using the software and getting familiar with the framework of the 
    developer/contribute
    developer/issues
    developer/references
-
-.. _Verifications:
-
-.. toctree::
-   :caption: Verifications
-   :maxdepth: 1
 
 
 

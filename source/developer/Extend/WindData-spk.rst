@@ -19,7 +19,7 @@ _GlobalParameters
 
    In the following tables the existing global parameters and methods in `_GlobalParameters.py <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/WindData/_GlobalParameters.py>`_ of this subpackage has been shown:
    
-      .. csv-table:: 
+      .. csv-table:: Global paramters
          :header: "Parameter", "Description"
          :widths: 20, 40
 	     
@@ -30,7 +30,7 @@ _GlobalParameters
 		 `isCalmn <https://github.com/OpenSRANE/OpenSRANE/blob/048f3ac7eb2aabb4729bf81f0b29d58ab6bca15d/opensrane/WindData/_GlobalParameters.py#L50>`_, It shows that each class(in the module) should store the sampled Calm condition in each analysis in this parameter.
 		 
 		 
-      .. csv-table:: 
+      .. csv-table:: Global methods
          :header: "Method", "Arguments", "Description"
          :widths: 10, 10, 40
 	     

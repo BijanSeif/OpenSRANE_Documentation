@@ -19,6 +19,8 @@ _GlobalParameters
 
    This subpackage as said is mainly for getting data from user and just one module is enough for this purpose so the `_GlobalParameters.py <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Substance/_GlobalParameters.py>`_ have no usage in this subpackage and it is leaved empty.
    
+   All the parameters that existing modules (mentioned in the following) should return are described in the :ref:`related command page <Material>`:
+   
     
 		 
 Existing modules

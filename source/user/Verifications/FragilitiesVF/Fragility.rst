@@ -4,7 +4,7 @@
 Fragility Module Verification 
 *************************************
 
-The question is that **Does the GetProbability method of Fragility object correctly samples the defined distribution?**. To find the answer of this question, first a Fragility object will be created. Then numerous samples will be created and record. Finally the distribution of recorded samples will be check by results of samples created by Excel.
+The question is that **Does the GetProbability method of Fragility object correctly samples the defined distribution?**. To find the answer of this question, first a Fragility object will be created. Then a range of manitude will be define and for each magnitude the result of the GetProbability method will be record and recorded results will be check by results of data created using Excel.
 
 The below codes can be downloaded from :download:`here <files/Fragilities.ipynb>` in Jupyter Notebook format. Also the Excel file that results are checked with, can be downloaded from :download:`here <files/Fragilities.xlsx>`.
 

@@ -15,4 +15,5 @@ In this section, for subpackages modules a verification has been provided. For t
    Verifications/hazardVF
    Verifications/DateAndTimeVF
    Verifications/WindDataVF
+   Verifications/FragilitiesVF
    

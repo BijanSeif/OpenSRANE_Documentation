@@ -50,6 +50,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../ModelingCommands.html">Modeling commands</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../MiscCommands.html">Miscellaneous(Misc) Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tags.html">Tags (Concept)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Objects.html">Objects (Concept)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hazard-spk.html">Hazard Subpackage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../DateAndTime-spk.html">DateAndTime Subpackage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../WindData-spk.html">WindData Subpackage</a></li>
@@ -78,6 +79,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Plot.html">Plotting tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../PostProcessing.html">Post Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Verifications.html">Verifications</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Developers Guideline</span></p>
 <ul>
@@ -137,6 +139,11 @@
    <span class="n">opr</span><span class="o">.</span><span class="n">Analyze</span><span class="o">.</span><span class="n">ScenarioAnalyze</span><span class="o">.</span><span class="n">MultiParallel</span><span class="p">(</span><span class="n">AnalysisNumber</span><span class="o">=</span><span class="mi">1_000_000</span><span class="p">,</span> <span class="n">NumberOfProcessors</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Users should attention that <strong>Never use MultiParallel inside a loop!</strong>. MultiParallel uses <strong>multiprocessing</strong> package that contains commands for parallel proccessing but it do not let you to use it inside a loop and you probably encounter with errors. This issue happened on windows operating system and maybe on mac and linux you found no error!</p>
+<p>There are some tricks that you can use MultiParallel command inside a loop. Look at this example to get the idea.</p>
 </div>
 </dd></dl>
 

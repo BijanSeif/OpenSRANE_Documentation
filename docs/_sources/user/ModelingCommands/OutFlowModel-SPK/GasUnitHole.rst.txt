@@ -1,12 +1,18 @@
 .. _GasUnitHole:
 
-GasUnitHole Command **(Still its doc is not completed)**
+GasUnitHole Command
 ********************************************************
 
 .. function:: OutFlowModel.GasUnitHole(tag,Hole_Diameter=0.01, Total_t=20, Cd=1, Gas_Constant=8.31446261815324)
    
-   This model considers a simultaneous release from Tank with a volume equal to the entered ratio of total amount of stored material by the user [Ref.1]_. 
+   This command models gas outflow from a hole using the following flowchart from [Ref.1]_. 
 
+   .. figure:: figures/GasHoleAlgorithm.png
+      :align: center
+      :figclass: align-center
+      
+      GasUnitHole command flowchart
+	
    .. csv-table:: 
       :header: "Argument", "Type", "Description"
       :widths: 10, 10, 40

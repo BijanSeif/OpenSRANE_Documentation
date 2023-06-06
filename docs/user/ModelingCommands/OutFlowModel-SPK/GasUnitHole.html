@@ -125,10 +125,10 @@
 <dt class="sig sig-object py" id="OutFlowModel.GasUnitHole">
 <span class="sig-prename descclassname"><span class="pre">OutFlowModel.</span></span><span class="sig-name descname"><span class="pre">GasUnitHole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Hole_Diameter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Total_t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Cd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Gas_Constant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8.31446261815324</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#OutFlowModel.GasUnitHole" title="Permalink to this definition"></a></dt>
 <dd><p>This command models gas outflow from a hole using the following flowchart from <a class="reference internal" href="#ref-1" id="id1"><span>[Ref.1]</span></a>.</p>
-<figure class="align-center" id="id2">
+<figure class="align-center" id="id3">
 <img alt="../../../_images/GasHoleAlgorithm.png" src="../../../_images/GasHoleAlgorithm.png" />
 <figcaption>
-<p><span class="caption-text">GasUnitHole command flowchart</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-text">GasUnitHole command flowchart</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <table class="docutils align-default">
@@ -154,15 +154,15 @@
 </tr>
 <tr class="row-even"><td><p>Total_t</p></td>
 <td><p>float</p></td>
-<td></td>
+<td><p>Total duration of outflow</p></td>
 </tr>
 <tr class="row-odd"><td><p>Cd</p></td>
 <td><p>float</p></td>
-<td></td>
+<td><p>Explained in <a class="reference internal" href="#ref-1" id="id2"><span>[Ref.1]</span></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p>Gas_Constant</p></td>
 <td><p>float</p></td>
-<td></td>
+<td><p>Gas Constant</p></td>
 </tr>
 </tbody>
 </table>
@@ -179,7 +179,8 @@
 
 <div role="list" class="citation-list">
 <div class="citation" id="ref-1" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Ref.1</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span>Ref.1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
 <p><cite>J. Casal, Evaluation of the Effects and Consequences of Major Accidents in Industrial Plants, vol. 8. 2018.</cite></p>
 </div>
 </div>

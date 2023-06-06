@@ -19,9 +19,9 @@ GasUnitHole Command
 	  
       Tag, int, Unique integer value that will be used for referring to the defined elements or objects.
 	  "Hole_Diameter", float, Diameter of the hole that gas is releasing from.
-	  "Total_t", float, 
-	  Cd, float, 
-	  Gas_Constant, float, 
+	  "Total_t", float, Total duration of outflow
+	  Cd, float, Explained in [Ref.1]_.
+	  Gas_Constant, float, Gas Constant
 
 
    .. admonition:: Example:

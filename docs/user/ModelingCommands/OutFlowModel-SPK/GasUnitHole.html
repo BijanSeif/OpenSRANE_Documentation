@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GasUnitHole Command (Still its doc is not completed) &mdash; OpenSRANE Documentation 0.0.3 documentation</title>
+  <title>GasUnitHole Command &mdash; OpenSRANE Documentation 0.0.3 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -50,6 +50,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../ModelingCommands.html">Modeling commands</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../MiscCommands.html">Miscellaneous(Misc) Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tags.html">Tags (Concept)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Objects.html">Objects (Concept)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hazard-spk.html">Hazard Subpackage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../DateAndTime-spk.html">DateAndTime Subpackage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../WindData-spk.html">WindData Subpackage</a></li>
@@ -59,7 +60,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../OutFlowModel-spk.html">OutFlowModel Subpackage</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="TankSimultanious.html">TankSimultanious Command</a></li>
 <li class="toctree-l3"><a class="reference internal" href="TankHoleSeries.html">TankHoleSeries Commands</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">GasUnitHole Command <strong>(Still its doc is not completed)</strong></a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">GasUnitHole Command</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#OutFlowModel.GasUnitHole"><code class="docutils literal notranslate"><span class="pre">OutFlowModel.GasUnitHole()</span></code></a></li>
 </ul>
 </li>
@@ -80,6 +81,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Plot.html">Plotting tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../PostProcessing.html">Post Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Verifications.html">Verifications</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Developers Guideline</span></p>
 <ul>
@@ -107,7 +109,7 @@
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../ModelingCommands.html">Modeling commands</a></li>
           <li class="breadcrumb-item"><a href="../OutFlowModel-spk.html">OutFlowModel Subpackage</a></li>
-      <li class="breadcrumb-item active">GasUnitHole Command <strong>(Still its doc is not completed)</strong></li>
+      <li class="breadcrumb-item active">GasUnitHole Command</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/user/ModelingCommands/OutFlowModel-SPK/GasUnitHole.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -117,12 +119,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="gasunithole-command-still-its-doc-is-not-completed">
-<span id="gasunithole"></span><h1>GasUnitHole Command <strong>(Still its doc is not completed)</strong><a class="headerlink" href="#gasunithole-command-still-its-doc-is-not-completed" title="Permalink to this heading"></a></h1>
+  <section id="gasunithole-command">
+<span id="gasunithole"></span><h1>GasUnitHole Command<a class="headerlink" href="#gasunithole-command" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="OutFlowModel.GasUnitHole">
 <span class="sig-prename descclassname"><span class="pre">OutFlowModel.</span></span><span class="sig-name descname"><span class="pre">GasUnitHole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Hole_Diameter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Total_t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Cd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Gas_Constant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8.31446261815324</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#OutFlowModel.GasUnitHole" title="Permalink to this definition"></a></dt>
-<dd><p>This model considers a simultaneous release from Tank with a volume equal to the entered ratio of total amount of stored material by the user <a class="reference internal" href="../WindData-SPK/WindRose.html#ref-1" id="id1"><span>[Ref.1]</span></a>.</p>
+<dd><p>This command models gas outflow from a hole using the following flowchart from <a class="reference internal" href="#ref-1" id="id1"><span>[Ref.1]</span></a>.</p>
+<figure class="align-center" id="id3">
+<img alt="../../../_images/GasHoleAlgorithm.png" src="../../../_images/GasHoleAlgorithm.png" />
+<figcaption>
+<p><span class="caption-text">GasUnitHole command flowchart</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 17%" />
@@ -146,15 +154,15 @@
 </tr>
 <tr class="row-even"><td><p>Total_t</p></td>
 <td><p>float</p></td>
-<td></td>
+<td><p>Total duration of outflow</p></td>
 </tr>
 <tr class="row-odd"><td><p>Cd</p></td>
 <td><p>float</p></td>
-<td></td>
+<td><p>Explained in <a class="reference internal" href="#ref-1" id="id2"><span>[Ref.1]</span></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p>Gas_Constant</p></td>
 <td><p>float</p></td>
-<td></td>
+<td><p>Gas Constant</p></td>
 </tr>
 </tbody>
 </table>
@@ -171,7 +179,8 @@
 
 <div role="list" class="citation-list">
 <div class="citation" id="ref-1" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Ref.1</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span>Ref.1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
 <p><cite>J. Casal, Evaluation of the Effects and Consequences of Major Accidents in Industrial Plants, vol. 8. 2018.</cite></p>
 </div>
 </div>

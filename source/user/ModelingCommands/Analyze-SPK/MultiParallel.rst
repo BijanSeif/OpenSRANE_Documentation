@@ -26,5 +26,10 @@ MultiParallel Command
         if __name__=='__main__':
            opr.Analyze.ScenarioAnalyze.MultiParallel(AnalysisNumber=1_000_000, NumberOfProcessors=15)
 
+   .. warning::
+   
+      Users should attention that **Never use MultiParallel inside a loop!**. MultiParallel uses **multiprocessing** package that contains commands for parallel proccessing but it do not let you to use it inside a loop and you probably encounter with errors. This issue happened on windows operating system and maybe on mac and linux you found no error!
+      
+      There are some tricks that you can use MultiParallel command inside a loop. Look at this example to get the idea.
 
 Code Developed by: |bsz|

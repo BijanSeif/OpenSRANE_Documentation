@@ -5,7 +5,7 @@ OpenSRANE
  
 .. raw:: html
    
-   <p style="font-size: 20px; margin-bottom: 50px"><b style="font-size: 25px">Open S</b>oftware for <b style="font-size: 25px">R</b>isk <b style="font-size: 25px">A</b>ssessment of <b style="font-size: 25px">N</b>aTech <b style="font-size: 25px">E</b>vents</p>
+   <p style="font-size: 20px; margin-bottom: 50px"><b style="font-size: 25px">Open S</b>ystem for <b style="font-size: 25px">R</b>isk <b style="font-size: 25px">A</b>ssessment of <b style="font-size: 25px">N</b>aTech <b style="font-size: 25px">E</b>vents</p>
 
 
 |opr| is an open-source, extensible, flexible and object-oriented software for calculating the quantitative risk of NaTech events in process plants. For performing NaTech analysis using |opr|, **Python** popular scripting language has been extended, by extended we mean additional commands have been added to the languages.

@@ -15,7 +15,7 @@ Recorder Command
       Tag, int, Unique integer value that will be used for referring to the defined elements or objects.
 	  filename, str, Name of the file that user wants to record data in.
 	  fileAppend, boolean, "True says that if the filename exists, add the recorded scenarios to the existing file and false will clear the file if exists."
-      recordfield, str, "A specific Flag that shows witch data should be record. In the following, the possible Flags are described."
+      recordfield, str, "A specific Flag that shows which data should be record. In the following, the possible Flags are described."
 	  NodesGroupTag, int, "If a property of a NodesGroup is considered in the recordfield to record, the tag of the NodesGroup object should be define here."
 	  
    .. note::

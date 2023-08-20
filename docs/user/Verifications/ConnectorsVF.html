@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recorders Subpackage &mdash; OpenSRANE Documentation 0.0.3 documentation</title>
+  <title>Connectors Verification &mdash; OpenSRANE Documentation 0.0.3 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Objs_recorder Command" href="Recorders-SPK/Objs_recorder.html" />
-    <link rel="prev" title="ONGStorage Command" href="PlantUnits-SPK/ONGStorage.html" /> 
+    <link rel="next" title="DS_LOC Module Verification" href="ConnectorsVF/DS_LOC.html" />
+    <link rel="prev" title="Simultaneous &amp; NoOutFlow Modules Verification" href="OutflowVF/Simultaneous.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,36 +47,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Systemofunits.html">System of units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ModelingStepsDiagram.html">Modeling Steps</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../ModelingCommands.html">Modeling commands</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="MiscCommands.html">Miscellaneous(Misc) Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tags.html">Tags (Concept)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Objects.html">Objects (Concept)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hazard-spk.html">Hazard Subpackage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DateAndTime-spk.html">DateAndTime Subpackage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="WindData-spk.html">WindData Subpackage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Sites-spk.html">Sites Subpackage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Substance-spk.html">Substance Subpackage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Fragilities-spk.html">Fragilities Subpackage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OutFlowModel-spk.html">OutFlowModel Subpackage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Connectors-spk.html">Connectors Subpackage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="DispersionSpreadModels-spk.html">DispersionSpreadModels Subpackage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PhysicalEffect-spk.html">PhysicalEffect Subpackage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Safety-spk.html">Safety Subpackage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="PlantUnits-spk.html">PlantUnits Subpackage</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Recorders Subpackage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Recorders-SPK/Objs_recorder.html">Objs_recorder Command</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Recorders-SPK/Objs_recorder_loader.html">Objs_recorder_loader Command</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Recorders-SPK/Recorder.html">Recorder Command</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="Analyze-spk.html">Analyze Subpackage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NodesGroups-spk.html">NodesGroups Subpackage</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../ModelingCommands.html">Modeling commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Plot.html">Plotting tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PostProcessing.html">Post Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Verifications.html">Verifications</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../Verifications.html">Verifications</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hazardVF.html">Hazard Verification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DateAndTimeVF.html">DateAndTime Verification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WindDataVF.html">WindData Verification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FragilitiesVF.html">Fragilities Verification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OutflowVF.html">Outflow Verification</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Connectors Verification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ConnectorsVF/DS_LOC.html">DS_LOC Module Verification</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Developers Guideline</span></p>
 <ul>
@@ -102,10 +88,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../ModelingCommands.html">Modeling commands</a></li>
-      <li class="breadcrumb-item active">Recorders Subpackage</li>
+          <li class="breadcrumb-item"><a href="../Verifications.html">Verifications</a></li>
+      <li class="breadcrumb-item active">Connectors Verification</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/user/ModelingCommands/Recorders-spk.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/user/Verifications/ConnectorsVF.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -113,17 +99,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="recorders-subpackage">
-<span id="recorders"></span><h1>Recorders Subpackage<a class="headerlink" href="#recorders-subpackage" title="Permalink to this heading"></a></h1>
-<p>The Recorders is a very important subpackage that users should be familiar with completely. This subpackage is responsible to record data of each simulation. Currently there are two different modules for this purpose that are described in the following. The available commands of this subpackage are described in the following:</p>
+  <section id="connectors-verification">
+<span id="connectorsvf"></span><h1>Connectors Verification<a class="headerlink" href="#connectors-verification" title="Permalink to this heading"></a></h1>
+<p>The main purpose of the connectors is to make decisions for the following consequences according defined probability distribution. So, what should be verified for them is the accuracy of making decisions or selecting the following consequences according defined probability distribution.</p>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Recorders subpackage commands</span></p>
+<p class="caption" role="heading"><span class="caption-text">Existing Modules</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Recorders-SPK/Objs_recorder.html">Objs_recorder Command</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Recorders-SPK/Objs_recorder_loader.html">Objs_recorder_loader Command</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Recorders-SPK/Recorder.html">Recorder Command</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ConnectorsVF/DS_LOC.html">DS_LOC Module Verification</a></li>
 </ul>
 </div>
+<p>Verification by: <strong>Bijan Sayyafzadeh</strong></p>
 </section>
 
 

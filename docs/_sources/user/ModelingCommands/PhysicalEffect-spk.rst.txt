@@ -3,7 +3,7 @@
 PhysicalEffect Subpackage
 *************************
 
-In this subpackage the gas dispersion and liquid spread models define by the user. It is possible to for any dispersion type of each material define one dispersion model. The available commands of this subpackage are described in the following:
+Using this subpackage the physical effect models could be defined by the user. Defined models using connectors commands will be connected to the outflow models. One or more than one physical effect model can be connected to the one outflow model with different probability of occurence. According defined probability of occurence the software will select one of the defined physical effect models when the connected ouflow model happen. The available commands of this subpackage are described in the following:
  
 
 .. toctree::

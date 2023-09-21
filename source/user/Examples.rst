@@ -19,3 +19,8 @@ In this section, several example script of |opr| model is shown.
    Examples/BasicExam5
    Examples/BasicExam6
    
+.. toctree::
+   :caption: Articles OpenSRANE's model files
+   :maxdepth: 1
+   
+   Examples/OpenSRANE1

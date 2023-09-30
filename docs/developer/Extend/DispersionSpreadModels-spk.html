@@ -18,7 +18,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="PhysicalEffect Subpackage Structure" href="PhysicalEffect-spk.html" />
+    <link rel="next" title="BritterMcQuaid Module Structure" href="DispersionSpreadModels-spk/BritterMcQuaid.html" />
     <link rel="prev" title="Connectors Subpackage Structure" href="Connectors-spk.html" /> 
 </head>
 
@@ -51,6 +51,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../user/Plot.html">Plotting tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user/PostProcessing.html">Post Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user/Examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/Verifications.html">Verifications</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Developers Guideline</span></p>
 <ul class="current">
@@ -66,7 +67,18 @@
 <li class="toctree-l2"><a class="reference internal" href="Fragilities-spk.html">Fragilities Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="OutFlowModel-spk.html">OutFlowModel Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Connectors-spk.html">Connectors Subpackage Structure</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">DispersionSpreadModels Subpackage Structure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DispersionSpreadModels Subpackage Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-goal-of-this-subpackage">Main Goal Of this Subpackage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#globalparameters">_GlobalParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#existing-modules">Existing modules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DispersionSpreadModels-spk/BritterMcQuaid.html">BritterMcQuaid Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DispersionSpreadModels-spk/GasGaussian.html">GasGaussian Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DispersionSpreadModels-spk/LiquidSpread.html">LiquidSpread Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DispersionSpreadModels-spk/LqdSprdGaussianGasDisp.html">LqdSprdGaussianGasDisp Module Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="PhysicalEffect-spk.html">PhysicalEffect Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Safety-spk.html">Safety Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PlantUnits-spk.html">PlantUnits Subpackage Structure</a></li>
@@ -108,6 +120,134 @@
              
   <section id="dispersionspreadmodels-subpackage-structure">
 <span id="dispersionspreadmodelsex"></span><h1>DispersionSpreadModels Subpackage Structure<a class="headerlink" href="#dispersionspreadmodels-subpackage-structure" title="Permalink to this heading"></a></h1>
+<section id="main-goal-of-this-subpackage">
+<h2>Main Goal Of this Subpackage<a class="headerlink" href="#main-goal-of-this-subpackage" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>The main goals of this <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/DispersionSpreadModels">subpackage</a> are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Creating the desired Dispersion or Spread model and get the mentioned model parameters from the user.</p></li>
+<li><p>Calculating the dispersion or spread of the substance into the environment and store results in the global parameters to use in other required objects.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="globalparameters">
+<h2>_GlobalParameters<a class="headerlink" href="#globalparameters" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>In the following tables the existing global parameters and methods in <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/blob/main/opensrane/DispersionSpreadModels/_GlobalParameters.py">_GlobalParameters.py</a> of this subpackage has been shown:</p>
+<blockquote>
+<div><table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Global parameters</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MatTags</p></td>
+<td><p>List of the tag of materials that the model can be implemented for.</p></td>
+</tr>
+<tr class="row-odd"><td><p>OutFlowModelTags</p></td>
+<td><p>List of the outflow models that the model can be implemented for.</p></td>
+</tr>
+<tr class="row-even"><td><p>t_disp</p></td>
+<td><p>This parameter is for storing and returning the time step values of the substance dispersion.</p></td>
+</tr>
+<tr class="row-odd"><td><p>LiquidRadious</p></td>
+<td><p>This parameter is for storing and returning the dispersed liquid radious at each time step.</p></td>
+</tr>
+<tr class="row-even"><td><p>LiquidCenter</p></td>
+<td><p>This parameter is for storing and returning the dispersed liquid center coordinate at each time step.</p></td>
+</tr>
+<tr class="row-odd"><td><p>LiquidThickness</p></td>
+<td><p>This parameter is for storing and returning the dispersed liquid thickness at each time step.</p></td>
+</tr>
+<tr class="row-even"><td><p>t_dispLiquidVaporization</p></td>
+<td><p>This parameter is for storing and returning the time step values of the liquid vaporization.</p></td>
+</tr>
+<tr class="row-odd"><td><p>LiquidVaporizationMassRate</p></td>
+<td><p>This parameter is for storing and returning the vaporization mass rate of dispersed liquid at each time step.</p></td>
+</tr>
+<tr class="row-even"><td><p>LiquidVaporizationMass</p></td>
+<td><p>This parameter is for storing and returning the total vaporized mass of dispersed liquid at each time step.</p></td>
+</tr>
+<tr class="row-odd"><td><p>GasExplosiveMass</p></td>
+<td><p>This parameter returns the explosive mass of the dispersed gas at each time step.</p></td>
+</tr>
+<tr class="row-even"><td><p>GasExplosiveCenterX</p></td>
+<td><p>This parameter returns the x coordinate of explosive mass center of the dispersed gas at each time step.</p></td>
+</tr>
+<tr class="row-odd"><td><p>GasExplosiveCenterY</p></td>
+<td><p>This parameter returns the y coordinate of explosive mass center of the dispersed gas at each time step.</p></td>
+</tr>
+<tr class="row-even"><td><p>GasExplosiveCenterZ</p></td>
+<td><p>This parameter returns the z coordinate of explosive mass center of the dispersed gas at each time step.</p></td>
+</tr>
+<tr class="row-odd"><td><p>UnitObject</p></td>
+<td><p>This parameter is to store the object of the plant unit that has damaged and the outflow is calculating for it.</p></td>
+</tr>
+<tr class="row-even"><td><p>WindDirection</p></td>
+<td><p>This parameter stores the sampled wind direction from winddata objects for required calculations.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Global methods</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Arguments</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Calculate</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>By calling this method the calculations for outflow will be done and the results will be store in the above global parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p>GasConcentration</p></td>
+<td><p>x,y,z</p></td>
+<td><p>This method returns the gas concentration at entered coordinate.</p></td>
+</tr>
+<tr class="row-even"><td><p>GiveBoundary</p></td>
+<td><p>C</p></td>
+<td><p>This method returns the boundary points that have concentration equal to entered C.</p></td>
+</tr>
+<tr class="row-odd"><td><p>wipeAnalysisGlobal</p></td>
+<td><p>—</p></td>
+<td><p>Shows the global parameters that should be initialize and the beginning of each analysis as described <a class="reference internal" href="Framework/GlobalParam.html#frameworkglbp"><span class="std std-ref">here</span></a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="existing-modules">
+<h2>Existing modules<a class="headerlink" href="#existing-modules" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>In the following the existing modules for this <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/DispersionSpreadModels">subpackage</a> are described:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="DispersionSpreadModels-spk/BritterMcQuaid.html">BritterMcQuaid Module Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DispersionSpreadModels-spk/GasGaussian.html">GasGaussian Module Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DispersionSpreadModels-spk/LiquidSpread.html">LiquidSpread Module Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DispersionSpreadModels-spk/LqdSprdGaussianGasDisp.html">LqdSprdGaussianGasDisp Module Structure</a></li>
+</ul>
+</div>
+</div></blockquote>
+</section>
 </section>
 
 

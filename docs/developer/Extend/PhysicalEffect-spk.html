@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Safety Subpackage Structure" href="Safety-spk.html" />
-    <link rel="prev" title="DispersionSpreadModels Subpackage Structure" href="DispersionSpreadModels-spk.html" /> 
+    <link rel="next" title="fire_point_source Module Structure" href="PhysicalEffect-spk/fire_point_source.html" />
+    <link rel="prev" title="LqdSprdGaussianGasDisp Module Structure" href="DispersionSpreadModels-spk/LqdSprdGaussianGasDisp.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,6 +51,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../user/Plot.html">Plotting tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user/PostProcessing.html">Post Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user/Examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/Verifications.html">Verifications</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Developers Guideline</span></p>
 <ul class="current">
@@ -67,7 +68,18 @@
 <li class="toctree-l2"><a class="reference internal" href="OutFlowModel-spk.html">OutFlowModel Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Connectors-spk.html">Connectors Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DispersionSpreadModels-spk.html">DispersionSpreadModels Subpackage Structure</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">PhysicalEffect Subpackage Structure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">PhysicalEffect Subpackage Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-goal-of-this-subpackage">Main Goal Of this Subpackage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#globalparameters">_GlobalParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#existing-modules">Existing modules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="PhysicalEffect-spk/fire_point_source.html">fire_point_source Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PhysicalEffect-spk/SAFE.html">SAFE Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PhysicalEffect-spk/Simple_fire_point_source.html">Simple_fire_point_source Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PhysicalEffect-spk/VCE_TNT.html">VCE_TNT Module Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="Safety-spk.html">Safety Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PlantUnits-spk.html">PlantUnits Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Recorders-spk.html">Recorders Subpackage Structure</a></li>
@@ -108,6 +120,104 @@
              
   <section id="physicaleffect-subpackage-structure">
 <span id="physicaleffectex"></span><h1>PhysicalEffect Subpackage Structure<a class="headerlink" href="#physicaleffect-subpackage-structure" title="Permalink to this heading"></a></h1>
+<section id="main-goal-of-this-subpackage">
+<h2>Main Goal Of this Subpackage<a class="headerlink" href="#main-goal-of-this-subpackage" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>The main goals of this <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/PhysicalEffect">subpackage</a> are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Calculate the physical effect like heat radiation and overpressure and toxic dose as well in any required point.</p></li>
+<li><p>Calculate the boundary points that have equal dose values.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="globalparameters">
+<h2>_GlobalParameters<a class="headerlink" href="#globalparameters" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>In the following tables the existing global parameters and methods in <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/PhysicalEffect/_GlobalParameters.py">_GlobalParameters.py</a> of this subpackage has been shown:</p>
+<blockquote>
+<div><table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Global parameters</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UnitObject</p></td>
+<td><p>This parameter is to store the object of the plant unit that has damaged and the outflow is calculating for it.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Global methods</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Arguments</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Calculate</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>By calling this method the calculations for outflow will be done and the results will be store in the above global parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Thermal_Radiation_at_Point</p></td>
+<td><p>x,y,z</p></td>
+<td><p>By calling this method the heat radiation at entered coordinate should be calculated and returned.</p></td>
+</tr>
+<tr class="row-even"><td><p>OverPressure_at_Point</p></td>
+<td><p>x,y,z</p></td>
+<td><p>By calling this method the overpressure at entered coordinate should be calculated and returned.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Toxic_at_Point</p></td>
+<td><p>x,y,z</p></td>
+<td><p>By calling this method the toxic dose at entered coordinate should be calculated and returned.</p></td>
+</tr>
+<tr class="row-even"><td><p>RadiationBoundary</p></td>
+<td><p>Radiation, Height, PointNumber</p></td>
+<td><p>By calling this method boudary points with dose equal to Radiation and height equal to Height should be return. The number of points are equal PointNumber that distributed uniformly in the boundary.</p></td>
+</tr>
+<tr class="row-odd"><td><p>OverPressureBoundary</p></td>
+<td><p>OverPressure, Height, PointNumber</p></td>
+<td><p>By calling this method boudary points with dose equal to OverPressure and height equal to Height should be return. The number of points are equal PointNumber that distributed uniformly in the boundary.</p></td>
+</tr>
+<tr class="row-even"><td><p>wipeAnalysisGlobal</p></td>
+<td><p>—</p></td>
+<td><p>Shows the global parameters that should be initialize and the beginning of each analysis as described <a class="reference internal" href="Framework/GlobalParam.html#frameworkglbp"><span class="std std-ref">here</span></a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="existing-modules">
+<h2>Existing modules<a class="headerlink" href="#existing-modules" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>In the following the existing modules for this <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/PhysicalEffect">subpackage</a> are described:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="PhysicalEffect-spk/fire_point_source.html">fire_point_source Module Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PhysicalEffect-spk/SAFE.html">SAFE Module Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PhysicalEffect-spk/Simple_fire_point_source.html">Simple_fire_point_source Module Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PhysicalEffect-spk/VCE_TNT.html">VCE_TNT Module Structure</a></li>
+</ul>
+</div>
+</div></blockquote>
+</section>
 </section>
 
 

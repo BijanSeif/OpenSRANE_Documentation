@@ -37,7 +37,7 @@ _GlobalParameters
          :header: "Method", "Arguments", "Description"
          :widths: 10, 10, 40
 	     
-		 Calculate, - , By calling this method the calculations for outflow will be done and the results will be store in the above global parameters.
+		 Calculate, "---" , By calling this method the calculations for outflow will be done and the results will be store in the above global parameters.
 	     wipeAnalysisGlobal, "---", Shows the global parameters that should be initialize and the beginning of each analysis as described :ref:`here <FrameworkGLBP>`.
 		 
 		 

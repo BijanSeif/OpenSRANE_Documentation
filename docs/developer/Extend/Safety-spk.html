@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="PlantUnits Subpackage Structure" href="PlantUnits-spk.html" />
-    <link rel="prev" title="PhysicalEffect Subpackage Structure" href="PhysicalEffect-spk.html" /> 
+    <link rel="next" title="Dike Module Structure" href="Safety-spk/Dike.html" />
+    <link rel="prev" title="VCE_TNT Module Structure" href="PhysicalEffect-spk/VCE_TNT.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,6 +51,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../user/Plot.html">Plotting tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user/PostProcessing.html">Post Processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user/Examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/Verifications.html">Verifications</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Developers Guideline</span></p>
 <ul class="current">
@@ -68,7 +69,15 @@
 <li class="toctree-l2"><a class="reference internal" href="Connectors-spk.html">Connectors Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="DispersionSpreadModels-spk.html">DispersionSpreadModels Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PhysicalEffect-spk.html">PhysicalEffect Subpackage Structure</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Safety Subpackage Structure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Safety Subpackage Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-goal-of-this-subpackage">Main Goal Of this Subpackage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#globalparameters">_GlobalParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#existing-modules">Existing modules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Safety-spk/Dike.html">Dike Module Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="PlantUnits-spk.html">PlantUnits Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Recorders-spk.html">Recorders Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Analyze-spk.html">Analyze Subpackage Structure</a></li>
@@ -108,6 +117,74 @@
              
   <section id="safety-subpackage-structure">
 <span id="safetyex"></span><h1>Safety Subpackage Structure<a class="headerlink" href="#safety-subpackage-structure" title="Permalink to this heading"></a></h1>
+<section id="main-goal-of-this-subpackage">
+<h2>Main Goal Of this Subpackage<a class="headerlink" href="#main-goal-of-this-subpackage" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>The main goals of this <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Safety">subpackage</a> are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Calculate the physical effect like heat radiation and overpressure and toxic dose as well in any required point.</p></li>
+<li><p>Calculate the boundary points that have equal dose values.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="globalparameters">
+<h2>_GlobalParameters<a class="headerlink" href="#globalparameters" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>In the following tables the existing global parameters and methods in <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Safety/_GlobalParameters.py">_GlobalParameters.py</a> of this subpackage has been shown:</p>
+<blockquote>
+<div><table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Global parameters</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>—</p></td>
+<td><p>—</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">Global methods</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Arguments</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wipeAnalysisGlobal</p></td>
+<td><p>—</p></td>
+<td><p>Shows the global parameters that should be initialize and the beginning of each analysis as described <a class="reference internal" href="Framework/GlobalParam.html#frameworkglbp"><span class="std std-ref">here</span></a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="existing-modules">
+<h2>Existing modules<a class="headerlink" href="#existing-modules" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>In the following the existing modules for this <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/Safety">subpackage</a> are described:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Safety-spk/Dike.html">Dike Module Structure</a></li>
+</ul>
+</div>
+</div></blockquote>
+</section>
 </section>
 
 

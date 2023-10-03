@@ -30,7 +30,7 @@ _GlobalParameters
          :header: "Method", "Arguments", "Description"
          :widths: 10, 10, 40
 	     
-		 Calculate, - , By calling this method the calculations for outflow will be done and the results will be store in the above global parameters.
+		 Calculate, "---" , By calling this method the calculations for outflow will be done and the results will be store in the above global parameters.
          Thermal_Radiation_at_Point, "x,y,z", By calling this method the heat radiation at entered coordinate should be calculated and returned.
          OverPressure_at_Point, "x,y,z", By calling this method the overpressure at entered coordinate should be calculated and returned.
          Toxic_at_Point, "x,y,z", By calling this method the toxic dose at entered coordinate should be calculated and returned.

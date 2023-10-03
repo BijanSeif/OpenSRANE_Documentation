@@ -10,8 +10,8 @@ Main Goal Of this Subpackage
    The main goals of this `subpackage <https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/PlantUnits>`_ are:
 
       * Getting the geometrical parameters and local parameters of each plant unit.
-	  * Assigning the material and various models and properties of each plant unit to its parameters.
-	  * Assigning the damage condition and data to related parameters during the analysis for post processing.
+      * Assigning the material and various models and properties of each plant unit to its parameters.
+      * Assigning the damage condition and data to related parameters during the analysis for post processing.
 	  
 	  
 _GlobalParameters

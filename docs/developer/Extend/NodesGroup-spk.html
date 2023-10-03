@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PlantUnits Subpackage Structure &mdash; OpenSRANE Documentation 0.0.3 documentation</title>
+  <title>NodesGroup Subpackage Structure &mdash; OpenSRANE Documentation 0.0.3 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="ONGStorage Module Structure" href="PlantUnits-spk/ONGStorage.html" />
-    <link rel="prev" title="Dike Module Structure" href="Safety-spk/Dike.html" /> 
+    <link rel="next" title="Nodes Module Structure" href="NodesGroup-spk/Nodes.html" />
+    <link rel="prev" title="ONGStorage Module Structure" href="PlantUnits-spk/ONGStorage.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -70,11 +70,13 @@
 <li class="toctree-l2"><a class="reference internal" href="DispersionSpreadModels-spk.html">DispersionSpreadModels Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PhysicalEffect-spk.html">PhysicalEffect Subpackage Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Safety-spk.html">Safety Subpackage Structure</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">PlantUnits Subpackage Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PlantUnits-spk.html">PlantUnits Subpackage Structure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">NodesGroup Subpackage Structure</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#main-goal-of-this-subpackage">Main Goal Of this Subpackage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#globalparameters">_GlobalParameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#existing-modules">Existing modules</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="PlantUnits-spk/ONGStorage.html">ONGStorage Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NodesGroup-spk/Nodes.html">Nodes Module Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NodesGroup-spk/RectangNodes.html">RectangNodes Module Structure</a></li>
 </ul>
 </li>
 </ul>
@@ -105,9 +107,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../extend.html">Extending Application</a></li>
-      <li class="breadcrumb-item active">PlantUnits Subpackage Structure</li>
+      <li class="breadcrumb-item active">NodesGroup Subpackage Structure</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/developer/Extend/PlantUnits-spk.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/developer/Extend/NodesGroup-spk.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -115,17 +117,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="plantunits-subpackage-structure">
-<span id="plantunitsex"></span><h1>PlantUnits Subpackage Structure<a class="headerlink" href="#plantunits-subpackage-structure" title="Permalink to this heading"></a></h1>
+  <section id="nodesgroup-subpackage-structure">
+<span id="nodesgroupex"></span><h1>NodesGroup Subpackage Structure<a class="headerlink" href="#nodesgroup-subpackage-structure" title="Permalink to this heading"></a></h1>
 <section id="main-goal-of-this-subpackage">
 <h2>Main Goal Of this Subpackage<a class="headerlink" href="#main-goal-of-this-subpackage" title="Permalink to this heading"></a></h2>
 <blockquote>
-<div><p>The main goals of this <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/PlantUnits">subpackage</a> are:</p>
+<div><p>The main goals of this <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/NodesGroups">subpackage</a> are:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Getting the geometrical parameters and local parameters of each plant unit.</p></li>
-<li><p>Assigning the material and various models and properties of each plant unit to its parameters.</p></li>
-<li><p>Assigning the damage condition and data to related parameters during the analysis for post processing.</p></li>
+<li><p>Define set of the nodes to assess their vulnerability under various physical effects.</p></li>
 </ul>
 </div></blockquote>
 </div></blockquote>
@@ -133,7 +133,7 @@
 <section id="globalparameters">
 <h2>_GlobalParameters<a class="headerlink" href="#globalparameters" title="Permalink to this heading"></a></h2>
 <blockquote>
-<div><p>In the following tables the existing global parameters and methods in <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/PlantUnits/_GlobalParameters.py">_GlobalParameters.py</a> of this subpackage has been shown:</p>
+<div><p>In the following tables the existing global parameters and methods in <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/NodesGroups/_GlobalParameters.py">_GlobalParameters.py</a> of this subpackage has been shown:</p>
 <blockquote>
 <div><table class="docutils align-default" id="id2">
 <caption><span class="caption-text">Global parameters</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
@@ -147,107 +147,62 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>V_unit</p></td>
-<td><p>Parameter for total volume of the plant unit.</p></td>
+<tr class="row-even"><td><p>Type</p></td>
+<td><p>Is a string that user specify for created set of the nodes and is useful for postprocess when multiple set of the nodes exist.</p></td>
 </tr>
-<tr class="row-odd"><td><p>V_subs</p></td>
-<td><p>Parameter for substance volume that has been stored in the plant unit.</p></td>
+<tr class="row-odd"><td><p>xGlobalList</p></td>
+<td><p>list of the local x coordinate of the nodes.</p></td>
 </tr>
-<tr class="row-even"><td><p>Pressure</p></td>
-<td><p>Parameter for internal pressure of the plant unit.</p></td>
+<tr class="row-even"><td><p>yGlobalList</p></td>
+<td><p>list of the local y coordinate of the nodes.</p></td>
 </tr>
-<tr class="row-odd"><td><p>Temperature</p></td>
-<td><p>Parameter for internal temprature of the plant unit.</p></td>
+<tr class="row-odd"><td><p>zGlobalList</p></td>
+<td><p>list of the local z coordinate of the nodes.</p></td>
 </tr>
-<tr class="row-even"><td><p>Horizontal_localPosition</p></td>
-<td><p>Parameter for local horizontal location of the plant unit.</p></td>
+<tr class="row-even"><td><p>AreaList</p></td>
+<td><p>list of the nodes area.</p></td>
 </tr>
-<tr class="row-odd"><td><p>Vertical_localPosition</p></td>
-<td><p>Parameter for local vertical location of the plant unit.</p></td>
+<tr class="row-odd"><td><p>IntensityList</p></td>
+<td><p>list of the intensity of each node.</p></td>
 </tr>
-<tr class="row-even"><td><p>FragilityTagNumbers</p></td>
-<td><p>Parameter for the list of the fragilities tag of the plant unit.</p></td>
+<tr class="row-even"><td><p>pressure_probit_tag</p></td>
+<td><p>tag of the defined probit function to be used for calculating vulnerability under overpressure loads.</p></td>
 </tr>
-<tr class="row-odd"><td><p>SubstanceTag</p></td>
-<td><p>Parameter for substance tag of the plant unit.</p></td>
+<tr class="row-odd"><td><p>radiation_probit_tag</p></td>
+<td><p>tag of the defined probit function to be used for calculating vulnerability under heat radiation.</p></td>
 </tr>
-<tr class="row-even"><td><p>SafetyTag</p></td>
-<td><p>Parameter for safety tag of the plant unit.</p></td>
+<tr class="row-even"><td><p>Toxic_probit_tag</p></td>
+<td><p>tag of the defined probit function to be used for calculating vulnerability under toxic materials.</p></td>
 </tr>
-<tr class="row-odd"><td><p>Surface_Roughness</p></td>
-<td><p>Parameter for surface roughness needed for liquid dispersion calculation around the plant unit.</p></td>
+<tr class="row-odd"><td><p>isDamagedList</p></td>
+<td><p>List that shows the damage condition of each node.</p></td>
 </tr>
-<tr class="row-even"><td><p>Ks_Soil_Thermal_conductivity</p></td>
-<td><p>Parameter needed for liquid dispersion calculation around the plant unit.</p></td>
+<tr class="row-even"><td><p>DamageSource</p></td>
+<td><p>List that shows the name of subpackage of damage source for each node.</p></td>
 </tr>
-<tr class="row-odd"><td><p>Alphas_Soil_thermal_diffusivity</p></td>
-<td><p>Parameter for surface roughness needed for liquid dispersion calculation around the plant unit.</p></td>
+<tr class="row-odd"><td><p>DamageSourceTag</p></td>
+<td><p>List that shows the tag of damage source for each node.</p></td>
 </tr>
-<tr class="row-even"><td><p>GroundTemperature</p></td>
-<td><p>Parameter for Ground Temperature around the plant unit.</p></td>
+<tr class="row-even"><td><p>DamageSourceDose</p></td>
+<td><p>List that shows the dose of damage source for each node.</p></td>
 </tr>
-<tr class="row-odd"><td><p>pressure_probit_tag</p></td>
-<td><p>Parameter for probit tag for overpressure excitations.</p></td>
+<tr class="row-odd"><td><p>DamageSourceType</p></td>
+<td><p>List that shows the physical effect type for each node.</p></td>
 </tr>
-<tr class="row-even"><td><p>radiation_probit_tag</p></td>
-<td><p>Parameter for probit tag for radiation excitations.</p></td>
+<tr class="row-even"><td><p>Radiation_Intensity</p></td>
+<td><p>List that shows the radiation intensity for each node.</p></td>
 </tr>
-<tr class="row-odd"><td><p>DikeTag</p></td>
-<td><p>Parameter for dike tag of the plant unit.</p></td>
+<tr class="row-odd"><td><p>OverPressure_Intensity</p></td>
+<td><p>List that shows the overpressure intensiry for each node.</p></td>
 </tr>
-<tr class="row-even"><td><p>LastRadiationDose</p></td>
-<td><p>Parameter to store the dose of last radiation that the vulnerability has been calculated with it.</p></td>
+<tr class="row-even"><td><p>Toxic_Intensity</p></td>
+<td><p>List that shows the toxic dose for each node.</p></td>
 </tr>
-<tr class="row-odd"><td><p>RadiationDifferenceDose</p></td>
-<td><p>Parameter to store the radiation difference limit. When the increase of radiation become more that this criteria, the damage of the plant unit again will be checked.</p></td>
+<tr class="row-odd"><td><p>Radiation_Probit</p></td>
+<td><p>List the shows the multiplication of heat radiation value and coresponding probit value for each node.</p></td>
 </tr>
-<tr class="row-even"><td><p>isdamaged</p></td>
-<td><p>A boolean parameter that shows the damage condition of the plant unit.</p></td>
-</tr>
-<tr class="row-odd"><td><p>DamageSource</p></td>
-<td><p>Parameter for storing the name of the subpackage of the damage source.</p></td>
-</tr>
-<tr class="row-even"><td><p>DamageSourceTag</p></td>
-<td><p>Parameter for storing the damage source tag.</p></td>
-</tr>
-<tr class="row-odd"><td><p>DamageSourceDose</p></td>
-<td><p>Parameter for stoing the damage source dose.</p></td>
-</tr>
-<tr class="row-even"><td><p>DamageSourceType</p></td>
-<td><p>Parameter for storing the physical effect type of damage source.</p></td>
-</tr>
-<tr class="row-odd"><td><p>DamageFragilityTag</p></td>
-<td><p>Parameter for storing the fragility or probit tag that damage is calculated according to it.</p></td>
-</tr>
-<tr class="row-even"><td><p>DamageLevel</p></td>
-<td><p>Parameter for storing the damage level of the plant unit.</p></td>
-</tr>
-<tr class="row-odd"><td><p>OutFlowModelTag</p></td>
-<td><p>Parameter for storing the tag of the OutflowModel object.</p></td>
-</tr>
-<tr class="row-even"><td><p>OutFlowModelname</p></td>
-<td><p>Parameter for storing the outflowModel object name.</p></td>
-</tr>
-<tr class="row-odd"><td><p>OutFlowModelObject</p></td>
-<td><p>Parameter for storing the outflowModel object.</p></td>
-</tr>
-<tr class="row-even"><td><p>DispersionSpreadModelTag</p></td>
-<td><p>Parameter for storing the tag of the DispersionSpreadModel object.</p></td>
-</tr>
-<tr class="row-odd"><td><p>DispersionSpreadModelname</p></td>
-<td><p>Parameter for storing the DispersionSpreadModel object name.</p></td>
-</tr>
-<tr class="row-even"><td><p>DispersionSpreadModelObject</p></td>
-<td><p>Parameter for storing the DispersionSpreadModel object.</p></td>
-</tr>
-<tr class="row-odd"><td><p>PhysicalEffectModelTag</p></td>
-<td><p>Parameter for storing the tag of the PhysicalEffectModel object.</p></td>
-</tr>
-<tr class="row-even"><td><p>PhysicalEffectModelname</p></td>
-<td><p>Parameter for storing the PhysicalEffectModel object name.</p></td>
-</tr>
-<tr class="row-odd"><td><p>PhysicalEffectObject</p></td>
-<td><p>Parameter for storing the PhysicalEffectModel object.</p></td>
+<tr class="row-even"><td><p>OverPressure_Probit</p></td>
+<td><p>List the shows the multiplication of overpressure value and coresponding probit value for each node.</p></td>
 </tr>
 </tbody>
 </table>
@@ -265,11 +220,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>boundary_points</p></td>
-<td><p>—</p></td>
-<td><p>This method should return a list of the boundary points of the plant unit to be used in the calculating the damages under physical effects.</p></td>
-</tr>
-<tr class="row-odd"><td><p>wipeAnalysisGlobal</p></td>
+<tr class="row-even"><td><p>wipeAnalysisGlobal</p></td>
 <td><p>—</p></td>
 <td><p>Shows the global parameters that should be initialize and the beginning of each analysis as described <a class="reference internal" href="Framework/GlobalParam.html#frameworkglbp"><span class="std std-ref">here</span></a>.</p></td>
 </tr>
@@ -281,10 +232,11 @@
 <section id="existing-modules">
 <h2>Existing modules<a class="headerlink" href="#existing-modules" title="Permalink to this heading"></a></h2>
 <blockquote>
-<div><p>In the following the existing modules for this <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/PlantUnits">subpackage</a> are described:</p>
+<div><p>In the following the existing modules for this <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE/tree/main/opensrane/NodesGroups">subpackage</a> are described:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="PlantUnits-spk/ONGStorage.html">ONGStorage Module Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NodesGroup-spk/Nodes.html">Nodes Module Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NodesGroup-spk/RectangNodes.html">RectangNodes Module Structure</a></li>
 </ul>
 </div>
 </div></blockquote>

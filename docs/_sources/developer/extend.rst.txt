@@ -33,6 +33,7 @@ This section has been divided to the following parts.
    Extend/PhysicalEffect-spk
    Extend/Safety-spk
    Extend/PlantUnits-spk
+   Extend/NodesGroup-spk
    Extend/Recorders-spk
    Extend/Analyze-spk
 

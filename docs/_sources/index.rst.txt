@@ -1,5 +1,9 @@
 .. _home:
 
+.. comment: in the below line add meta data from google search console to verify it on google search engine
+.. meta::
+   :google-site-verification: urOWf3F5etdxQeLrqblrNbk_blbvilo-RyoLSlAuOak
+   
 OpenSRANE
 =========
  

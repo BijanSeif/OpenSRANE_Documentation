@@ -11,10 +11,11 @@
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=47de8214"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -109,11 +110,11 @@
            <div itemprop="articleBody">
              
   <section id="basic-example-6-individual-risk-for-4-tank">
-<span id="basicexam6"></span><h1>Basic Example 6. (Individual Risk for 4 Tank)<a class="headerlink" href="#basic-example-6-individual-risk-for-4-tank" title="Permalink to this heading"></a></h1>
+<span id="basicexam6"></span><h1>Basic Example 6. (Individual Risk for 4 Tank)<a class="headerlink" href="#basic-example-6-individual-risk-for-4-tank" title="Link to this heading"></a></h1>
 <p>This example is similar to <a class="reference internal" href="BasicExam4.html#basicexam4"><span class="std std-ref">Basic Example 4</span></a> but with considering four tanks.</p>
 <p>Data are recorded by Objs_recorder. Also the code completely can be downloaded from <a class="reference download internal" download="" href="../../_downloads/0d59abcd7b4f15000333b1a5cd817910/Basic%20Example6.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a> in the Jupyter Notebook format.</p>
 <section id="import-required-packages">
-<h2>Import required packages<a class="headerlink" href="#import-required-packages" title="Permalink to this heading"></a></h2>
+<h2>Import required packages<a class="headerlink" href="#import-required-packages" title="Link to this heading"></a></h2>
 <p>In this example only <a class="reference external" href="https://github.com/OpenSRANE/OpenSRANE">OpenSRANE</a> package is enough and there is no need to any other Python packages. So:</p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">opensrane</span> <span class="k">as</span> <span class="nn">opr</span>
@@ -122,7 +123,7 @@
 </div></blockquote>
 </section>
 <section id="initialize-the-model-and-define-reorder">
-<h2>Initialize the model and define reorder<a class="headerlink" href="#initialize-the-model-and-define-reorder" title="Permalink to this heading"></a></h2>
+<h2>Initialize the model and define reorder<a class="headerlink" href="#initialize-the-model-and-define-reorder" title="Link to this heading"></a></h2>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Wipe the model to clear any created object if it is created before</span>
 <span class="n">opr</span><span class="o">.</span><span class="n">wipe</span><span class="p">()</span>
@@ -137,7 +138,7 @@
 </div></blockquote>
 </section>
 <section id="define-hazard-curve-and-datetime-object-and-wind-data-and-site-data">
-<h2>Define Hazard Curve and DateTime object and wind Data and Site data<a class="headerlink" href="#define-hazard-curve-and-datetime-object-and-wind-data-and-site-data" title="Permalink to this heading"></a></h2>
+<h2>Define Hazard Curve and DateTime object and wind Data and Site data<a class="headerlink" href="#define-hazard-curve-and-datetime-object-and-wind-data-and-site-data" title="Link to this heading"></a></h2>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#define Hazard Curve</span>
 <span class="n">PGA</span><span class="o">=</span><span class="p">[</span><span class="mf">1.4</span><span class="p">,</span> <span class="mf">1.29984</span><span class="p">,</span><span class="mf">1.27091</span><span class="p">,</span><span class="mf">1.24865</span><span class="p">,</span><span class="mf">1.22194</span><span class="p">,</span><span class="mf">1.20191</span><span class="p">,</span><span class="mf">1.17297</span><span class="p">,</span><span class="mf">1.13959</span><span class="p">,</span><span class="mf">1.11065</span><span class="p">,</span><span class="mf">1.08172</span><span class="p">,</span>
@@ -189,7 +190,7 @@
 </div></blockquote>
 </section>
 <section id="define-materials-and-fragilities-and-probits">
-<h2>Define Materials and Fragilities and Probits<a class="headerlink" href="#define-materials-and-fragilities-and-probits" title="Permalink to this heading"></a></h2>
+<h2>Define Materials and Fragilities and Probits<a class="headerlink" href="#define-materials-and-fragilities-and-probits" title="Link to this heading"></a></h2>
 <blockquote>
 <div><p>Butene considered as tank content. A new value considered for the specific heat of combustion of this material, so the considered value of defined object modified after the definition.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Define Substances</span>
@@ -212,7 +213,7 @@
 </div></blockquote>
 </section>
 <section id="define-outflow-dispersion-and-physical-effect-models">
-<h2>Define Outflow, Dispersion and physical effect models<a class="headerlink" href="#define-outflow-dispersion-and-physical-effect-models" title="Permalink to this heading"></a></h2>
+<h2>Define Outflow, Dispersion and physical effect models<a class="headerlink" href="#define-outflow-dispersion-and-physical-effect-models" title="Link to this heading"></a></h2>
 <blockquote>
 <div><p>Two different outflow model considered. Also, for all considered outflow models just one dispersion model defined. And fire point source model defined for physical events.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Define Outflow Models</span>
@@ -230,7 +231,7 @@
 </div></blockquote>
 </section>
 <section id="define-connectors-to-connect-models-to-each-other">
-<h2>Define connectors to connect models to each other<a class="headerlink" href="#define-connectors-to-connect-models-to-each-other" title="Permalink to this heading"></a></h2>
+<h2>Define connectors to connect models to each other<a class="headerlink" href="#define-connectors-to-connect-models-to-each-other" title="Link to this heading"></a></h2>
 <blockquote>
 <div><p>DS_LOC:</p>
 <blockquote>
@@ -259,7 +260,7 @@
 </div></blockquote>
 </section>
 <section id="define-safety-dike-plant-units-and-nodesgroups-object">
-<h2>Define Safety dike, plant units and NodesGroups object<a class="headerlink" href="#define-safety-dike-plant-units-and-nodesgroups-object" title="Permalink to this heading"></a></h2>
+<h2>Define Safety dike, plant units and NodesGroups object<a class="headerlink" href="#define-safety-dike-plant-units-and-nodesgroups-object" title="Link to this heading"></a></h2>
 <blockquote>
 <div><p>Plant units defined and its properties according defined models tag specified for them. The Fragility tag and vulnerability probit and their location and material and internal pressure and temprature and … . Also, to calculate individual risk, a NodesGroups object defined that covers all around tank and risk values are calculated in its defined nodes.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Define Dike Object</span>
@@ -296,7 +297,7 @@
 </div></blockquote>
 </section>
 <section id="define-analysis">
-<h2>Define Analysis<a class="headerlink" href="#define-analysis" title="Permalink to this heading"></a></h2>
+<h2>Define Analysis<a class="headerlink" href="#define-analysis" title="Link to this heading"></a></h2>
 <blockquote>
 <div><p>By finishing the modeling, Using analysis command the number or analysis and type of analysis specified for model. In this model it is considered to do analysis for 40000 times. MultiAnalysis type considered for analysis and this type implement multiple analysis using only one cpu.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Analysis</span>
@@ -306,7 +307,7 @@
 </div></blockquote>
 </section>
 <section id="post-processing-and-plotting-individual-risk">
-<h2>Post Processing and plotting individual risk<a class="headerlink" href="#post-processing-and-plotting-individual-risk" title="Permalink to this heading"></a></h2>
+<h2>Post Processing and plotting individual risk<a class="headerlink" href="#post-processing-and-plotting-individual-risk" title="Link to this heading"></a></h2>
 <blockquote>
 <div><p>By finishing the analysis, using the PostProcess subpackage the individual risk values at each defined nodes will be calculated.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Post Process</span>

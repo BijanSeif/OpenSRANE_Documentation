@@ -11,10 +11,11 @@
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=47de8214"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -118,10 +119,10 @@
            <div itemprop="articleBody">
              
   <section id="ds-loc-command">
-<span id="dsloc"></span><h1>DS_LOC Command<a class="headerlink" href="#ds-loc-command" title="Permalink to this heading"></a></h1>
+<span id="dsloc"></span><h1>DS_LOC Command<a class="headerlink" href="#ds-loc-command" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="Connectors.DS_LOC">
-<span class="sig-prename descclassname"><span class="pre">Connectors.</span></span><span class="sig-name descname"><span class="pre">DS_LOC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FragilityTag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OutFlowModelTagList</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LOCProbabilityList</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Connectors.DS_LOC" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">Connectors.</span></span><span class="sig-name descname"><span class="pre">DS_LOC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FragilityTag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OutFlowModelTagList</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LOCProbabilityList</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Connectors.DS_LOC" title="Link to this definition"></a></dt>
 <dd><p>This command connects a fragility model (Damage state) to its corresponding outflow models and user for each damage state or fragility defines a list of probable outflow models with their corresponding probability and if during the analysis a damage under a fragility happens, then code uses the fragility’s outflow models to calculate the following out flow. Such approach has been used to connect probit functions to outflow models and also to connect outflow models to physical events that will be described in the following.</p>
 <table class="docutils align-default">
 <colgroup>

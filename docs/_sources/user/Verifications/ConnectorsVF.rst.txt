@@ -12,5 +12,7 @@ The main purpose of the connectors is to make decisions for the following conseq
    :maxdepth: 1
 
    ConnectorsVF/DS_LOC
+   ConnectorsVF/PB_LOC
+   ConnectorsVF/Out_Physic
 		  
 Verification by: |bsz|

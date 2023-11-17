@@ -14,7 +14,9 @@ OpenSRANE
 
 .. admonition:: Latest News
 
-   * Verification of :ref:`DispersionSpreadModels <DispersionSpreadVF>` added to the documentation.
+   * Verification of :ref:`fire_point_source <firepointsourceVF>` added to the documentation. Date: 11/17/2023
+
+   * Verification of :ref:`DispersionSpreadModels <DispersionSpreadVF>` added to the documentation. Date: 11/10/2023
    
 
 |opr| is an open-source, extensible, flexible and object-oriented software for calculating the quantitative risk of NaTech events in process plants. For performing NaTech analysis using |opr|, **Python** popular scripting language has been extended, by extended we mean additional commands have been added to the languages.

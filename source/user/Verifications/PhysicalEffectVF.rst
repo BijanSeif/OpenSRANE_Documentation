@@ -11,5 +11,6 @@ This package is for modelling physical effect (overpressure or heat radiation) o
    :maxdepth: 1
 
    PhysicalEffectVF/fire_point_source
+   PhysicalEffectVF/VCE_TNT
    
    

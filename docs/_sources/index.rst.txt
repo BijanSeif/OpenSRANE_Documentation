@@ -14,6 +14,10 @@ OpenSRANE
 
 .. admonition:: Latest News
 
+   * Verification of :ref:`PhysicalEffect <PhysicalEffectVF>` verification section completed. Date: 11/18/2023
+
+   * Verification of :ref:`VCE_TNT <VCETNTVF>` added to the documentation. Date: 11/18/2023
+
    * Verification of :ref:`fire_point_source <firepointsourceVF>` added to the documentation. Date: 11/17/2023
 
    * Verification of :ref:`DispersionSpreadModels <DispersionSpreadVF>` added to the documentation. Date: 11/10/2023

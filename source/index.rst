@@ -14,6 +14,8 @@ OpenSRANE
 
 .. admonition:: Latest News
 
+   * :ref:`First Article <references>` of OpenSRANE Released. 11/25/2023
+
    * Verification of :ref:`PhysicalEffect <PhysicalEffectVF>` verification section completed. Date: 11/18/2023
 
    * Verification of :ref:`VCE_TNT <VCETNTVF>` added to the documentation. Date: 11/18/2023

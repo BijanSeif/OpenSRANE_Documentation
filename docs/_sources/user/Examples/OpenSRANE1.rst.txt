@@ -4,7 +4,7 @@
 OpenSRANE, a flexible and extensible platform for quantitative risk assessment of NaTech events 
 ***********************************************************************************************
 
-DOI:
+DOI: `10.22115/SCCE.2023.407882.1685 <https://doi.org/10.22115/scce.2023.407882.1685>`_
 
 In this page the model file of above article and other related files with their description are presented. 
 

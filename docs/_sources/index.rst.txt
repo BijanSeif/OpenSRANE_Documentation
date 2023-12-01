@@ -4,13 +4,12 @@
 .. meta::
    :google-site-verification: urOWf3F5etdxQeLrqblrNbk_blbvilo-RyoLSlAuOak
    
-OpenSRANE
-=========
+OpenSRANE documentation
+=======================
  
 .. raw:: html
    
    <p style="font-size: 20px; margin-bottom: 50px"><b style="font-size: 25px">Open S</b>ystem for <b style="font-size: 25px">R</b>isk <b style="font-size: 25px">A</b>ssessment of <b style="font-size: 25px">N</b>aTech <b style="font-size: 25px">E</b>vents</p>
-
 
 .. admonition:: Latest News
 
@@ -29,6 +28,7 @@ OpenSRANE
    
 The |doc| for using the software and getting familiar with the framework of the software and the platform (|githubLink|) that the package has been located and presented are described here. This documentation is divided to two parts. In the first part (:ref:`Users Guideline`) the procedure of modelling and usage of the program has been described for users and steps of modelling has been explained. In the second part (:ref:`Developers Guideline`) the |opr| framework is described for developers wishing to create their own applications or extend the existing applications.
 
+**Official Website (Under Construction):** `https://opensrane.qom.ac.ir/ <https://opensrane.qom.ac.ir/>`_
 
 .. _Users Guideline:
 

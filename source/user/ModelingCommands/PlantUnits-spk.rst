@@ -1,4 +1,4 @@
-.. _PlantUnits:
+.. _plantunits:
 
 PlantUnits Subpackage
 *********************
@@ -11,5 +11,6 @@ Very Important subpackage that is responsible to define the plant unit objects a
    :maxdepth: 1
 
    PlantUnits-SPK/ONGStorage
+   PlantUnits-SPK/SphericalTank
    
    

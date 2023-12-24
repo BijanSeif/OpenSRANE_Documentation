@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ONGStorage Command &mdash; OpenSRANE Documentation 0.0.3 documentation</title>
+  <title>SphericalTank Command &mdash; OpenSRANE Documentation 0.0.3 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="SphericalTank Command" href="SphericalTank.html" />
-    <link rel="prev" title="PlantUnits Subpackage" href="../PlantUnits-spk.html" /> 
+    <link rel="next" title="Recorders Subpackage" href="../Recorders-spk.html" />
+    <link rel="prev" title="ONGStorage Command" href="ONGStorage.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -64,11 +64,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../PhysicalEffect-spk.html">PhysicalEffect Subpackage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Safety-spk.html">Safety Subpackage</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../PlantUnits-spk.html">PlantUnits Subpackage</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">ONGStorage Command</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#PlantUnits.ONGStorage"><code class="docutils literal notranslate"><span class="pre">PlantUnits.ONGStorage()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="ONGStorage.html">ONGStorage Command</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">SphericalTank Command</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#PlantUnits.SphericalTank"><code class="docutils literal notranslate"><span class="pre">PlantUnits.SphericalTank()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="SphericalTank.html">SphericalTank Command</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Recorders-spk.html">Recorders Subpackage</a></li>
@@ -107,9 +107,9 @@
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../ModelingCommands.html">Modeling commands</a></li>
           <li class="breadcrumb-item"><a href="../PlantUnits-spk.html">PlantUnits Subpackage</a></li>
-      <li class="breadcrumb-item active">ONGStorage Command</li>
+      <li class="breadcrumb-item active">SphericalTank Command</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../../_sources/user/ModelingCommands/PlantUnits-SPK/ONGStorage.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../../_sources/user/ModelingCommands/PlantUnits-SPK/SphericalTank.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -117,12 +117,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ongstorage-command">
-<span id="ongstorage"></span><h1>ONGStorage Command<a class="headerlink" href="#ongstorage-command" title="Link to this heading"></a></h1>
+  <section id="sphericaltank-command">
+<span id="sphericaltank"></span><h1>SphericalTank Command<a class="headerlink" href="#sphericaltank-command" title="Link to this heading"></a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="PlantUnits.ONGStorage">
-<span class="sig-prename descclassname"><span class="pre">PlantUnits.</span></span><span class="sig-name descname"><span class="pre">ONGStorage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SiteTag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DikeTag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SubstanceTag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FragilityTagNumbers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Horizontal_localPosition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Vertical_localPosition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Surface_Roughness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Pressure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Temperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SubstanceVolumeRatio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Diameter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">GroundTemperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ks_Soil_Thermal_conductivity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Alphas_Soil_thermal_diffusivity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary_points_Number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary_points_height_levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pressure_probit_tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radiation_probit_tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RadiationDifferenceDose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PlantUnits.ONGStorage" title="Link to this definition"></a></dt>
-<dd><p>ON Ground Storage tank object is defined by this command. Defined features also should be assigned by their tags to this/these object/s.</p>
+<dt class="sig sig-object py" id="PlantUnits.SphericalTank">
+<span class="sig-prename descclassname"><span class="pre">PlantUnits.</span></span><span class="sig-name descname"><span class="pre">SphericalTank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SiteTag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DikeTag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SafetyTag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SubstanceTag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FragilityTagNumbers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Horizontal_localPosition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Vertical_localPosition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Surface_Roughness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Pressure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Temperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SubstanceVolumeRatio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Diameter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Botton_Point_Height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">GroundTemperature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ks_Soil_Thermal_conductivity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Alphas_Soil_thermal_diffusivity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary_points_Number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Number_of_boundary_points_height_levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pressure_probit_tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radiation_probit_tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RadiationDifferenceDose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PlantUnits.SphericalTank" title="Link to this definition"></a></dt>
+<dd><p>Above Ground Spherical tank object is defined by this command. Defined features also should be assigned by their tags to this/these object/s.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 17%" />
@@ -182,11 +182,11 @@
 </tr>
 <tr class="row-odd"><td><p>Diameter</p></td>
 <td><p>float</p></td>
-<td><p>Tank diameter.</p></td>
+<td><p>Spherical Tank diameter.</p></td>
 </tr>
-<tr class="row-even"><td><p>Height</p></td>
+<tr class="row-even"><td><p>Botton_Point_Height</p></td>
 <td><p>float</p></td>
-<td><p>Tank height.</p></td>
+<td><p>Height of the most bottom point of spherical tank from ground.</p></td>
 </tr>
 <tr class="row-odd"><td><p>GroundTemperature</p></td>
 <td><p>float</p></td>
@@ -202,11 +202,11 @@
 </tr>
 <tr class="row-even"><td><p>boundary_points_Number</p></td>
 <td><p>int</p></td>
-<td><p>Number of the boundary points that program uses them to calculate the pressure and temperature at these points.</p></td>
+<td><p>Number of the boundary points that program uses them to calculate the pressure and temperature at these points at each specified level of height.</p></td>
 </tr>
-<tr class="row-odd"><td><p>boundary_points_height_levels</p></td>
+<tr class="row-odd"><td><p>Number_of_boundary_points_height_levels</p></td>
 <td><p>int</p></td>
-<td><p>Number of the levels that boundary points will be repeated in the height of the tank. If boundary points defined equal to 20 and heigh points level defined equal to 10, there will be 200 points on the tank body that temperatures and pressures will be calculated for.</p></td>
+<td><p>Number of the levels that boundary points will be repeated in the height of the spherical tank. If boundary points defined equal to 20 and heigh points level defined equal to 10, there will be 200 points on the tank body that temperatures and pressures will be calculated for.</p></td>
 </tr>
 <tr class="row-even"><td><p>pressure_probit_tag</p></td>
 <td><p>int</p></td>
@@ -232,7 +232,7 @@
 <p><strong>Python Code</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">opensrane</span> <span class="k">as</span> <span class="nn">opr</span>
 
-<span class="n">opr</span><span class="o">.</span><span class="n">PlantUnits</span><span class="o">.</span><span class="n">ONGStorage</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">SiteTag</span><span class="o">=</span><span class="n">SiteTAg</span><span class="p">,</span> <span class="n">DikeTag</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">Horizontal_localPosition</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">Vertical_localPosition</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">Pressure</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">,</span> <span class="n">Temperature</span><span class="o">=</span><span class="mi">273</span><span class="o">+</span><span class="mi">3</span><span class="p">,</span> <span class="n">SubstanceTag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">FragilityTagNumbers</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="n">radiation_probit_tag</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">pressure_probit_tag</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">Diameter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">Height</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">SubstanceVolumeRatio</span><span class="o">=</span><span class="mf">0.85</span><span class="p">)</span>
+<span class="n">opr</span><span class="o">.</span><span class="n">PlantUnits</span><span class="o">.</span><span class="n">SphericalTank</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">SiteTag</span><span class="o">=</span><span class="n">SiteTAg</span><span class="p">,</span> <span class="n">DikeTag</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">Horizontal_localPosition</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">Vertical_localPosition</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">Pressure</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">,</span> <span class="n">Temperature</span><span class="o">=</span><span class="mi">273</span><span class="o">+</span><span class="mi">3</span><span class="p">,</span> <span class="n">SubstanceTag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">FragilityTagNumbers</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="n">radiation_probit_tag</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">pressure_probit_tag</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">Diameter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">Botton_Point_Height</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">SubstanceVolumeRatio</span><span class="o">=</span><span class="mf">0.85</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

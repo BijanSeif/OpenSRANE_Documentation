@@ -13,6 +13,10 @@ OpenSRANE documentation
 
 .. admonition:: Latest News
 
+   * :ref:`Spherical Tank <sphericaltank>` element added to :ref:`PlantUnits <PlantUnits>` subpackage. 12/23/2023
+
+   * :ref:`Liquefied Petroleum Gas (LPG) <MatDataBank>` Material added to data bank of materials. 12/23/2023
+
    * :ref:`First Article <references>` of OpenSRANE Released. 11/25/2023
 
    * Verification of :ref:`PhysicalEffect <PhysicalEffectVF>` verification section completed. Date: 11/18/2023

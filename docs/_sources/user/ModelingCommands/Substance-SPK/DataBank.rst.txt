@@ -32,7 +32,7 @@ DataBank Command
       Octane
       n_hexane
       Gasoline
-	  Liquefied Petroleum Gas (LPG)
+	  LPG_Liquefied_Petroleum_Gas
 
    .. admonition:: Example:
    

@@ -6,7 +6,7 @@ PlotIndividualRisk
 		   
    To plot any set of values on defined nodesGroup object. If we set the individual risk values on each node of a defined nodesGroup then this command will plot the individual risk.
    
-   .. function:: Plot.Plotly.PlotIndividualRisk(PlotMode=1, NodesGroupTag=1, NodesProbabilityList=[], ContorList=[], )
+   .. function:: Plot.Plotly.PlotIndividualRisk(PlotMode=1, NodesGroupTag=1, NodesProbabilityList=[], ContorList=[], width=None, height=None, xrange=[], yrange=[], fontsize=18, labelfontsize=18)
 
    
    .. csv-table:: 
@@ -17,6 +17,13 @@ PlotIndividualRisk
 	  NodesGroupTag, int, The tag of NodesGroup that user want to be shown on plot. 
 	  NodesProbabilityList, list of float, "the probability values that has been resulted from analysis and the specify the death probability of each node (Obviously its length should be equal to the number of the NodesGroupTag nodes. "
 	  ContorList, list of float, "The list of the minimum and maximum contour value that we want to be plot. If user do not fill it, the code automatically consider the range according the minimum and maximum values of NodesProbabilityList."
+	  width, int, Determines the width of plot
+	  height, int, Determines the height of plot
+	  xrange, list, A list with two values of start and end of x axis to limit plot to these values
+	  yrange, list, A list with two values of start and end of y axis to limit plot to these values
+	  fontsize, int, Determines font size of plot
+	  labelfontsize, int, Determines labels font size
+	  XTitle, int, Determines title of plot
 	  
    .. admonition:: Example:
       

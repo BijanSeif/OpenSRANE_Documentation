@@ -6,7 +6,7 @@ PlotFragilities
 
    To plot defined fragilities. 
    
-   .. function:: Plot.Plotly.PlotFragilities(StdNumber=3, NPoints=100, FragilityTagList=[],PlotMode=1)
+   .. function:: Plot.Plotly.PlotFragilities(StdNumber=3, NPoints=100, FragilityTagList=[],PlotMode=1, width=None, height=None, fontsize=18, labelfontsize=18, XTitle='Random Variable')
 
    
    .. csv-table:: 
@@ -17,6 +17,12 @@ PlotFragilities
 	  NPoints, int, The number of the points that will be consider for each fragility 
 	  FragilityTagList, list of int, the list of fragility tags and those that mentioned in this list will be plotted and if nothing entered all fragilities will be plot.
 	  PlotMode, int, "Options with values equal to 1,2 or 3 to change the plot mode. For various Editors with one on these option plot will be activate!"
+	  width, int, Determines the width of plot
+	  height, int, Determines the height of plot
+	  fontsize, int, Determines font size of plot
+	  labelfontsize, int, Determines labels font size
+	  XTitle, int, Determines title of plot
+	  
 	  
    .. admonition:: Example:
    

@@ -6,7 +6,7 @@ PlotWindRose
 		   
    To plot defined windrose. 
    
-   .. function:: Plot.Plotly.PlotWindRose(WindRoseTag, Draw_For_Day=True,PlotMode=1)
+   .. function:: Plot.Plotly.PlotWindRose(WindRoseTag, Draw_For_Day=True,PlotMode=1, width=None, height=None)
    
    .. csv-table:: 
       :header: "Argument", "Type", "Description"
@@ -15,6 +15,8 @@ PlotWindRose
 	  PlotMode, int, "Options with values equal to 1,2 or 3 to change the plot mode. For various Editors with one on these option plot will be activate!"
 	  WindRoseTag, int, Tag of defined windrose.
 	  Draw_For_Day, boolean, Determines to plot Data defined for day or night.
+	  width, int, Determines the width of plot
+	  height, int, Determines the height of plot
 	  
    .. admonition:: Example:
    

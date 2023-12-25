@@ -6,13 +6,15 @@ PlotHazard
 		   
    To plot defined hazards. 
    
-   .. function:: Plot.Plotly.PlotHazard(PlotMode=1)
+   .. function:: Plot.Plotly.PlotHazard(PlotMode=1, width=None, height=None)
    
    .. csv-table:: 
       :header: "Argument", "Type", "Description"
       :widths: 10, 10, 40
 	  
 	  PlotMode, int, "Options with values equal to 1,2 or 3 to change the plot mode. For various Editors with one on these option plot will be activate!"
+	  width, int, Determines the width of plot
+	  height, int, Determines the height of plot
 	  
    .. admonition:: Example:
    

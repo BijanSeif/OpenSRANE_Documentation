@@ -13,6 +13,8 @@ OpenSRANE documentation
 
 .. admonition:: Latest News
 
+   * :ref:`ConstIM <constim>` added to :ref:`Hazard <hazSPK>` subpackage. 3/09/2024
+
    * :ref:`Spherical Tank <sphericaltank>` element added to :ref:`PlantUnits <PlantUnits>` subpackage. 12/23/2023
 
    * :ref:`Liquefied Petroleum Gas (LPG) <MatDataBank>` Material added to data bank of materials. 12/23/2023

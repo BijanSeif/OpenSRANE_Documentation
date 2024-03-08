@@ -45,4 +45,5 @@ Existing modules
       :maxdepth: 1
    
       hazard-spk/Earthquake
+      hazard-spk/ConstIM
       

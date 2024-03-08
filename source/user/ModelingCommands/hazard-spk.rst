@@ -11,3 +11,4 @@ In this package the natural hazard intensities and corresponding probability of 
    :maxdepth: 1
 
    Hazard-SPK/Earthquake
+   Hazard-SPK/ConstIM

@@ -13,6 +13,10 @@ OpenSRANE documentation
 
 .. admonition:: Latest News
 
+   * :ref:`Rapid_N_Poolfire_point_source <rapidnpoolfirepointsource>` added to :ref:`PhysicalEffect <PhysicalEffect>` subpackage. 3/21/2024
+
+   * :ref:`fire_point_source <firepointsource>` and :ref:`Simple_fire_point_source <simplefirepointsource>` commands are modified and Radiative_Fraction added to them. 3/21/2024
+
    * :ref:`ConstIM <constim>` added to :ref:`Hazard <hazSPK>` subpackage. 3/09/2024
 
    * :ref:`Spherical Tank <sphericaltank>` element added to :ref:`PlantUnits <PlantUnits>` subpackage. 12/23/2023

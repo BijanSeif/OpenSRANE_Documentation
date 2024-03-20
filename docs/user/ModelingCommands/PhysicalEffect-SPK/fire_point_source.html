@@ -21,7 +21,7 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="VCE_TNT Command" href="VCE_TNT.html" />
+    <link rel="next" title="Simple_fire_point_source Command" href="Simple_fire_point_source.html" />
     <link rel="prev" title="PhysicalEffect Subpackage" href="../PhysicalEffect-spk.html" /> 
 </head>
 
@@ -68,6 +68,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#PhysicalEffect.fire_point_source"><code class="docutils literal notranslate"><span class="pre">PhysicalEffect.fire_point_source()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="Simple_fire_point_source.html">Simple_fire_point_source Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Rapid_N_Poolfire_point_source.html">Rapid_N_Poolfire_point_source Command</a></li>
 <li class="toctree-l3"><a class="reference internal" href="VCE_TNT.html">VCE_TNT Command</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Safe.html">SAFE Command</a></li>
 </ul>
@@ -124,7 +126,7 @@
 <span id="firepointsource"></span><h1>fire_point_source Command<a class="headerlink" href="#fire-point-source-command" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="PhysicalEffect.fire_point_source">
-<span class="sig-prename descclassname"><span class="pre">PhysicalEffect.</span></span><span class="sig-name descname"><span class="pre">fire_point_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.055</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PhysicalEffect.fire_point_source" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">PhysicalEffect.</span></span><span class="sig-name descname"><span class="pre">fire_point_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minf</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.055</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Radiative_Fraction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PhysicalEffect.fire_point_source" title="Link to this definition"></a></dt>
 <dd><p>This command is for modelling the heat radiation of a burning liquid base on <a class="reference internal" href="../../Verifications/PhysicalEffectVF/fire_point_source.html#ref-1" id="id1"><span>[Ref.1]</span></a>. If there were no liquid spread this module do not return any results.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -151,6 +153,10 @@
 <td><p>float</p></td>
 <td><p>constant according table 3.8 in <a class="reference internal" href="../../Verifications/PhysicalEffectVF/fire_point_source.html#ref-1" id="id3"><span>[Ref.1]</span></a>.</p></td>
 </tr>
+<tr class="row-odd"><td><p>Radiative_Fraction</p></td>
+<td><p>float</p></td>
+<td><p>Radiation factor of heat of combustion, This value will modify the heat of combustion of material. This factor will be multiply in specific heat of combustion of material or substace. <a class="reference internal" href="#ref-2" id="id4"><span>[Ref.2]</span></a></p></td>
+</tr>
 </tbody>
 </table>
 <div class="admonition-example admonition">
@@ -159,7 +165,7 @@
 <p><strong>Python Code</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">opensrane</span> <span class="k">as</span> <span class="nn">opr</span>
 
-<span class="n">opr</span><span class="o">.</span><span class="n">PhysicalEffect</span><span class="o">.</span><span class="n">fire_point_source</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">minf</span><span class="o">=</span><span class="mf">0.0501</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">opr</span><span class="o">.</span><span class="n">PhysicalEffect</span><span class="o">.</span><span class="n">fire_point_source</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">minf</span><span class="o">=</span><span class="mf">0.0501</span><span class="p">,</span><span class="n">k</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">Radiative_Fraction</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -170,6 +176,10 @@
 <span class="label"><span class="fn-bracket">[</span>Ref.1<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id3">3</a>)</span>
 <p><cite>J. Casal, Evaluation of the Effects and Consequences of Major Accidents in Industrial Plants, vol. 8. 2018.</cite></p>
+</div>
+<div class="citation" id="ref-2" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">Ref.2</a><span class="fn-bracket">]</span></span>
+<p><cite>Rapid-N docs: https://publications.jrc.ec.europa.eu/repository/bitstream/JRC130323/JRC130323_01.pdf</cite></p>
 </div>
 </div>
 <p>Code Developed by: <strong>Bijan Sayyafzadeh</strong></p>

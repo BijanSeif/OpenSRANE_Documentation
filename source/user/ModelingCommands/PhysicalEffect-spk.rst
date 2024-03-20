@@ -11,6 +11,8 @@ Using this subpackage the physical effect models could be defined by the user. D
    :maxdepth: 1
 
    PhysicalEffect-SPK/fire_point_source
+   PhysicalEffect-SPK/Simple_fire_point_source
+   PhysicalEffect-SPK/Rapid_N_Poolfire_point_source
    PhysicalEffect-SPK/VCE_TNT
    PhysicalEffect-SPK/Safe
    

@@ -3,7 +3,7 @@
 Simple_fire_point_source Command
 --------------------------------
 
-.. function:: PhysicalEffect.fire_point_source(tag, minf=0.055, k=1.5, Radiative_Fraction=1)
+.. function:: PhysicalEffect.Simple_fire_point_source(tag, minf=0.055, k=1.5, Radiative_Fraction=1)
 
 
 

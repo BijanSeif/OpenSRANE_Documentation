@@ -3,13 +3,22 @@
 UniAnalyze Command
 ******************
 
-.. function:: opr.Analyze.ScenarioAnalyze.UniAnalyze(SavetoFile=True)
+.. function:: opr.Analyze.ScenarioAnalyze.UniAnalyze(SavetoFile=True, fileindex=0, MergeSavedFiles=False)
    
-   By running this command, **only one scenario analysis will be run** and the defined algorithm will be implemented for defined model. The main structure of the command has been shown in the following.
+   By running this command, **only one scenario analysis will be run** and the defined algorithm will be implemented for defined model. After running this command all recorder objects will record the results.
+   
+   .. csv-table:: 
+      :header: "Argument", "Type", "Description"
+      :widths: 10, 10, 40
+   
+      SavetoFile, boolean, "Setting this command to True leads to move all recorded data from memort to a file. When user run this command with setting SavetoFile to True, then all recorded objects or data will be moved to the defined file."
+      fileindex, int, An integer value that will be add to the end of the filename to save recorded scenarios in seperate file.
+      MergeSavedFiles, boolean, "If set this option into True, When analysis finished all files will be merge into one file and for huge files it takes so much memory and time!. The created final file has an uppercase M in its suffix."
+	  
 
 .. note::
 
-   When analyze finished, all objects and results are in the memory and user can use them for post processing. SavetoFile option cause that the resulted scenario will be remain in the memory and when the number of scenarios in the memory become equal recorder object SaveStep number, they will be save into the reorder file specified in the recorder object.
+   When one analyze finished, all objects and results are in the memory and user can use them for post processing. By running next analysis without setting SavetoFile option to True, the previous results will go into the memory of the system and new results will be activate. By setting SavetoFile option to True all recorded data or objects will be move into the defined filename with defined index and memory will be clear. 
    
    if user set SavetoFile to False, then the results won't save into the defined recorder object and results remain in the memory. If user, for some reasons had to use UniAnalyze to do multiple analysis, then the SavetoFile option can set to False to make the analysis faster and then after some steps (for example 1000 steps) can set it True till the recorded results will be save into the defined recorder file or object.
    

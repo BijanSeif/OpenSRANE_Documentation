@@ -124,13 +124,40 @@
 <span id="unianalyze"></span><h1>UniAnalyze Command<a class="headerlink" href="#unianalyze-command" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="opr.Analyze.ScenarioAnalyze.UniAnalyze">
-<span class="sig-prename descclassname"><span class="pre">opr.Analyze.ScenarioAnalyze.</span></span><span class="sig-name descname"><span class="pre">UniAnalyze</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">SavetoFile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opr.Analyze.ScenarioAnalyze.UniAnalyze" title="Link to this definition"></a></dt>
-<dd><p>By running this command, <strong>only one scenario analysis will be run</strong> and the defined algorithm will be implemented for defined model. The main structure of the command has been shown in the following.</p>
+<span class="sig-prename descclassname"><span class="pre">opr.Analyze.ScenarioAnalyze.</span></span><span class="sig-name descname"><span class="pre">UniAnalyze</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">SavetoFile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileindex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MergeSavedFiles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opr.Analyze.ScenarioAnalyze.UniAnalyze" title="Link to this definition"></a></dt>
+<dd><p>By running this command, <strong>only one scenario analysis will be run</strong> and the defined algorithm will be implemented for defined model. After running this command all recorder objects will record the results.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Argument</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SavetoFile</p></td>
+<td><p>boolean</p></td>
+<td><p>Setting this command to True leads to move all recorded data from memort to a file. When user run this command with setting SavetoFile to True, then all recorded objects or data will be moved to the defined file.</p></td>
+</tr>
+<tr class="row-odd"><td><p>fileindex</p></td>
+<td><p>int</p></td>
+<td><p>An integer value that will be add to the end of the filename to save recorded scenarios in seperate file.</p></td>
+</tr>
+<tr class="row-even"><td><p>MergeSavedFiles</p></td>
+<td><p>boolean</p></td>
+<td><p>If set this option into True, When analysis finished all files will be merge into one file and for huge files it takes so much memory and time!. The created final file has an uppercase M in its suffix.</p></td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When analyze finished, all objects and results are in the memory and user can use them for post processing. SavetoFile option cause that the resulted scenario will be remain in the memory and when the number of scenarios in the memory become equal recorder object SaveStep number, they will be save into the reorder file specified in the recorder object.</p>
+<p>When one analyze finished, all objects and results are in the memory and user can use them for post processing. By running next analysis without setting SavetoFile option to True, the previous results will go into the memory of the system and new results will be activate. By setting SavetoFile option to True all recorded data or objects will be move into the defined filename with defined index and memory will be clear.</p>
 <p>if user set SavetoFile to False, then the results won’t save into the defined recorder object and results remain in the memory. If user, for some reasons had to use UniAnalyze to do multiple analysis, then the SavetoFile option can set to False to make the analysis faster and then after some steps (for example 1000 steps) can set it True till the recorded results will be save into the defined recorder file or object.</p>
 </div>
 <p>Code Developed by: <strong>Bijan Sayyafzadeh</strong></p>

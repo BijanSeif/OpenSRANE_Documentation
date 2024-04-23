@@ -3,7 +3,7 @@
 Objs_recorder Command
 *********************
 
-.. function:: Recorders.Objs_recorder(tag, filename='', SaveStep=100, fileAppend=True,)
+.. function:: Recorders.Objs_recorder(tag, filename='', SaveStep=100, fileAppend=True, RecodingSubpackages=['PlantUnits', 'Hazard', 'DateAndTime', 'WindData', 'NodesGroups'])
 
    
    Using this command, a file will be determined by the user to record all simulated scenarios objects. By every analyze, the created objects and results will be record in the mentioned file and user can call them using the load commands.
@@ -16,11 +16,12 @@ Objs_recorder Command
 	  filename, str, Name of the file that user wants to record data in.
 	  SaveStep, int, Number of steps that after that data will be move to the file and memory become empty. Bigger values cause faster analysis but it needs enough system memory.
 	  fileAppend, boolean, "True says that if the filename exists, add the recorded scenarios to the existing file and false will clear the file if exists."
+	  RecodingSubpackages, list, "List of subpackages that Users wanna to be recorded by recorders. The default value is ['PlantUnits','Hazard', 'DateAndTime', 'WindData'] which contains some variables that their values usually changaed by each simulation. But also other subpackages can be added by user except 'Recorders'. The Other subpackages that their variables values are initially assigned and never changes during simulation will be record once at the first savefile."
 
 
    .. admonition:: Example:
    
-      The following demonstrates the use of the Objs_recorder command.
+      The following demonstrates the use of the Objs_recorder command and just saves 'PlantUnits' objects in each simulation.
    
       **Python Code**
    
@@ -28,7 +29,7 @@ Objs_recorder Command
       
         import opensrane as opr
 		
-        opr.Recorders.Objs_recorder(tag=1, filename='ObjsRecorder', SaveStep=100, fileAppend=False,)
+        opr.Recorders.Objs_recorder(tag=1, filename='ObjsRecorder', SaveStep=100, fileAppend=False, RecodingSubpackages=['PlantUnits'])
 
 
 Code Developed by: |bsz|

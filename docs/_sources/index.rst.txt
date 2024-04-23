@@ -13,6 +13,10 @@ OpenSRANE documentation
 
 .. admonition:: Latest News
 
+   * New update and loading approach (Ordinary approach) and commands are added to :ref:`Objs_recorder_loader <Objsrecorderloader>` subpackage. 4/23/2024
+
+   * MergeSavedFiles option added to :ref:`Analyze <Analyze>` subpackage commands. 4/23/2024
+
    * New version of OpenSRANE (Version 0.0.4) Released. 3/21/2024
 
    * :ref:`Rapid_N_Poolfire_point_source <rapidnpoolfirepointsource>` added to :ref:`PhysicalEffect <PhysicalEffect>` subpackage. 3/21/2024

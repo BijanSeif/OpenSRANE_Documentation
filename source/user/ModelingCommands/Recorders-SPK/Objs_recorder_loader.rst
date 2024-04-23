@@ -6,6 +6,25 @@ Objs_recorder_loader module
 
    
    This module contains the following subcommands that are used to load the recorded data using :ref:`Objs_recorder <Objsrecorder>`. In the following each subcommand with their usage are described. There are two approaches for loading recorded scenarios that are described in the following.
+   
+   .. note::
+   
+      **Important attention**:  As explained in :ref:`Objs_recorder <Objsrecorder>`, just subpackages that are defined using RecodingSubpackages option will be recorded and the other subpackages are recorded just once. The following approaches (Ordinary and Bank) are for loading the objects that are recorded in each simulation. So, the related commands in each approach will load just one scenario that contains objects that are defined for recording in each simulation and do not load other objects that are recorded only once. 
+      
+      
+      Objects that are recorded only once also should be loaded for plotting and other purposes. To load these object the below command should be used.
+	  
+      * **LoadOtherSubPackages command**
+	  
+	  .. function:: Recorders.Objs_recorder_loader.LoadOtherSubPackages(filename)
+   
+         This command will load objects that are recorded only once and their subpackages are **not** defined in **RecodingSubpackages** option of :ref:`Objs_recorder <Objsrecorder>`. 
+         
+         .. csv-table:: 
+            :header: "Argument", "Type", "Description"
+            :widths: 10, 10, 40
+         
+            filename, str, Name of the :ref:`Objs_recorder <Objsrecorder>` created file.  
 
 Ordinary approach
 +++++++++++++++++

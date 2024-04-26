@@ -124,7 +124,7 @@
 <span id="objsrecorder"></span><h1>Objs_recorder Command<a class="headerlink" href="#objs-recorder-command" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="Recorders.Objs_recorder">
-<span class="sig-prename descclassname"><span class="pre">Recorders.</span></span><span class="sig-name descname"><span class="pre">Objs_recorder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SaveStep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileAppend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RecodingSubpackages</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['PlantUnits',</span> <span class="pre">'Hazard',</span> <span class="pre">'DateAndTime',</span> <span class="pre">'WindData',</span> <span class="pre">'NodesGroups']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Recorders.Objs_recorder" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">Recorders.</span></span><span class="sig-name descname"><span class="pre">Objs_recorder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileAppend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RecodingSubpackages</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['PlantUnits',</span> <span class="pre">'Hazard',</span> <span class="pre">'DateAndTime',</span> <span class="pre">'WindData',</span> <span class="pre">'NodesGroups']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Recorders.Objs_recorder" title="Link to this definition"></a></dt>
 <dd><p>Using this command, a file will be determined by the user to record all simulated scenarios objects. By every analyze, the created objects and results will be record in the mentioned file and user can call them using the load commands.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -147,15 +147,11 @@
 <td><p>str</p></td>
 <td><p>Name of the file that user wants to record data in.</p></td>
 </tr>
-<tr class="row-even"><td><p>SaveStep</p></td>
-<td><p>int</p></td>
-<td><p>Number of steps that after that data will be move to the file and memory become empty. Bigger values cause faster analysis but it needs enough system memory.</p></td>
-</tr>
-<tr class="row-odd"><td><p>fileAppend</p></td>
+<tr class="row-even"><td><p>fileAppend</p></td>
 <td><p>boolean</p></td>
 <td><p>True says that if the filename exists, add the recorded scenarios to the existing file and false will clear the file if exists.</p></td>
 </tr>
-<tr class="row-even"><td><p>RecodingSubpackages</p></td>
+<tr class="row-odd"><td><p>RecodingSubpackages</p></td>
 <td><p>list</p></td>
 <td><p>List of subpackages that Users wanna to be recorded by recorders. The default value is [‘PlantUnits’,’Hazard’, ‘DateAndTime’, ‘WindData’] which contains some variables that their values usually changaed by each simulation. But also other subpackages can be added by user except ‘Recorders’. The Other subpackages that their variables values are initially assigned and never changes during simulation will be record once at the first savefile.</p></td>
 </tr>
@@ -170,6 +166,13 @@
 <span class="n">opr</span><span class="o">.</span><span class="n">Recorders</span><span class="o">.</span><span class="n">Objs_recorder</span><span class="p">(</span><span class="n">tag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;ObjsRecorder&#39;</span><span class="p">,</span> <span class="n">SaveStep</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">fileAppend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">RecodingSubpackages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;PlantUnits&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Attention: Initially this command had SaveStep option that was the Number of steps that after that data will be move to the file and memory become empty but it has removed to Anlysis command because different recorders because of parallel issues can not have different save step. So, the following definition does not exist here else. To prevent any probable error still it exist in the input argument but do not have any effect.</p>
+<blockquote>
+<div><p><strong>SaveStep, int, Number of steps that after that data will be move to the file and memory become empty. Bigger values cause faster analysis but it needs enough system memory.</strong></p>
+</div></blockquote>
 </div>
 </dd></dl>
 

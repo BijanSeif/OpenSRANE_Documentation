@@ -3,7 +3,7 @@
 Objs_recorder Command
 *********************
 
-.. function:: Recorders.Objs_recorder(tag, filename='', fileAppend=True, RecodingSubpackages=['PlantUnits', 'Hazard', 'DateAndTime', 'WindData', 'NodesGroups'])
+.. function:: Recorders.Objs_recorder(tag, filename='', fileAppend=True, RecodingSubpackages=['PlantUnits', 'Hazard', 'DateAndTime', 'WindData', 'NodesGroups'], MergeSavedFiles=False)
 
    
    Using this command, a file will be determined by the user to record all simulated scenarios objects. By every analyze, the created objects and results will be record in the mentioned file and user can call them using the load commands.
@@ -16,6 +16,7 @@ Objs_recorder Command
 	  filename, str, Name of the file that user wants to record data in.
 	  fileAppend, boolean, "True says that if the filename exists, add the recorded scenarios to the existing file and false will clear the file if exists."
 	  RecodingSubpackages, list, "List of subpackages that Users wanna to be recorded by recorders. The default value is ['PlantUnits','Hazard', 'DateAndTime', 'WindData'] which contains some variables that their values usually changaed by each simulation. But also other subpackages can be added by user except 'Recorders'. The Other subpackages that their variables values are initially assigned and never changes during simulation will be record once at the first savefile."
+      MergeSavedFiles, boolean, "By setting this option to True, When analysis finished all saved files will be merge into one file with suffix M. Attention that for huge models it take so much memory and time and is not recomonded for huge models!"
 
 
    .. admonition:: Example:

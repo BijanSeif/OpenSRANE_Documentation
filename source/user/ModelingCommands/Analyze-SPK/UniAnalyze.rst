@@ -13,7 +13,7 @@ UniAnalyze Command
    
       SavetoFile, boolean, "Setting this command to True leads to move all recorded data from memort to a file. When user run this command with setting SavetoFile to True, then all recorded objects or data will be moved to the defined file."
       fileindex, int, An integer value that will be add to the end of the filename to save recorded scenarios in seperate file.
-      MergeSavedFiles, boolean, "If set this option into True, When analysis finished all files will be merge into one file and for huge files it takes so much memory and time!. The created final file has an uppercase M in its suffix."
+      MergeSavedFiles, boolean, "If set this option into True, When analysis finished it runs merge and clear method for all recorder objects and for any recorder object that MergeSavedFiles was set to true it will merge all saved files to a file with M suffix."
 	  
 
 .. note::

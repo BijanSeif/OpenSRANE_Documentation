@@ -3,7 +3,7 @@
 Recorder Command
 ================
 
-.. function:: Recorders.recorder(tag, filename='Recorder', fileAppend=True, recordfield='DamageLevel', NodesGroupTag=1,)
+.. function:: Recorders.recorder(tag, filename='Recorder', fileAppend=True, recordfield='DamageLevel', NodesGroupTag=1, MergeSavedFiles=False)
 
   
    Using this command, a specific result will be recorded for each simulation. The results that can be recorded by this command are listed in the following. The command is fast and it do not take much huge hard disk space. The simulated scenarios will no longer exist and user cannot load them after analysis.
@@ -17,6 +17,7 @@ Recorder Command
 	  fileAppend, boolean, "True says that if the filename exists, add the recorded scenarios to the existing file and false will clear the file if exists."
       recordfield, str, "A specific Flag that shows which data should be record. In the following, the possible Flags are described."
 	  NodesGroupTag, int, "If a property of a NodesGroup is considered in the recordfield to record, the tag of the NodesGroup object should be define here."
+      MergeSavedFiles, boolean, "By setting this option to True, When analysis finished all saved files will be merge into one file with suffix M. Attention that for huge models it may takes so much memory and time and is not recomonded for huge models!"
 	  
    .. note::
       

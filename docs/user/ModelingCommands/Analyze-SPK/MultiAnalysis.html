@@ -124,7 +124,7 @@
 <span id="multianalysis"></span><h1>MultiAnalysis Command<a class="headerlink" href="#multianalysis-command" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="opr.Analyze.ScenarioAnalyze.MultiAnalysis">
-<span class="sig-prename descclassname"><span class="pre">opr.Analyze.ScenarioAnalyze.</span></span><span class="sig-name descname"><span class="pre">MultiAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">AnalysisNumber</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileindex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MergeSavedFiles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opr.Analyze.ScenarioAnalyze.MultiAnalysis" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">opr.Analyze.ScenarioAnalyze.</span></span><span class="sig-name descname"><span class="pre">MultiAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">AnalysisNumber</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileindex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opr.Analyze.ScenarioAnalyze.MultiAnalysis" title="Link to this definition"></a></dt>
 <dd><p>This command as obvious from its name, <strong>implement multiple analysis</strong> equal to specified AnalysisNumber.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -139,16 +139,20 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>fileindex</p></td>
+<tr class="row-even"><td><p>AnalysisNumber</p></td>
+<td><p>int</p></td>
+<td><p>Number of analysis that should be run</p></td>
+</tr>
+<tr class="row-odd"><td><p>fileindex</p></td>
 <td><p>int</p></td>
 <td><p>An integer value that will be add to the end of the filename to save recorded scenarios in seperate file.</p></td>
 </tr>
-<tr class="row-odd"><td><p>MergeSavedFiles</p></td>
-<td><p>boolean</p></td>
-<td><p>If set this option into True, When analysis finished all files will be merge into one file and for huge files it takes so much memory and time!. The created final file has an uppercase M in its suffix.</p></td>
-</tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Initially this command had <strong>MergeSavedFiles</strong> that was used to merge all saved files. But this option moved to recorders and objs_recorders and now this option does not have any effect on performance of the command.</p>
+</div>
 </dd></dl>
 
 <div class="admonition note">

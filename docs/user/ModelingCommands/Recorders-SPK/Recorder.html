@@ -124,7 +124,7 @@
 <span id="recorder"></span><h1>Recorder Command<a class="headerlink" href="#recorder-command" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="Recorders.recorder">
-<span class="sig-prename descclassname"><span class="pre">Recorders.</span></span><span class="sig-name descname"><span class="pre">recorder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Recorder'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileAppend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recordfield</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DamageLevel'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NodesGroupTag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Recorders.recorder" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">Recorders.</span></span><span class="sig-name descname"><span class="pre">recorder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Recorder'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileAppend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recordfield</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DamageLevel'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NodesGroupTag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MergeSavedFiles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Recorders.recorder" title="Link to this definition"></a></dt>
 <dd><p>Using this command, a specific result will be recorded for each simulation. The results that can be recorded by this command are listed in the following. The command is fast and it do not take much huge hard disk space. The simulated scenarios will no longer exist and user cannot load them after analysis.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -158,6 +158,10 @@
 <tr class="row-even"><td><p>NodesGroupTag</p></td>
 <td><p>int</p></td>
 <td><p>If a property of a NodesGroup is considered in the recordfield to record, the tag of the NodesGroup object should be define here.</p></td>
+</tr>
+<tr class="row-odd"><td><p>MergeSavedFiles</p></td>
+<td><p>boolean</p></td>
+<td><p>By setting this option to True, When analysis finished all saved files will be merge into one file with suffix M. Attention that for huge models it may takes so much memory and time and is not recomonded for huge models!</p></td>
 </tr>
 </tbody>
 </table>

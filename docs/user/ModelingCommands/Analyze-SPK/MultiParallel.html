@@ -124,7 +124,7 @@
 <span id="multiparallel"></span><h1>MultiParallel Command<a class="headerlink" href="#multiparallel-command" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="opr.Analyze.ScenarioAnalyze.MultiParallel">
-<span class="sig-prename descclassname"><span class="pre">opr.Analyze.ScenarioAnalyze.</span></span><span class="sig-name descname"><span class="pre">MultiParallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">AnalysisNumber</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NumberOfProcessors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RecordersSaveStep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MergeSavedFiles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opr.Analyze.ScenarioAnalyze.MultiParallel" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">opr.Analyze.ScenarioAnalyze.</span></span><span class="sig-name descname"><span class="pre">MultiParallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">AnalysisNumber</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NumberOfProcessors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RecordersSaveStep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opr.Analyze.ScenarioAnalyze.MultiParallel" title="Link to this definition"></a></dt>
 <dd><p>By this command users can analyze their model with multiple cores or CPUs. Depend on the number of the cores the analysis duration will be reduce more.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -143,10 +143,6 @@
 <td><p>int</p></td>
 <td><p>for recorder objects, this number will be consider as save step and each processor will run analysis with this number of analysis and then save the recorded results (All recorded data or objects will be removed from memory to defined files in recorders) and then will go to next analysis.</p></td>
 </tr>
-<tr class="row-odd"><td><p>MergeSavedFiles</p></td>
-<td><p>boolean</p></td>
-<td><p>If set this option into True, When analysis finished all files will be merge into one file and for huge files it takes so much memory and time!. The created final file has an uppercase M in its suffix.</p></td>
-</tr>
 </tbody>
 </table>
 <div class="admonition note">
@@ -155,6 +151,10 @@
 <li><p>If user define NumberOfProcessors more than the number of the available cores, it will be reduced to the available number of the cores.</p></li>
 <li><p>Users should pay attention that this command should be used after (if __name__==’__main__’:) and outside of that, it will be encounter with error!. Because of mentioned limitation it cannot be used inside the Jupyter NoteBook (for windows operating system). Here is an example of how should it be hire:</p></li>
 </ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Initially this command had <strong>MergeSavedFiles</strong> that was used to merge all saved files. But this option moved to recorders and objs_recorders and now this option does not have any effect on performance of the command.</p>
 </div>
 <div class="admonition-example admonition">
 <p class="admonition-title">Example:</p>
@@ -168,7 +168,7 @@
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Users should attention that <strong>Never use MultiParallel inside a loop!</strong>. MultiParallel uses <strong>multiprocessing</strong> package that contains commands for parallel proccessing but it do not let you to use it inside a loop and you probably encounter with errors. This issue happened on windows operating system and maybe on mac and linux you found no error!</p>
+<p>Users should attention that <strong>Never use MultiParallel inside a loop!</strong>. MultiParallel uses <strong>multiprocessing</strong> package that contains commands for parallel proccessing but it do not let you to use it inside a loop and you probably encounter with errors. This issue happens on windows operating system and maybe on mac and linux you’ll find no error!</p>
 <p>There are some tricks that you can use MultiParallel command inside a loop. Look at the examples to get somes ideas.</p>
 </div>
 </dd></dl>

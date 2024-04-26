@@ -124,7 +124,7 @@
 <span id="multiparallel"></span><h1>MultiParallel Command<a class="headerlink" href="#multiparallel-command" title="Link to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="opr.Analyze.ScenarioAnalyze.MultiParallel">
-<span class="sig-prename descclassname"><span class="pre">opr.Analyze.ScenarioAnalyze.</span></span><span class="sig-name descname"><span class="pre">MultiParallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">AnalysisNumber</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NumberOfProcessors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RecorderSaveStep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MergeSavedFiles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opr.Analyze.ScenarioAnalyze.MultiParallel" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">opr.Analyze.ScenarioAnalyze.</span></span><span class="sig-name descname"><span class="pre">MultiParallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">AnalysisNumber</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NumberOfProcessors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RecordersSaveStep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MergeSavedFiles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opr.Analyze.ScenarioAnalyze.MultiParallel" title="Link to this definition"></a></dt>
 <dd><p>By this command users can analyze their model with multiple cores or CPUs. Depend on the number of the cores the analysis duration will be reduce more.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -139,9 +139,9 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>RecorderSaveStep</p></td>
+<tr class="row-even"><td><p>RecordersSaveStep</p></td>
 <td><p>int</p></td>
-<td><p>for recorder objects that savestep are not defined by user, this number will be consider as save step and each processor will run analysis with this number of analysis and then save the recorded results and then will go to next analysis.</p></td>
+<td><p>for recorder objects, this number will be consider as save step and each processor will run analysis with this number of analysis and then save the recorded results (All recorded data or objects will be removed from memory to defined files in recorders) and then will go to next analysis.</p></td>
 </tr>
 <tr class="row-odd"><td><p>MergeSavedFiles</p></td>
 <td><p>boolean</p></td>
@@ -162,14 +162,14 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">opensrane</span> <span class="k">as</span> <span class="nn">opr</span>
 
 <span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-   <span class="n">opr</span><span class="o">.</span><span class="n">Analyze</span><span class="o">.</span><span class="n">ScenarioAnalyze</span><span class="o">.</span><span class="n">MultiParallel</span><span class="p">(</span><span class="n">AnalysisNumber</span><span class="o">=</span><span class="mi">1_000_000</span><span class="p">,</span> <span class="n">NumberOfProcessors</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+   <span class="n">opr</span><span class="o">.</span><span class="n">Analyze</span><span class="o">.</span><span class="n">ScenarioAnalyze</span><span class="o">.</span><span class="n">MultiParallel</span><span class="p">(</span><span class="n">AnalysisNumber</span><span class="o">=</span><span class="mi">1_000_000</span><span class="p">,</span> <span class="n">NumberOfProcessors</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">RecordersSaveStep</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Users should attention that <strong>Never use MultiParallel inside a loop!</strong>. MultiParallel uses <strong>multiprocessing</strong> package that contains commands for parallel proccessing but it do not let you to use it inside a loop and you probably encounter with errors. This issue happened on windows operating system and maybe on mac and linux you found no error!</p>
-<p>There are some tricks that you can use MultiParallel command inside a loop. Look at this example to get the idea.</p>
+<p>There are some tricks that you can use MultiParallel command inside a loop. Look at the examples to get somes ideas.</p>
 </div>
 </dd></dl>
 

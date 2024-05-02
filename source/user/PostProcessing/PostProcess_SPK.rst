@@ -23,15 +23,15 @@ First Step: Create PostProcess Object
 	     
          import opensrane as opr
   
-         Post_Process_Object=opr.PostProcess.ObjsRecorderPP(filename,100)
+         Post_Process_Object=opr.PostProcess.ObjsRecorderPP(ObjsRecorer_filename=filename, Number_Of_LOC_Histogram_Bins=100)
    
-   * To load recorded data via :ref:`Recorder <Recorder>` use the following command. When user is using :ref:`Recorder <Recorder>` to record data and results, there are one separated file for each desired result and so finally there will be more than one file for recorded results. In this command **Recorer_FilenamesList** is the list of the recoded files name using :ref:`Recorder <Recorder>` recorder. All the statistical analysis and data will be store in **Results** variable that shown in the following sample. In the following sample it is assumed that user recorded the desired results in the mentioned file names. 
+   * To load recorded data via :ref:`Recorder <Recorder>` use the following command. When user is using :ref:`Recorder <Recorder>` to record data and results, there are one separated file for each desired result and so finally there will be more than one file for recorded results. In this command **Recorder_FilenamesList** is the list of the recoded files name using :ref:`Recorder <Recorder>` recorder. All the statistical analysis and data will be store in **Results** variable that shown in the following sample. In the following sample it is assumed that user recorded the desired results in the mentioned file names. 
    
       .. code-block:: python
 	     
          import opensrane as opr
   
-         Results=opr.PostProcess.RecorderPP.Analyze(Recorer_FilenamesList=['RecorderA.OPRrec','RecorderB.OPRrec','RecorderC.OPRrec','RecorderD.OPRrec','RecorderE.OPRrec'])
+         Post_Process_Object=opr.PostProcess.RecorderPP(Recorder_FilenamesList=['RecorderA.OPRrec','RecorderB.OPRrec','RecorderC.OPRrec','RecorderD.OPRrec','RecorderE.OPRrec'],Number_Of_LOC_Histogram_Bins=100)
 
 Second Step: Methods
 --------------------

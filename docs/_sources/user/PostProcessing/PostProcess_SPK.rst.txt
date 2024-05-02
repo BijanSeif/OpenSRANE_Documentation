@@ -25,7 +25,7 @@ First Step: Create PostProcess Object
   
          Post_Process_Object=opr.PostProcess.ObjsRecorderPP(ObjsRecorer_filename=filename, Number_Of_LOC_Histogram_Bins=100)
    
-   * To load recorded data via :ref:`Recorder <Recorder>` use the following command. When user is using :ref:`Recorder <Recorder>` to record data and results, there are one separated file for each desired result and so finally there will be more than one file for recorded results. In this command **Recorder_FilenamesList** is the list of the recoded files name using :ref:`Recorder <Recorder>` recorder. All the statistical analysis and data will be store in **Results** variable that shown in the following sample. In the following sample it is assumed that user recorded the desired results in the mentioned file names. 
+   * To create post process object for recorded data :ref:`Recorder <Recorder>` use the following command. When user is using :ref:`Recorder <Recorder>` to record data and results, there are one separated file for each desired result and so finally there will be more than one file for recorded results. In this command **Recorder_FilenamesList** is the list of the recoded files name using :ref:`Recorder <Recorder>` recorder. All the statistical analysis and data will be in this created object. In the following sample it is assumed that user recorded the desired results in the mentioned file names. 
    
       .. code-block:: python
 	     

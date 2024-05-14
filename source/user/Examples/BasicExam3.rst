@@ -29,7 +29,7 @@ Initialize the model and define reorder
       opr.wipe()
       
       #Define the recorder
-      opr.Recorders.Objs_recorder(tag=1,filename='Recorder_ex3',SaveStep=5000, fileAppend=False)
+      opr.Recorders.Objs_recorder(tag=1,filename='Recorder_ex3', fileAppend=False)
       
       #Clear Warning File content
       opr.Misc.warningClear()
@@ -207,10 +207,10 @@ Post Processing
    .. code-block:: python
       
       #Post Process
-      Results=opr.PostProcess.ObjsRecorderPP.Analyze('Recorder_ex3')
+      Results=opr.PostProcess.ObjsRecorderPP('Recorder_ex3')
       
-      DM0Scen=list(Results['Damagelevel_Scenario_Dict'][0])
-      ScenProb=Results['ScenariosProbability']
+      DM0Scen=list(Results.Damagelevel_Scenario_Dict()[0])
+      ScenProb=Results.ScenariosProbability()
       print('Recorder Scenarios in Damage level 0 =',DM0Scen,'\n')
       
       Len=list(set([len(i) for i in DM0Scen]))
@@ -220,7 +220,7 @@ Post Processing
           print()
           for Scenario in DM0Scen:
               if len(Scenario)==ln: print(f'Probability of Scenario {Scenario} is equal: {ScenProb[Scenario]}')
-      		  
+
 Plot some scenarios
 *******************************************************************
 

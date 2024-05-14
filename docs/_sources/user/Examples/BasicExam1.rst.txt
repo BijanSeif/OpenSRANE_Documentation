@@ -196,16 +196,15 @@ Post Processing
    .. code-block:: python
       
       #Post Process
-      Results=opr.PostProcess.RecorderPP.Analyze(['Recorder_ex1.OPRrec'])
+      Results=opr.PostProcess.RecorderPP(['Recorder_ex1'])
       
-      DM0Scen=Results['Damagelevel_Scenario_Dict'][0]
-      ScenProb=Results['ScenariosProbability']
+      DM0Scen=Results.Damagelevel_Scenario_Dict()[0]
+      ScenProb=Results.ScenariosProbability()
       print('\n\n','Recorder Scenarios in Damage level 0 =',DM0Scen,'\n')
       
       for Scenario in DM0Scen:
-	  
           print(f'Probability of Scenario {Scenario} is equal: {ScenProb[Scenario]}')
-		  
+
 		  
 		  
 Example by: |bsz|

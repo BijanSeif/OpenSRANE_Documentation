@@ -29,7 +29,7 @@ Initialize the model and define reorder
       opr.wipe()
       
       #Define the recorder
-      opr.Recorders.Objs_recorder(tag=1,filename='Recorder_ex6',SaveStep=5000, fileAppend=False)
+      opr.Recorders.Objs_recorder(tag=1,filename='Recorder_ex6', fileAppend=False)
       
       #Clear Warning File content
       opr.Misc.warningClear()
@@ -215,11 +215,11 @@ Post Processing and plotting individual risk
       #Post Process
 	  
       #Get results using PostProcess subpackage
-      results=opr.PostProcess.ObjsRecorderPP.Analyze('Recorder_ex6',100)
-
+      results=opr.PostProcess.ObjsRecorderPP('Recorder_ex6',100)
+      
       #Calculate the Average radiation and over pressure in nodegroup
-      NGRadDict=results['NodesGroup_Rad_Probit_Dict']
-      NGOVPDict=results['NodesGroup_OVP_Probit_Dict']
+      NGRadDict=results.NodesGroup_Rad_Probit_Dict()
+      NGOVPDict=results.NodesGroup_OVP_Probit_Dict()
 	  
       #Export and plot max(Radiation,OverPressure) average (Fast Approch with high speed convergency)--------------------------------------------
       NodeGroupTag=1
@@ -231,10 +231,10 @@ Post Processing and plotting individual risk
           NodesProbabilityList=MaxProb,
           ContorList=[1e-8,1e-5],)
 		  
-      #Also, Plot Individual risk  (With lower speed convergency results)
+      #Plot Individual risk  (With low speed convergency)
       opr.Plot.Plotly.PlotIndividualRisk(PlotMode=1,
           NodesGroupTag=1,
-          NodesProbabilityList=results['NodesGroupDamageProbability'][1],
+          NodesProbabilityList=results.NodesGroupDamageProbability()[1],
           ContorList=[1e-8,1e-5],)
             	  
 	  

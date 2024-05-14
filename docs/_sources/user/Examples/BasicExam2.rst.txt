@@ -195,10 +195,10 @@ Post Processing
    .. code-block:: python
       
       #Post Process
-      Results=opr.PostProcess.ObjsRecorderPP.Analyze('Recorder_ex2')
+      Results=opr.PostProcess.ObjsRecorderPP('Recorder_ex2')
       
-      DM0Scen=Results['Damagelevel_Scenario_Dict'][0]
-      ScenProb=Results['ScenariosProbability']
+      DM0Scen=Results.Damagelevel_Scenario_Dict()[0]
+      ScenProb=Results.ScenariosProbability()
       print('\n\n','Recorder Scenarios in Damage level 0 =',DM0Scen,'\n')
       
       for Scenario in DM0Scen:

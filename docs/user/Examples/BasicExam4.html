@@ -131,7 +131,7 @@
 <span class="n">opr</span><span class="o">.</span><span class="n">wipe</span><span class="p">()</span>
 
 <span class="c1">#Define the recorder</span>
-<span class="n">opr</span><span class="o">.</span><span class="n">Recorders</span><span class="o">.</span><span class="n">Objs_recorder</span><span class="p">(</span><span class="n">tag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;Recorder_ex4&#39;</span><span class="p">,</span><span class="n">SaveStep</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">fileAppend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">opr</span><span class="o">.</span><span class="n">Recorders</span><span class="o">.</span><span class="n">Objs_recorder</span><span class="p">(</span><span class="n">tag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;Recorder_ex4&#39;</span><span class="p">,</span> <span class="n">fileAppend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1">#Clear Warning File content</span>
 <span class="n">opr</span><span class="o">.</span><span class="n">Misc</span><span class="o">.</span><span class="n">warningClear</span><span class="p">()</span>
@@ -300,11 +300,11 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Post Process</span>
 
 <span class="c1">#Get results using PostProcess subpackage</span>
-<span class="n">results</span><span class="o">=</span><span class="n">opr</span><span class="o">.</span><span class="n">PostProcess</span><span class="o">.</span><span class="n">ObjsRecorderPP</span><span class="o">.</span><span class="n">Analyze</span><span class="p">(</span><span class="s1">&#39;Recorder_ex4&#39;</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">results</span><span class="o">=</span><span class="n">opr</span><span class="o">.</span><span class="n">PostProcess</span><span class="o">.</span><span class="n">ObjsRecorderPP</span><span class="p">(</span><span class="s1">&#39;Recorder_ex4&#39;</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 
 <span class="c1">#Calculate the Average radiation and over pressure in nodegroup</span>
-<span class="n">NGRadDict</span><span class="o">=</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;NodesGroup_Rad_Probit_Dict&#39;</span><span class="p">]</span>
-<span class="n">NGOVPDict</span><span class="o">=</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;NodesGroup_OVP_Probit_Dict&#39;</span><span class="p">]</span>
+<span class="n">NGRadDict</span><span class="o">=</span><span class="n">results</span><span class="o">.</span><span class="n">NodesGroup_Rad_Probit_Dict</span><span class="p">()</span>
+<span class="n">NGOVPDict</span><span class="o">=</span><span class="n">results</span><span class="o">.</span><span class="n">NodesGroup_OVP_Probit_Dict</span><span class="p">()</span>
 
 <span class="c1">#Export and plot max(Radiation,OverPressure) average (Fast Approch with high speed convergency)--------------------------------------------</span>
 <span class="n">NodeGroupTag</span><span class="o">=</span><span class="mi">1</span>
@@ -316,10 +316,10 @@
     <span class="n">NodesProbabilityList</span><span class="o">=</span><span class="n">MaxProb</span><span class="p">,</span>
     <span class="n">ContorList</span><span class="o">=</span><span class="p">[</span><span class="mf">1e-8</span><span class="p">,</span><span class="mf">1e-5</span><span class="p">],)</span>
 
-<span class="c1">#Also, Plot Individual risk  (With lower speed convergency results)</span>
+<span class="c1">#Plot Individual risk  (With low speed convergency)</span>
 <span class="n">opr</span><span class="o">.</span><span class="n">Plot</span><span class="o">.</span><span class="n">Plotly</span><span class="o">.</span><span class="n">PlotIndividualRisk</span><span class="p">(</span><span class="n">PlotMode</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">NodesGroupTag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">NodesProbabilityList</span><span class="o">=</span><span class="n">results</span><span class="p">[</span><span class="s1">&#39;NodesGroupDamageProbability&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span>
+    <span class="n">NodesProbabilityList</span><span class="o">=</span><span class="n">results</span><span class="o">.</span><span class="n">NodesGroupDamageProbability</span><span class="p">()[</span><span class="mi">1</span><span class="p">],</span>
     <span class="n">ContorList</span><span class="o">=</span><span class="p">[</span><span class="mf">1e-8</span><span class="p">,</span><span class="mf">1e-5</span><span class="p">],)</span>
 </pre></div>
 </div>

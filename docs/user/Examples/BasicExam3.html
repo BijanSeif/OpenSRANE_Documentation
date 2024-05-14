@@ -132,7 +132,7 @@
 <span class="n">opr</span><span class="o">.</span><span class="n">wipe</span><span class="p">()</span>
 
 <span class="c1">#Define the recorder</span>
-<span class="n">opr</span><span class="o">.</span><span class="n">Recorders</span><span class="o">.</span><span class="n">Objs_recorder</span><span class="p">(</span><span class="n">tag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;Recorder_ex3&#39;</span><span class="p">,</span><span class="n">SaveStep</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">fileAppend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">opr</span><span class="o">.</span><span class="n">Recorders</span><span class="o">.</span><span class="n">Objs_recorder</span><span class="p">(</span><span class="n">tag</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;Recorder_ex3&#39;</span><span class="p">,</span> <span class="n">fileAppend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="c1">#Clear Warning File content</span>
 <span class="n">opr</span><span class="o">.</span><span class="n">Misc</span><span class="o">.</span><span class="n">warningClear</span><span class="p">()</span>
@@ -308,10 +308,10 @@
 <blockquote>
 <div><p>By finishing the analysis, using the PostProcess subpackage the probability of damage scenarios for each plant unit and for both are calculated. As it is seen in the above results, as we expected, the resulted scenarios are also symmetric. Obviously by increasing the number of the analysis, the probability of scenario (0)-[1] become closer to (0)-[2].</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Post Process</span>
-<span class="n">Results</span><span class="o">=</span><span class="n">opr</span><span class="o">.</span><span class="n">PostProcess</span><span class="o">.</span><span class="n">ObjsRecorderPP</span><span class="o">.</span><span class="n">Analyze</span><span class="p">(</span><span class="s1">&#39;Recorder_ex3&#39;</span><span class="p">)</span>
+<span class="n">Results</span><span class="o">=</span><span class="n">opr</span><span class="o">.</span><span class="n">PostProcess</span><span class="o">.</span><span class="n">ObjsRecorderPP</span><span class="p">(</span><span class="s1">&#39;Recorder_ex3&#39;</span><span class="p">)</span>
 
-<span class="n">DM0Scen</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">Results</span><span class="p">[</span><span class="s1">&#39;Damagelevel_Scenario_Dict&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">ScenProb</span><span class="o">=</span><span class="n">Results</span><span class="p">[</span><span class="s1">&#39;ScenariosProbability&#39;</span><span class="p">]</span>
+<span class="n">DM0Scen</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">Results</span><span class="o">.</span><span class="n">Damagelevel_Scenario_Dict</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ScenProb</span><span class="o">=</span><span class="n">Results</span><span class="o">.</span><span class="n">ScenariosProbability</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Recorder Scenarios in Damage level 0 =&#39;</span><span class="p">,</span><span class="n">DM0Scen</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="n">Len</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">DM0Scen</span><span class="p">]))</span>

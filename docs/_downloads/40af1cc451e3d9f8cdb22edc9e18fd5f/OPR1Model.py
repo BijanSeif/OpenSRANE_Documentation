@@ -30,7 +30,7 @@ Tanks_D5=(-0.659,0.452) #(Median,Dispersion)
 opr.wipe()
 
 #Define the recorder/s
-opr.Recorders.Objs_recorder(tag=5, filename='Recorder', SaveStep=5000, fileAppend=False)
+opr.Recorders.Objs_recorder(tag=5, filename='Recorder', fileAppend=False)
 opr.Recorders.recorder(tag=1,filename='RecorderA',fileAppend=False, recordfield='NodesGroupIsDamaged', NodesGroupTag=1)
 opr.Recorders.recorder(tag=2,filename='RecorderB',fileAppend=False, recordfield='DamageLevel', NodesGroupTag=1)
 opr.Recorders.recorder(tag=3,filename='RecorderC',fileAppend=False, recordfield='FragilityTag', NodesGroupTag=1)
@@ -209,7 +209,7 @@ import time
 if __name__=='__main__':
     t0=time.time()
     print('start time is=',t0)
-    opr.Analyze.ScenarioAnalyze.MultiParallel(AnalysisNumber=1_000_000, NumberOfProcessors=15,RecorderSaveStep=5000)
+    opr.Analyze.ScenarioAnalyze.MultiParallel(AnalysisNumber=1_000_000, NumberOfProcessors=15,RecordersSaveStep=5000)
     print('Time consumed for this analysis is=', time.time()-t0)
     # opr.Analyze.ScenarioAnalyze.UniAnalyze()
     # for i in range(3):
